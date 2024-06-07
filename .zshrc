@@ -91,15 +91,21 @@ source $ZSH/oh-my-zsh.sh
 
 # llfo = link libs from onedrive
 ldl() {
-    sudo /home/jmoore2/i2dev/tools/system_libs_link_and_unlink/link_libs.sh --path "$1"
+    sudo /home/jmoore2/system_libs_unlink_link/system_libs_link_and_unlink/link_libs.sh --path "$1"
 }
 
 # Function to unlink libs with a dynamic path argument
 uldl() {
-    sudo /home/jmoore2/i2dev/tools/system_libs_link_and_unlink/unlink_libs.sh --path "$1"
+    sudo /home/jmoore2/system_libs_unlink_link/system_libs_link_and_unlink/unlink_libs.sh --path "$1"
 }
 
+lh() {
+    sudo /home/jmoore2/system_includes_unlink_link/link_headers.sh --path "$1"
+}
 
+ulh() {
+    sudo /home/jmoore2/system_includes_unlink_link/unlink_headers.sh --path "$1"
+}
 
 bindkey '^[[1;5D' backward-word
 bindkey '^[[1;5C' forward-word
