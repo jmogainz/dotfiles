@@ -1,0 +1,7 @@
+[user]
+	email = private
+	name = jmogainz
+[pager]
+	branch = false
+[credential]
+	helper = cache --timeout=100000
