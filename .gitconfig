@@ -1,0 +1,7 @@
+[user]
+	email = jmoore2@torchtechnologies.com
+	name = Jacob Moore
+[pager]
+	branch = false
+[credential]
+	helper = cache --timeout=100000
