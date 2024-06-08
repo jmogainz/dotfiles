@@ -13,6 +13,11 @@ vim.o.wrap = true
 vim.o.cursorline = true
 vim.o.timeoutlen = 300
 vim.o.smartindent = false
+vim.opt.fixeol = false
+vim.opt.shada = { "!", "'300", "<50", "s10", "h" } 
+
+-- Suda settings
+vim.g.suda_prompt = 'Password: '
 
 -- Bookmarks settings
 vim.g.bookmark_no_default_key_mappings = 1
@@ -52,7 +57,7 @@ vim.g.gitgutter_enabled = 1
 -- ALE settings
 vim.g.ale_cpp_clang_options = '-Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion'
 vim.g.ale_cpp_gcc_options = '-std=c++17 -Wall -O2 -Wextra -Wpedantic -Wconversion -Wsign-conversion'
-vim.g.ale_cpp_cc_options = '-Wall -Wextra -Wpedantic Wsign-conversion -Wno-c++17-extensions'
+vim.g.ale_cpp_cc_options = '-Wall -Wextra -Wpedantic Wsign-conversion'
 vim.g.ale_linters = {
     cpp = {'clang', 'g++'},
     python = {'flake8', 'pylint', 'mypy'}

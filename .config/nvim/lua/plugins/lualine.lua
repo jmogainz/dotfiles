@@ -52,6 +52,14 @@ local conditions = {
   end,
 }
 
+-- Custom function to get parent directory and file name
+local function get_parent_dir_and_filename()
+  local filepath = vim.fn.expand('%:p')
+  local parent = vim.fn.fnamemodify(filepath, ':h:t')
+  local filename = vim.fn.fnamemodify(filepath, ':t')
+  return parent .. '/' .. filename
+end
+
 -- Config
 local config = {
   options = {
@@ -59,9 +67,9 @@ local config = {
     component_separators = '',
     section_separators = '',
     theme = {
-      -- We are going to use lualine_c an lualine_x as left and
+      -- We are going to use lualine_c and lualine_x as left and
       -- right section. Both are highlighted by c theme .  So we
-      -- are just setting default looks o statusline
+      -- are just setting default looks of statusline
       normal = { c = { fg = colors.fg, bg = colors.bg } },
       inactive = { c = { fg = colors.fg, bg = colors.bg } },
     },
@@ -146,7 +154,10 @@ ins_left {
 }
 
 ins_left {
-  'filename',
+  -- Use custom function to show parent directory and file name
+  function()
+    return get_parent_dir_and_filename()
+  end,
   cond = conditions.buffer_not_empty,
   color = { fg = colors.magenta, gui = 'bold' },
 }
@@ -174,7 +185,7 @@ ins_left {
 }
 
 -- Insert mid section. You can make any number of sections in neovim :)
--- for lualine it's any number greater then 2
+-- for lualine it's any number greater than 2
 ins_left {
   function()
     return '%='

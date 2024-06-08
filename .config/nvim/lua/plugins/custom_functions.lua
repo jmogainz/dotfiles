@@ -278,4 +278,17 @@ M.copy_snippet_info = function()
     print(string.format("Total time: %.2f ms", (end_time - start_time) / 1e6))
 end
 
+-- Do the new function in a correct module way
+M.copy_and_print_file_path = function()
+    local path = vim.fn.expand("%:p")
+    vim.fn.setreg('+', path) -- Copy to clipboard
+    print("File path copied to clipboard: " .. path) -- Print to command line
+end
+
+M.copy_and_print_dir_path = function()
+    local path = vim.fn.expand("%:p:h")
+    vim.fn.setreg('+', path) -- Copy to clipboard
+    print("Path copied to clipboard: " .. path) -- Print to command line
+end
+
 return M
