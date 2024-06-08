@@ -43,6 +43,7 @@ require('packer').startup(function(use)
   use 'mg979/vim-visual-multi'
   use 'mbbill/undotree'
   use 'nvim-lualine/lualine.nvim'
+  use 'lambdalisue/vim-suda'
 end)
 
 -- Load individual plugin configurations
