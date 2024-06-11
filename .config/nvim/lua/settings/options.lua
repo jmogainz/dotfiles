@@ -16,6 +16,10 @@ vim.o.smartindent = false
 vim.opt.fixeol = false
 vim.opt.shada = { "!", "'300", "<50", "s10", "h" } 
 
+-- PlantUML settings
+vim.g['plantuml_previewer#plantuml_jar_path'] = '/usr/share/java/plantuml/plantuml.jar'
+vim.g['plantuml_previewer#debug_mode'] = 1
+
 -- Suda settings
 vim.g.suda_prompt = 'Password: '
 
