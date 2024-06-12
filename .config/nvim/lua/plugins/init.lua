@@ -44,9 +44,7 @@ require('packer').startup(function(use)
   use 'mbbill/undotree'
   use 'nvim-lualine/lualine.nvim'
   use 'lambdalisue/vim-suda'
-  use 'aklt/plantuml-syntax'
-  use 'weirongxu/plantuml-previewer.vim'
-  use 'tyru/open-browser.vim'
+  use 'lervag/vimtex'
 end)
 
 -- Load individual plugin configurations
