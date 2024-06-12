@@ -16,9 +16,13 @@ vim.o.smartindent = false
 vim.opt.fixeol = false
 vim.opt.shada = { "!", "'300", "<50", "s10", "h" } 
 
--- PlantUML settings
-vim.g['plantuml_previewer#plantuml_jar_path'] = '/usr/share/java/plantuml/plantuml.jar'
-vim.g['plantuml_previewer#debug_mode'] = 1
+-- LaTeX settings
+vim.g.vimtex_view_method = 'zathura'
+vim.g.vimtex_compiler_method = 'latexmk'
+vim.g.vimtex_view_general_viewer = 'zathura'
+vim.g.vimtex_quickfix_mode = 0
+vim.g.vimtex_lint_enabled = 0
+vim.g.vimtex_check_enabled = 0
 
 -- Suda settings
 vim.g.suda_prompt = 'Password: '
@@ -64,7 +68,8 @@ vim.g.ale_cpp_gcc_options = '-std=c++17 -Wall -O2 -Wextra -Wpedantic -Wconversio
 vim.g.ale_cpp_cc_options = '-Wall -Wextra -Wpedantic Wsign-conversion'
 vim.g.ale_linters = {
     cpp = {'clang', 'g++'},
-    python = {'flake8', 'pylint', 'mypy'}
+    python = {'flake8', 'pylint', 'mypy'},
+    tex = {}
 }
 vim.g.ale_verbose = 1
 
