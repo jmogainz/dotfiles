@@ -1,0 +1,2247 @@
+: 1690238856:0;yay -S mambaforge
+: 1690238856:0;cd /.config
+: 1690238856:0;nano config
+: 1690238856:0;nano sync_list
+: 1690238856:0;systemctl enable cronie
+: 1690238856:0;mv .zshrc.bak2 .zshrc
+: 1690238856:0;rm -r /home/jmogainz/.oh-my-zsh
+: 1690238856:0;sudo rm -r /home/jmogainz/.oh-my-zsh
+: 1690238856:0;mv .zshrc .zshrc.bak2
+: 1690238856:0;sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"\
+
+: 1690238767:0;nano .zshrc.bak2
+: 1690238835:0;cat .zshrc.bak2
+: 1690238886:0;la
+: 1690239222:0;cd /etc
+: 1690239228:0;ls | grep auto
+: 1690239234:0;sudo nano time
+: 1690239250:0;sudo nano timeshift-autosnap.conf
+: 1690241286:0;grep oh
+: 1690241286:0;ls | grep oh
+: 1690241286:0;find type -f | grep oh
+: 1690241286:0;find -type f | grep oh
+: 1690239944:0;sudo pacman -S xclip
+: 1690240018:0;cat .zshrc | xclip -selection clipboard
+: 1690240285:0;which bash
+: 1690240291:0;chsh -s /usr/bin/bash
+: 1690240304:0;chsh -l
+: 1690241278:0;mamba activate
+: 1690241296:0;conda activate
+: 1690241562:0;nano e
+: 1690241566:0;nano extra_installs.txt
+: 1690241631:0;nano dev_setup.sh
+: 1690241673:0;mv extra_installs.txt manual_setup.txt
+: 1690241692:0;cd etc/systemd
+: 1690241697:0;cd /etc/systemd
+: 1690241705:0;nano logind.conf
+: 1690241735:0;nano arch_install.sh
+: 1690242245:0;lls
+: 1690242261:0;gsettings set org.gnome.desktop.background picture-uri cmanjaro.png
+: 1690242330:0;sudo gsettings set org.gnome.desktop.background picture-uri cmanjaro.png
+: 1690242355:0;ls -l cmanjaro.png
+: 1691355545:0;touch test.txt
+: 1691355605:0;rm te
+: 1691355608:0;rm test.txt
+: 1691355663:0;ls OneDrive
+: 1691355707:0;cd /boot
+: 1691355712:0;cd grub
+: 1691355718:0;cd efi
+: 1691355725:0;sudo cd efi
+: 1691356279:0;code -n /etc/default/grub
+: 1691356710:0;nano /etc/fstab
+: 1691356742:0;sudo efibootmgr -b 0001 -l "\EFI\boot\bootx64.efi" -L "Manjaro"\
+
+: 1691356961:0;sudo grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=Manjaro --removable\
+
+: 1691357076:0;efibootmgr
+: 1691357151:0;code -n /boot/grub/grub.cfg
+: 1691357167:0;sudo nano /boot/grub/grub.cfg
+: 1691361817:0;systemctl status chronie
+: 1691361835:0;timeshift-launcher
+: 1691853417:0;sudo kill -9 $(pgrep code)
+: 1691853437:0;kill -9 $(pgrep code)
+: 1691853444:0;pgrep
+: 1691853484:0;yay -S code
+: 1691853510:0;pacman -S code
+: 1691853638:0;pacman -Syu
+: 1691877003:0;sudo pacman -S code
+: 1691878247:0;sudo pacman -Rns code
+: 1691878597:0;rm 'Code - OSS'
+: 1691878604:0;rm -r 'Code - OSS'
+: 1691878636:0;find -type file | grep settings.json
+: 1691878645:0;find -type f | grep settings.json
+: 1691878658:0;cd Code
+: 1691878665:0;code settings.json
+: 1691949895:0;cd OneDrive/Misc/C\&J_Finances/ls
+: 1691949899:0;cd OneDrive/Misc/C\&J_Finances/
+: 1691949976:0;conda
+: 1691949994:0;mamba
+: 1691950075:0;whereis mamba
+: 1691950082:0;which mamba
+: 1691950182:0;code -n .zshrc
+: 1691950217:0;cd OneDrive/Misc/ls
+: 1691950226:0;cd hom
+: 1691950275:0;which conda
+: 1691950670:0;which which
+: 1691950677:0;which ls
+: 1691950688:0;which cd
+: 1691950712:0;whereis cd
+: 1691950732:0;type ls
+: 1691950737:0;ls conda
+: 1691950744:0;type conda
+: 1691950824:0;type which
+: 1691950960:0;whereis which
+: 1691950964:0;cd /usr/bin
+: 1691950967:0;ls -al
+: 1691950985:0;ls -al | wh
+: 1691950992:0;ls -al | grep wh
+: 1691951028:0;who
+: 1691951040:0;ls | grep which
+: 1691951046:0;ls -al | grep which
+: 1691951107:0;command conda
+: 1691951111:0;command -v conda
+: 1691975737:0;code OneDrive/Misc/C\&J_Finances
+: 1691976725:0;python total = 710.00 + 300.00 + 235.00 + 300.00 + 232.00 + 362.00 + 100.00 + 1534.00 + 909.17\
+print(total)
+: 1691976895:0;6
+: 1692055832:0;cd Misc
+: 1692055843:0;cd C\&J_Finances/
+: 1692242930:0;less manual_setup.txt
+: 1692242947:0;less dev_setup.sh
+: 1692243060:0;onedrive
+: 1692243074:0;ls | grep one
+: 1692243179:0;gedit dev_setup.sh
+: 1692243368:0;systemctl status onedrive
+: 1692243430:0;cd config
+: 1692467464:0;cd..
+: 1692467724:0;dconf load / < gnome-settings.dconf
+: 1692467728:0;dconf load / < gnome-settings2.dconf
+: 1692467834:0;cp home/.zshrc ~/.zshrc
+: 1692467904:0;dconf dump / > gnome-settings-1080.dconf
+: 1692467953:0;mv gnome-settings2.dconf gnome-settings-2K.dconf
+: 1692469528:0;cd home/.config
+: 1692469566:0;mv onedrive ~/.config/onedrive
+: 1692469581:0;systemctl --synchronzie --resyn
+: 1692469594:0;systemctl --synchronize --resync
+: 1692469668:0;cd onedrive
+: 1692469692:0;mv onedrive/config config
+: 1692469702:0;rm -r onedrive
+: 1692470752:0;cd C\&J_Finances
+: 1692470918:0;pythhon
+: 1693955241:0;yay -Rn teams
+: 1698284420:0;cd /etc/X11
+: 1698284425:0;grep -r intel
+: 1698284430:0;grep -r Intel
+: 1698284441:0;grep -r Screen
+: 1698284473:0;xrandr --verbose
+: 1698284512:0;xrandr --verbose | grep "Synch"
+: 1698284523:0;xrandr --verbose | less
+: 1698284562:0;xrand --verbose > temp.txt; code temp.txt
+: 1698284574:0;xrandr --verbose > temp.txt; code temp.txt
+: 1698284594:0;xrandr --verbose > temp.txt; sudo code temp.txt
+: 1698284612:0;xrandr --verbose > temp.txt; sudo --no-sandbox code temp.txt
+: 1698284624:0;xrandr --verbose > temp.txt; code --no-sandbox temp.txt
+: 1698284662:0;sudo xrandr --verbose > temp.txt; code temp.txt
+: 1698284720:0;chmod 777 temp.txt
+: 1698284731:0;sudo xrandr --verbose > temp.txt
+: 1698284827:0;lsmod | grep i915
+: 1698285323:0;lspci -k -s 1:0
+: 1698285531:0;sudo rm temp.txt
+: 1698285575:0;cd mhwd.d
+: 1698285583:0;code nvidia.conf
+: 1698285647:0;prime-select
+: 1698285738:0;xrandr --listproviders
+: 1698286261:0;arandr
+: 1698286294:0;journalctl -xe | grep monitor
+: 1698286302:0;journalctl -xe
+: 1698286318:0;journalctl
+: 1698286348:0;journalctl | grep monitor
+: 1698286370:0;journalctl | grep screen
+: 1698286445:0;journalctl | grep -w screen
+: 1698286471:0;journalctl | grep -w 1:0
+: 1698286491:0;lspci -k -s 0:2
+: 1698286548:0;journalctl | grep -w i915
+: 1698286563:0;journalctl | grep -w 0:2
+: 1698286635:0;sudo lshw -C display
+: 1698286706:0;sudo get-edit
+: 1698286708:0;sudo get-edid
+: 1698286755:0;sudo touch temp.txt
+: 1698286759:0;sudo chmod 777 temp.txt
+: 1698286769:0;xrandr --verbose > temp.txt
+: 1698286902:0;sudo mv temp.txt ~/OneDrive/Misc/xrandroutput
+: 1698286923:0;nano xrandroutput
+: 1698286935:0;mv xrandroutput xrandroutput.txt
+: 1698286959:0;history > temphistory.txt
+: 1698286963:0;l -o
+: 1698286971:0;l -m
+: 1698287007:0;l | grephis
+: 1698287011:0;l | grep hi
+: 1698287015:0;nano temphistory.txt
+: 1698287026:0;less temphistory.txt
+: 1698287134:0;xrandr --output HDMI1 --auto
+: 1698287139:0;xrandr --output HDMI
+: 1698287170:0;mhwd
+: 1701735403:0;cp $LINUX_CONFIG_PATH/home/.zshrc .
+: 1701735637:0;git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k\
+
+: 1701735652:0;
+: 1701735656:0;jacob
+: 1701735701:0;cp $LINUX_CONFIG_PATH/home/.p10k.zsh .
+: 1701988162:0;unzip iCloud\ Photos.zip
+: 1701988184:0;cd ~/OneDrive/Misc
+: 1701988198:0;find type -d
+: 1701988205:0;find -type d
+: 1701988234:0;l --help | grep directory
+: 1701988241:0;l -d
+: 1701988269:0;l . -d
+: 1701988355:0;mkdir testing_clustering
+: 1701988653:0;cd iCloud\ Photos
+: 1701988686:0;cp -p * ~/OneDrive/Misc/testing_clustering/images
+: 1701988711:0;mkdir /home/jmogainz/OneDrive/Misc/testing_clustering/images
+: 1701988712:0;cp * ~/OneDrive/Misc/testing_clustering/images
+: 1702511990:0;mambal ist
+: 1702511996:0;mamba list | grep ten
+: 1702512421:0;cd /opt/mambaforge/envs
+: 1702512441:0;cd /opt/mambaforge
+: 1702512443:0;cd envs
+: 1702512445:0;l -a
+: 1702512517:0;cd /home/jmogainz/.conda/envs/gen_env
+: 1702512526:0;cd python3.10
+: 1702512527:0;cd site-packages
+: 1702512532:0;l | grep tensorflow
+: 1702512536:0;cd tensorflow
+: 1702512556:0;find -type d | grep keras
+: 1702512794:0;cd ../sklearn
+: 1702512805:0;find -type d | grep KM
+: 1702512811:0;find -type d | grep KMeans
+: 1702512816:0;find -type f | grep KMean
+: 1702512834:0;find -type d | grep clu
+: 1702512836:0;cd cluster
+: 1702512847:0;find -type f | grep kme
+: 1702512864:0;grep -r KMeans
+: 1702512873:0;code _kmeans.py
+: 1702513037:0;code _kmeans.pyconda activate gen_env
+: 1702513409:0;image_directory = 'images'
+: 1702513575:0;mamba install -c anaconda pillow
+: 1702515497:0;l | grep wc
+: 1702515500:0;l | grep wc -l
+: 1702515521:0;l -1
+: 1702515528:0;l images | wc -l
+: 1702515537:0;l -1 | wc -l
+: 1702515546:0;l -1 images | wc -l
+: 1702515550:0;l images
+: 1702515569:0;l images | grep JPEG
+: 1702515573:0;l images | grep JPEG | wc -l
+: 1702516675:0;mamba install -c conda-forge matplotlibconda activate gen_env
+: 1702516704:0;mamba install -c conda-forge matplotlib
+: 1702521983:0;cp Screenshot\ from\ 2023-12-13\ 20-45-14.png /home/jmogainz/OneDrive/Misc/testing_clustering/
+: 1702523306:0;cp Screenshot\ from\ 2023-12-13\ 21-08-06.png /home/jmogainz/OneDrive/Misc/testing_clustering/
+: 1703539193:0;unzip -d iCloud\ Photos\(1\).zip temp
+: 1703539197:0;unzip -d iCloud\ Photos\(1\).zip
+: 1703539201:0;unzip iCloud\ Photos\(1\).zip
+: 1703539221:0;l iCloud\ Photos
+: 1703539256:0;gimage
+: 1703539258:0;image
+: 1703539409:0;sudo pacman -S exiftool
+: 1703539474:0;sudo pacman -S perl-image-exiftool
+: 1703539506:0;exiftool IMG_3410.JPEG
+: 1703539663:0;eog
+: 1703539678:0;gthumb IMG_34
+: 1703541390:0;exiftool FrontDriverFloorB.JPEG | grep Create
+: 1703541510:0;sudo rm temp1.txt
+: 1703541544:0;l | grep A
+: 1703541556:0;l | grep A.JPEG
+: 1703541569:0;nautilus . &; disown
+: 1703704677:0;re_cluster_count += 1
+: 1703708239:0;cd Downloads/iCloud\ Photos
+: 1703708295:0;echo $(exiftool FrontDriverFloorB.JPEG | grep Create) > temp1.txt
+: 1703708299:0;code temp1.txt
+: 1703708310:0;echo $(exiftool FrontDriverFloorA.JPEG | grep Create) >> temp1.txt
+: 1703708358:0;echo $(exiftool FrontDriverWheelA.JPEG | grep Create) > temp1.txt
+: 1703708365:0;echo $(exiftool FrontDriverWheelB.JPEG | grep Create) >> temp1.txt
+: 1703709535:0;cd images
+: 1703709548:0;exiftool 970EA067-E7AB-4E16-99F2-240081032DEA.JPEG
+: 1703709590:0;exiftool 970EA067-E7AB-4E16-99F2-240081032DEA.JPEG | grep Create
+: 1703709592:0;exiftool 970EA067-E7AB-4E16-99F2-240081032DEA.JPEG | grep Creat
+: 1703711054:0;cd ../images2
+: 1703711060:0;exiftool FrontDriverFloorB.JPEG
+: 1703711091:0;exiftool FrontDriverFloorB.JPEG | grep Wid
+: 1703711099:0;exiftool FrontDriverFloorB.JPEG | grep Image
+: 1703716920:0;del clusters[closest_match[2]]
+: 1703724201:0;return None
+: 1703731211:0;exiftool FrontDriverFloorB.JPEG | Size
+: 1703731214:0;exiftool FrontDriverFloorB.JPEG | grep Size
+: 1703732094:0;merged_image.save(output_path)
+: 1703733026:0;cd ../images2_output
+: 1703733033:0;exiftool merged_2.jpg
+: 1703818617:0;mkdir BeforeAfterPhotoCreatorApp
+: 1703818650:0;mkdir -p static/js
+: 1703818653:0;cd static
+: 1703818658:0;cd BeforeAfterPhotoCreatorApp
+: 1703818945:0;mkdir templates
+: 1703818959:0;touch app.py
+: 1703818983:0;touch static/js/script.js
+: 1703818999:0;touch templates/index.html
+: 1703819513:0;mamba activate flask_env
+: 1703819654:0;realpath /home/jmogainz/.conda/envs/flask_env
+: 1703819669:0;realpath /home/jmogainz/.conda/envs/flask_env/bin/python
+: 1703819675:0;realpath /home/jmogainz/.conda/envs/flask_env/bin/python | xclip
+: 1703819702:0;xclip "hello"
+: 1703819710:0;xclip
+: 1703820778:0;mamba activate gen_env
+: 1703820788:0;mamba install -c anaconda flask
+: 1703820929:0;return {k: [filename for filename, _ in v] for k, v in clusters.items()}
+: 1703822301:0;git config --global user.email "jlmoors001@gmail.com
+: 1703822303:0;git config --global user.email "jlmoors001@gmail.com"
+: 1703822318:0;git config --global user.name "Jacob Moore"
+: 1703823236:0;sudo rm -r /home/jmogainz/.conda/envs/flask_env
+: 1703825279:0;mamba list | grep flask
+: 1703825509:0;conda env remove --env BAPhotoCreatorEnv
+: 1703825700:0;mamba list | grep flash
+: 1703825885:0;mamba list | grep flas
+: 1703825919:0;conda env remove --name BAPhotoCreatorEnv
+: 1703825925:0;mamba env create -f environment.yml
+: 1703829383:0;cd testing_clustering
+: 1703829392:0;exiftool FrontDriverWheelA.JPEG | grep Size
+: 1703829411:0;exiftool BackSeatA.JPEG | grep Size
+: 1703832462:0;if\
+exit
+: 1703832484:0;ip addr
+: 1703834312:0;cd images2_output
+: 1703834885:0;nautilus .
+: 1703835486:0;cd OneDrive/Misc/BeforeAfterPhotoCreatorApp/uploads
+: 1703835497:0;exiftool IMG_3543.jpeg
+: 1703835501:0;exiftool IMG_3543.jpeg | Create
+: 1703835506:0;exiftool IMG_3543.jpeg | grep Create
+: 1703835661:0;exiftool ../../testing_clustering/images2/BackSeatA.JPEG
+: 1703835671:0;exiftool ../../testing_clustering/images2/BackSeatA.JPEG | grep Size
+: 1703835755:0;exiftool IMG_3543.jpeg | grep Size
+: 1703835768:0;gthumb IMG_3543.jpeg
+: 1703835790:0;exiftool IMG_3543.jpeg | grep Width
+: 1703835806:0;exiftool IMG_3543.jpeg | grep Height
+: 1703839553:0;curl
+: 1703839555:0;cron
+: 1703839634:0;sudo pacman -S cronie
+: 1703839667:0;ping www.google.com
+: 1703839685:0;cronie
+: 1703839710:0;sudo systemctl enable cronie.service
+: 1703839712:0;sudo systemctl status cronie.service
+: 1703840781:0;cd /
+: 1703840784:0;cd root
+: 1703840841:0;cd .keras
+: 1703840863:0;ncdu -h models
+: 1703840881:0;du -h models
+: 1703840888:0;du -h models/
+: 1703840891:0;du -h models/*
+: 1703840901:0;ncdu models
+: 1703841135:0;nano /home/jmogainz/.config/onedrive/config
+: 1703841364:0;git commit -m "First functioning commit"
+: 1703841634:0;git remote get-url
+: 1703841650:0;git remote add-url https://github.com/jmogainz/BeforeAfterPhotoCreatorApp.git
+: 1703841673:0;git remote add origin https://github.com/jmogainz/BeforeAfterPhotoCreatorApp.git
+: 1703841688:0;git push --set-upstream origin
+: 1703841691:0;git push --set-upstream origin master
+: 1703842492:0;sudo pacman -S net-tools
+: 1703891640:0;nano five-solas.pem
+: 1703891667:0;cp five-solas.pem ~/OneDrive/Misc/aws_server_key/
+: 1703891687:0;mkdir /home/jmogainz/OneDrive/Misc/aws_server_pub_key
+: 1703891693:0;cp five-solas.pem ~/OneDrive/Misc/aws_server_pub_key
+: 1703891723:0;chmod 400 five-solas.pem
+: 1703891731:0;ssh 
+: 1703892162:0;ssh -i five-solas.pem ec2-user@ec2-18-223-124-121.us-east-2.compute.amazonaws.com
+: 1703892216:0;sudo rm -r * /home/jmogainz/.ssh
+: 1703892223:0;ssh
+: 1703892227:0;ssh -i five-solas.pem ec2-user@18.223.124.121
+: 1703892316:0;cp ~/Downloads/five-solas.pem .
+: 1703892333:0;sudo chmod 400 five-solas.pem
+: 1703892334:0;ssh -i five-solas.pem ubuntu@18.223.124.121
+: 1703894095:0;nano .zshrc
+: 1703894115:0;code .zshrc
+: 1703895400:0;cd /home/jmogainz/OneDrive/Misc/aws_server_pub_key
+: 1703961369:0;ssh -i five-solas.pem ubuntu@3.18.237.6
+: 1703964748:0;git commit -m "Less imports"
+: 1703965144:0;mamba install -c anaconda memory_profiler
+: 1703966085:0;sudo python -m memory_profiler app.py
+: 1703973208:0;cd images2
+: 1703973223:0;exiftool FrontDriverFloorA.JPEG | grep Create
+: 1703973241:0;exiftool BackSeatA.JPEG| grep Create
+: 1703973258:0;exiftool BackSeatA.JPEG | grep Create
+: 1703973277:0;exiftool BackSeatB.JPEG | grep Create
+: 1703974189:0;cp Pictures/Screenshots/Screenshot\ from\ 2023-12-30\ 16-09-13.png /home/jmogainz/OneDrive/Misc/testing_clustering/
+: 1703988779:0;git commit -m "Upgraded merge algorithm to v2 and improved front end appeal"
+: 1703989911:0;git commit -m "Improved css further"
+: 1703991148:0;clusters.append((i, closest))
+: 1703992114:0;cd /home/jmogainz/OneDrive/Misc/testing_clustering/images2
+: 1703992131:0;exiftool FrontDriverFloorB.JPEG| grep Size
+: 1703992182:0;exiftool FrontDriverFloorA.JPEG| grep Size
+: 1703992215:0;exiftool IMG_3421.jpeg | grep Size
+: 1703993465:0;systemctl restart cronie.service accounts-daemon.service 
+: 1703993501:0;systemctl start cronie
+: 1703993528:0;systemctl status --user cronie
+: 1703993543:0;cd /etc/
+: 1703993548:0;l | grep cronie
+: 1703993550:0;l | grep cron
+: 1703993557:0;cd cron.d
+: 1703993574:0;crontab -e
+: 1703993624:0;systemctl restart cronie
+: 1703993628:0;systemctl status cronie
+: 1703998380:0;exiftool IMG_3558.jpeg
+: 1703998387:0;exiftool IMG_3558.jpeg | grep Orie
+: 1703998414:0;exiftool BackSeatA.JPEG | grep Orie
+: 1704004611:0;git commit -m "Changes to force multiple options if unsure"
+: 1704005618:0;grep -r favicon.ico
+: 1704005625:0;grep -r "favicon.ico"
+: 1704005895:0;git commit -m "Added icon"
+: 1704007068:0;git commit -m "Changed smart merge wording haha"
+: 1704007175:0;git config --global credential.helper 'cache --timeout=10000'\
+
+: 1704009154:0;git commit -m "Improved clustering algorithm again"
+: 1704244109:0;pass
+: 1704327774:0;cd /home/jmogainz/OneDrive/Misc/BeforeAfterPhotoCreatorApp/processed/
+: 1704327855:0;cd ../uploads
+: 1704327856:0;l | grep root | wc -l
+: 1704327886:0;git commit -m "Fixed bug with 2 photo input, added info box"
+: 1704508059:0;cd OneDrive/Misc/C\&J_Finances
+: 1704508290:0;python main.py
+: 1704508296:0;python monthly_expenses.py
+: 1705453923:0;python app.py
+: 1705454061:0;systemctl status dbus
+: 1705542871:0;exiftool IMG_4032.jpeg | grep Create
+: 1705542880:0;exiftool IMG_4032.jpeg
+: 1705546902:0;yay -S python-orange
+: 1705547011:0;yay -Rns python-orange
+: 1705547056:0;cd .cache
+: 1705547063:0;cd yay
+: 1705547080:0;code completion.cache
+: 1705547160:0;du -h .
+: 1705547168:0;ncdu .
+: 1705547196:0;l | grep orange
+: 1705547214:0;sudo rm -r *orange*
+: 1705547231:0;sudo rm -r *python*
+: 1705547314:0;touch test1
+: 1705547315:0;touch test2
+: 1705547318:0;touch test3
+: 1705547326:0;ls | grep test | rm 
+: 1705547364:0;cat /home/jmogainz/.zshrc | grep xclip
+: 1705547376:0;realpath
+: 1705547379:0;realpath .
+: 1705547402:0;sudo rm *test*
+: 1705548643:0;cd /home/jmogainz/OneDrive/Misc/Obsidian/Torch
+: 1705548648:0;l | grep torch
+: 1705548658:0;mv Torch Work
+: 1705622788:0;conda activate /home/jmogainz/.conda/envs/BAPhotoCreatorEnv
+: 1705625554:0;git commit -m "Updates for logging"
+: 1705625617:0;exiftool /home/jmogainz/OneDrive/Misc/BeforeAfterPhotoCreatorApp/uploads/IMG_4095.png
+: 1705625645:0;exiftool /home/jmogainz/OneDrive/Misc/BeforeAfterPhotoCreatorApp/uploads/IMG_4095.png | original
+: 1705625649:0;exiftool /home/jmogainz/OneDrive/Misc/BeforeAfterPhotoCreatorApp/uploads/IMG_4095.png | grep original
+: 1705625710:0;exiftool /home/jmogainz/OneDrive/Misc/BeforeAfterPhotoCreatorApp/uploads/IMG_4090.jpeg | grep Create
+: 1705625711:0;exiftool /home/jmogainz/OneDrive/Misc/BeforeAfterPhotoCreatorApp/uploads/IMG_4095.png | grep Create
+: 1705795585:0;l | grep SWE
+: 1705795604:0;gthumb SWEBOKv3.pdf
+: 1705796772:0;echo "For an overview and reference information on every type of Unified Modeling Language (UML) diagram, there are several reputable and commonly used resources. While there isn't one universally acknowledged "best" website, the following resources are popular and well-regarded in the software engineering and system design community:\
+\
+1. **The Official OMG UML Documentation**: The Object Management Group (OMG) is the organization that maintains the UML specification. Their documentation is the definitive source for UML standards. While it can be quite technical, it's the most authoritative source. Website: [OMG UML Specification](https://www.omg.org/spec/UML/)\
+\
+2. **Lucidchart**: Lucidchart provides a very user-friendly interface and has extensive resources and tutorials for UML diagrams. It is popular for both learning and creating diagrams. Website: [Lucidchart UML Diagrams](https://www.lucidchart.com/pages/uml-diagram-tool)\
+\
+3. **Visual Paradigm**: This site offers a comprehensive online guide to UML diagrams, including examples and templates. It's a good resource for both beginners and experienced users. Website: [Visual Paradigm UML Guide](https://www.visual-paradigm.com/guide/uml-unified-modeling-language/what-is-uml/)\
+\
+4. **Sparx Systems UML Tutorials**: Sparx Systems, known for their Enterprise Architect tool, provides extensive tutorials and guides on UML. These resources are quite detailed and useful for understanding both basic and advanced concepts. Website: [Sparx Systems UML Tutorials](https://sparxsystems.com/resources/tutorials/uml2/index.html)\
+\
+5. **IBM DeveloperWorks**: IBM offers a variety of articles and resources on UML that are both high-quality and accessible for beginners. Website: [IBM DeveloperWorks](https://developer.ibm.com/)\
+\
+6. **TutorialsPoint**: This website provides concise and easy-to-understand tutorials on various UML diagrams. It's a good starting point for beginners. Website: [TutorialsPoint UML Tutorials](https://www.tutorialspoint.com/uml/index.htm)\
+\
+7. **Wikipedia**: For a quick reference or overview, Wikipedia has articles on each type of UML diagram, which often include examples and basic descriptions. Website: [Wikipedia UML Diagrams](https://en.wikipedia.org/wiki/Unified_Modeling_Language)\
+\
+Each of these resources has its strengths, and the best one for you might depend on your specific needs â€ƒ³ whether you're looking for in-depth technical specifications, learning materials, or practical examples and templates." | grep lucidchart
+: 1705805805:0;cd Torch
+: 1705805823:0;find -type f | grep PUML
+: 1705805829:0;find -type f | grep .py
+: 1705805839:0;find -type f | grep ".py"
+: 1705805844:0;find -type f | grep "py"
+: 1705805849:0;find -type f | grep "*py"
+: 1705805859:0;find -type f | grep *"py"
+: 1705805862:0;find -type f | grep *py
+: 1705806035:0;find -type f | grep puml | realpath
+: 1705806046:0;find -type f | grep puml | 
+: 1705806064:0;find -type f | grep puml | xclip
+: 1705806067:0;cd ./Torch_Code/Onnx_DataSet_C++/onnx/src/libs/DeepLearningDataSet/docs/PlantUMLCode.puml\
+
+: 1705806073:0;cd Torch_Code/Onnx_DataSet_C++/onnx/src/libs/DeepLearningDataSet/docs/PlantUMLCode.puml\
+
+: 1705806083:0;cd Torch_Code/Onnx_DataSet_C++/onnx/src/libs/DeepLearningDataSet/docs/
+: 1705806095:0;cat PlantUMLCode.puml
+: 1705806101:0;cat PlantUMLCode.puml | xclip
+: 1705808752:0;find -type f | grep puml
+: 1705808757:0;find -type f | grep UML
+: 1705808767:0;find -type f | grep uml
+: 1705808776:0;find -type f | grep JS
+: 1705808813:0;code ./Misc/TargetClassification/JSGrafanaScriptCreator/ConvertCSVToPlotlyJS_Verbose.py
+: 1705816133:0;dconf dump / > OneDrive/Misc/linux_config/gnome/gnome-settings-1080.dconf
+: 1705816148:0;echo "dconf dump / > OneDrive/Misc/linux_config/gnome/gnome-settings-1080.dconf" > xclip
+: 1705816165:0;rm xclip
+: 1705816178:0;echo "dconf dump / > OneDrive/Misc/linux_config/gnome/gnome-settings-1080.dconf" | xclip
+: 1705816269:0;cd .local/share/gnome-shell/extensions
+: 1705816343:0;cd gnome/
+: 1705816358:0;mkdir extensions
+: 1705816399:0;cp *gnome-s* settings
+: 1705816413:0;rm *gnome-*
+: 1705816423:0;rm -r extensions
+: 1705816429:0;. temp
+: 1705816435:0;. temp.txt
+: 1705816447:0;. > temp.txt
+: 1705816455:0;echo > temp.txt
+: 1705816465:0;vim temp.txt
+: 1705816468:0;vi temp.txt
+: 1705816488:0;whereis vi
+: 1705816491:0;which vi
+: 1705816501:0;l /usr/bin/vi
+: 1705816509:0;l /usr/bin/ex
+: 1705816529:0;rm temp.txt
+: 1705816536:0;touch extensions.txt
+: 1705816587:0;vi extensions.txt
+: 1705816936:0;cat extensions.txt
+: 1705889752:0;python -v
+: 1705889769:0;python --version
+: 1705889813:0;which python
+: 1705889846:0;sudo rm -r .conda/envs/orange_env
+: 1705889875:0;mamba activate base
+: 1705889885:0;echo $PATH
+: 1705890087:0;mamba create -n orange_env
+: 1705890095:0;mamba deactivate; mamba activate orange_env
+: 1705890121:0;cd .conda/envs/orange_env
+: 1705890124:0;cd conda-meta
+: 1705890156:0;mamba deactivate
+: 1705890348:0;mamba install -c conda-forge orange3
+: 1705897068:0;ls -r
+: 1705897149:0;l /home/jmogainz/.config/onedrive
+: 1705897170:0;cd /home/jmogainz/.config/onedrive
+: 1705897173:0;code sync_list
+: 1705897269:0;mkdir OMSCSSpring2024
+: 1705897335:0;vi sync_list
+: 1705897406:0;mkdir SWArch&Design
+: 1705897433:0;mv SWArch SWArchDesign
+: 1705897496:0;mv SWArchDesign SoftwareArch
+: 1705897516:0;mv SoftwareArch SWArchitecture
+: 1705897534:0;mv SWArchitecture SWArchDesign
+: 1705897644:0;du -h daily+and+sports+activities.zip
+: 1705897651:0;unzip daily+and+sports+activities.zip
+: 1705897741:0;exiftool data
+: 1705897817:0;l data
+: 1705897828:0;l data/a01/p1/s01.txt
+: 1705897844:0;code data/a01/p1/s01.txt
+: 1705897870:0;mkdir data_for_school
+: 1705897872:0;cd data_for_school
+: 1705897887:0;cp -r ../Downloads/data .
+: 1705897917:0;sudo rm -r data_for_school
+: 1705898006:0;sudo rm -r data
+: 1705898184:0;l daily+and+sports+activities.zip
+: 1705898193:0;stat -h daily+and+sports+activities.zip
+: 1705898197:0;stat daily+and+sports+activities.zip
+: 1705898206:0;user
+: 1705898232:0;unzip -l daily+and+sports+activities.zip
+: 1705898371:0;unzip daily+and+sports+activities.zip -d daily_sports_activites_data
+: 1705898418:0;code daily_sports_activites_data/data/a01/p1/s35.txt
+: 1706058655:0;cd OneDrive/OMSCSSpring2024/SWArchDesign/
+: 1706058662:0;mkdir A1
+: 1706058665:0;cd A1
+: 1706058862:0;realpath daily_sports_activites_data | xclip
+: 1706058887:0;cd daily_sports_activites_data
+: 1706058900:0;cd data
+: 1706058971:0;cd a01
+: 1706058974:0;cd p1
+: 1706058988:0;head -n 5 s01.txt
+: 1706059023:0;head -n 5 ../../../data/a02/p1/s02.txt
+: 1706059061:0;head -n 5 ../../../data/a02/p1/s01.txt
+: 1706059081:0;head -n 5 ../../../data/a02/p2/s01.txt
+: 1706059092:0;head -n 5 ../../../data/a02/p3/s01.txt
+: 1706059104:0;head -n 5 ../../../data/a02/p4/s01.txt
+: 1706059120:0;head -n 5 ../../../data/a02/p5/s01.txt
+: 1706059547:0;wc s01.txt -l
+: 1706059558:0;wc -l s01.txt
+: 1706059561:0;wc -l s02.txt
+: 1706059565:0;wc -l s03.txt
+: 1706059573:0;wc s01.txt
+: 1706059597:0;125 * 65
+: 1706059599:0;python 
+: 1706059665:0;code s01.txt
+: 1706059691:0;300 / 60
+: 1706060965:0;du -h data
+: 1706060975:0;ncdu -h
+: 1706062228:0;du -h 5_daily_activities_and_sports.csv
+: 1706062251:0;wc -l 5_daily_activities_and_sports.csv
+: 1706062475:0;python dataset_light_preprocessing.py
+: 1706064730:0;wc -l 5_daily_activities_and_sports_temporal_features_dimensionality_reduced.csv
+: 1706077614:0;python dataset_basic_prep.py
+: 1706153683:0;cd Pictures
+: 1706153685:0;cd Screenshots
+: 1706153689:0;l -tr
+: 1706153715:0;gthumb Screenshot\ from\ 2024-01-24\ 21-33-56.png
+: 1706168745:0;cat dev_setup.sh
+: 1706168760:0;yay -Q teams
+: 1706168763:0;yay -Q
+: 1706168765:0;yay -Qm
+: 1706168773:0;yay -S teams
+: 1706172709:0;['T_xacc', 'T_yacc', 'T_zacc'],
+: 1706172711:0;/home/jmogainz/.conda/envs/gen_env/bin/python
+: 1706173127:0;du -h 10_daily_activities_and_sports_temporal_features_dimensionality_reduced.csv
+: 1706173139:0;du -h 10_daily_activities_and_sports_large.csv
+: 1706174337:0;sudo systemctl stop --user onedrive.service
+: 1706174578:0;sudo systemct start --user OneDrive
+: 1706174666:0;sudo .config/onedrive
+: 1706174682:0;code config
+: 1706174966:0;hostname
+: 1706175776:0;onedrive --monitor --upload-only
+: 1706175808:0;systemctl start --user onedrive
+: 1706175832:0;cd /etc/systemd/user/default.target.wants
+: 1706175840:0;cd sockets.target.wants
+: 1706175853:0;cd system
+: 1706175876:0;cd /home/jmogainz
+: 1706175916:0;cd /usr/lib/systemd/user/
+: 1706175921:0;code onedrive.service
+: 1706176015:0;systemctl stop --user onedrive
+: 1706176023:0;systemctl disable --user onedrive
+: 1706178713:0;du -h 10_daily_activities_and_sports_temporal_features.csv
+: 1706388615:0;cd /usr/lib/systemd/user
+: 1706388786:0;vi onedrive.service
+: 1706388791:0;sudo vi onedrive.service
+: 1706388808:0;cat onedrive.service
+: 1706388815:0;l onedrive.service
+: 1706388828:0;systemctl --user daemon-reload
+: 1706388850:0;systemctl disable --user onedrive.service 
+: 1706388854:0;systemctl enable --user onedrive
+: 1706389120:0;lspci -k | grep -A 2 -E "(VGA|3D)"\
+
+: 1706390386:0;nvidia-settings
+: 1706393582:0;nvidia-smi --query-compute-apps=used_memory --format=csv
+: 1706393590:0;l | grep csv
+: 1706393648:0;find -type file -name "*.csv"
+: 1706393659:0;find -type f -name "*.csv"
+: 1706393678:0;find . -type f -name "*.csv"
+: 1706393915:0;bottom
+: 1706393923:0;ps -aux
+: 1706393970:0;xrandr --query
+: 1706394068:0;lsmod | grep -e nvidia -e nouveau -e i915\
+
+: 1706394625:0;dmesg
+: 1706394631:0;sudo mesg
+: 1706394640:0;sudo dmesg 
+: 1706394690:0;sudo dmesg | xclip
+: 1706395143:0;sudo dmesg | grep HDMI
+: 1706422002:0;jkhg.kjgh.,jjklhk;hjjfdghgsdfhgsw46326432645326532]-089]-09=-890lk'j'oi;bnuy;oiyn;oiybyjtecxtexthr k      kghjkljh ; ;h khj,;n;
+: 1706423704:0;cd ../.config/onedrive
+: 1706423709:0;less config
+: 1706429145:0;cd OneDrive/Misc/linux_config/gnome
+: 1706429149:0;cd setting
+: 1706429193:0;dconf load / < gnome-settings-2K.dconf
+: 1706429209:0;dconf load / < gnome-settings-1080.dconf
+: 1706429844:0;cd OneDrive/Misc/linux_config/gnome/settings
+: 1706429919:0;cd .zshrc
+: 1706429973:0;vi .zshrc
+: 1706430071:0;m linux_config linux_config_bkp
+: 1706430076:0;mv linux_config linux_config_bkp
+: 1706430105:0;git clone https://github.com/jmogainz/linux_config.git
+: 1706430267:0;mv linux_config_bkp/gnome/settings/gnome-settings-home-dei.dconf linux_config/gnome/settings/
+: 1706430330:0;sudo rm -r linux_config_bkp
+: 1706430446:0;chsh -s /bin/bash
+: 1706430565:0;echo $SHELL
+: 1706430675:0;chsh -s /bin/zsh
+: 1706430691:0;zsh
+: 1706430707:0;exec
+: 1706431014:0;less .zshrc
+: 1706474677:0;cd OneDrive/Misc/linux_config/gnome/settings/
+: 1706474739:0;mv Obsidian Obsidian_bkp
+: 1706474764:0;git clone https://github.com/jmogainz/Obsidian.git
+: 1706474938:0;mv Obsidian_bkp/Work Obsidian/
+: 1706474966:0;which mv
+: 1706474973:0;l /usr/bin/mv
+: 1706475063:0;cp -r Obsidian_bkp/Work Obsidian/
+: 1706475107:0;sudo rm - Obsidian_bkp
+: 1706475123:0;sudo rm -r Obsidian_bkp
+: 1706479211:0;cd OneDrive/OMSCSSpring2024/SWArchDesign/A1
+: 1706479363:0;wc -l 10_daily_activities_and_sports_temporal_features_2_seconds.csv
+: 1706479372:0;wc -l 10_daily_activities_and_sports_temporal_features.csv
+: 1706479419:0;cd OMSCSSpring2024/SWArchDesign/A1
+: 1706479642:0;ooooooooo
+: 1706479661:0;conda activate gen_env
+: 1706479850:0;wc -l 10_daily_activities_and_sports_large.csv
+: 1706480026:0;mamba activate orange_env
+: 1706480029:0;orange-canvas
+: 1706498235:0;python dataset_temporal_ml_preprocessing.py
+: 1706504025:0;sudo pacman -S chromium
+: 1706504045:0;chromium
+: 1706670777:0;source activate
+: 1706670777:0;conda activate BAPhotoCreatorEnv
+: 1706678531:0;git clone https://github.com/mstorsjo/msvc-wine.git
+: 1706678626:0;clare
+: 1706678630:0;cleare
+: 1706678634:0;clar
+: 1706678647:0;clea
+: 1706678693:0;cd /home/jmogainz/OneDrive/Misc/linux_config/
+: 1706678702:0;code docker.sh
+: 1706678796:0;sudo chmod +x docker.sh
+: 1706678820:0;sudo ./docker.sh
+: 1706678907:0;git commit -m "Fixed docker.sh"
+: 1706678962:0;cd OneDrive/Misc/Obsidian/
+: 1706679532:0;git rm -r --cached .obsidian
+: 1706679851:0;git rm -r --cached **/.obsidian
+: 1706679857:0;git rm -r --cached Work/.obsidian
+: 1706679870:0;git rm -r --cached Bible/.obsidian/
+: 1706679887:0;git commit -m "Removed more obsidian folders"
+: 1706679925:0;./docker.sh
+: 1706680111:0;docker
+: 1706680251:0;group
+: 1706680297:0;su jmogain
+: 1706680301:0;su jmogaiz
+: 1706680517:0;systemctl --status docker
+: 1706680568:0;systemctl enabl docker
+: 1706680572:0;systemctl enable docker
+: 1706680729:0;git commit -m "Updated docker.sh"
+: 1706680817:0;docker build
+: 1706680832:0;docker build --help
+: 1706680926:0;cd msvc-wine
+: 1706681578:0;docker tag 485318ef63fc msvc-wine
+: 1706681755:0;whoami
+: 1706681919:0;systemctl status docker
+: 1706681989:0;mkdir test_msvc_win
+: 1706682025:0;cd te
+: 1706682029:0;cd test_msvc_win/
+: 1706682100:0;code .		
+: 1706682343:0;git commit -m "Updated for cmake"
+: 1706682573:0;git commit -m "Updated pat"
+: 1706682767:0;cat .ssh/id_ed25519.pub | xclip
+: 1706682909:0;git remote set-url git@github.com:jmogainz/Obsidian.git
+: 1706682916:0;git remote set-url origin git@github.com:jmogainz/Obsidian.git
+: 1706682954:0;git push -d main
+: 1706682960:0;git push -d origin main
+: 1706682979:0;git branch -d main
+: 1706682983:0;git branch -D main
+: 1706683019:0;git config --global pager.branch false
+: 1706683022:0;git branch
+: 1706683042:0;git rm -r Work/config.md
+: 1706683060:0;git rm Work/config.md
+: 1706683102:0;git checkout master
+: 1706683142:0;git remote set-url origin git@github.com:jmogainz/linux_config.git
+: 1706683182:0;git show b17d064
+: 1706683206:0;sudo pacman -S cmake
+: 1706683214:0;cmake
+: 1706683217:0;cmake --version
+: 1706683531:0;yay -S visual-studio-code-bin
+: 1706683635:0;cd OneDrive/Misc/test_msvc_win
+: 1706683783:0;cmake -DCMAKE_BUILD_TYPE=Release ..
+: 1706683847:0;../install/bin/helloworld
+: 1706684153:0;docker run -it /bin/bash msvc-wine:latest
+: 1706684252:0;docker run -it msvc-wine:latest /bin/bash\
+
+: 1706684379:0;lsdisk
+: 1706684482:0;docker run -it -v /home/jmoore2/OneDrive/Misc/test_msvc_win msvc-wine:latest /bin/bash\
+
+: 1706684514:0;docker run -it -v /home/jmoore2/OneDrive/Misc/test_msvc_win:/test_msvc_win msvc-wine:latest /bin/bash\
+
+: 1706684539:0;docker run -it -v /home/jmoore2/OneDrive/Misc/test_msvc_win/:/test_msvc_win msvc-wine:latest /bin/bash\
+
+: 1706684739:0;sudo rm -r jmoore2
+: 1706684761:0;docker run -d -v /home/jmogainz/OneDrive/Misc/test_msvc_win/:/test_msvc_win msvc-wine:latest\
+
+: 1706684800:0;docker run -it -d -v /home/jmogainz/OneDrive/Misc/test_msvc_win/:/test_msvc_win msvc-wine:latest /bin/bash\
+
+: 1706684835:0;docker run -it -v /home/jmogainz/OneDrive/Misc/test_msvc_win/:/test_msvc_win msvc-wine:latest /bin/bash\
+
+: 1706687552:0;rm -r *
+: 1706687746:0;cmake -DCMAKE_CXX_FLAGS=-Wall
+: 1706687752:0;cmake -DCMAKE_CXX_FLAGS=-Wall ..
+: 1706687755:0;cmake --build . --parallel 8 --target install
+: 1706977980:0;cd ../Obsidian
+: 1706979150:0;cd OneDrive/Misc/BeforeAfterPhotoCreatorApp
+: 1706979173:0;sudo python app.py
+: 1706981098:0;ssh-keygen
+: 1706981146:0;cat .ssh/gatech.pub | xclip
+: 1706981207:0;cd OMSCSSpring2024/SWArchDesign/
+: 1706981209:0;mkdir A2
+: 1706981495:0;https://github.gatech.edu/hmelendez8/CS6310-Team24.git
+: 1706981618:0;git clone git@github.gatech.edu:hmelendez8/CS6310-Team24.git
+: 1706982163:0;cd ../Misc
+: 1706982167:0;cd linux_confi
+: 1706982561:0;firefox SWEBOKv3.pdf
+: 1706982686:0;id
+: 1706982700:0;users
+: 1706982734:0;less /etc/systemd/user/onedrive.service
+: 1706982762:0;less /usr/lib/systemd/user/onedrive.service
+: 1706982850:0;sudo nano /etc/systemd/system/before_after_creator.service
+: 1706982942:0;code /etc/systemd/system/before_after_creator.service
+: 1706983039:0;cd -8
+: 1706983043:0;cd ../BeforeAfterPhotoCreatorApp
+: 1706983049:0;realpath . | xclip
+: 1706983251:0;cat app.py
+: 1706983256:0;cat app.py | xclip
+: 1706983649:0;sudo systemctl daemon-reload
+: 1706983662:0;sudo systemctl enable before_after_creator.service
+: 1706988732:0;cd -6 ]
+: 1706988734:0;cd -6 
+: 1706989354:0;sudo pacman -S jdk-openjdk
+: 1706989631:0;javac
+: 1706989647:0;sudo reboo
+: 1706990073:0;groups
+: 1706990088:0;docker iamges
+: 1706990205:0;docker build .
+: 1706990311:0;docker run -d -v .:CS6310-Team24 openjdk:22-slim
+: 1706990326:0;docker run -d -v .:/CS6310-Team24 openjdk:22-slim
+: 1706990642:0;git blame cs6310/CommandProcessor.java
+: 1706990975:0;cd .config/Code
+: 1706990982:0;cd User
+: 1706990990:0;code keybindings.json
+: 1706991909:0;sudo rm Main.class
+: 1706991915:0;sudo rm cs6310/CommandProcessor.class
+: 1707010480:0;docker rmi 4853
+: 1707010484:0;docker imaes
+: 1707010501:0;docker rmi e9840 1d61e
+: 1707010813:0;docker run -it -v .:/CS6310-Team24 openjdk:22-slim /bin/bash
+: 1707010841:0;docker run -it -d -v .:/CS6310-Team24 openjdk:22-slim /bin/bash
+: 1707010880:0;docker p
+: 1707010881:0;docker ps
+: 1707026791:0;git checkout -b jacob-temp-design-branch
+: 1707043676:0;git commit -m "Initial docs commit. Also I think the CommandProcessor was broken? Maybe..."
+: 1707043720:0;git credential-cache exit
+: 1707043773:0;cd OneDrive/OMSCSSpring2024/SWArchDesign/A2
+: 1707043803:0;git checkout mai
+: 1707043870:0;git push --set-upstream origin jacob-temp-design-branch
+: 1707043895:0;git diff main jacob-temp-design-branch
+: 1707043967:0;du -h
+: 1707089802:0;cd s
+: 1707110549:0;git commit -m "Changes to full class UML"
+: 1707111977:0;exi
+: 1707112131:0;sudo pacman -S inkspace
+: 1707112141:0;sudo pacman -S inkscape
+: 1707112270:0;inkscape OneDrive/OMSCSSpring2024/SWArchDesign/A2/CS6310-Team24/pokemonClassUML.svg --export-filename=temp.pdf
+: 1707112407:0;wget http://www.plantuml.com/plantuml/dpng/hLVVRngx4dxVlyBAVIXf0_rnfViG8L8AwGqg-I6WwaDLLMPts7NnsdliMHhQq__zsCjYrfWGjJayD7JyVT-CnpDZyrOZLLZcF7hvB1fA8aj52hc4N0gIqHKGb6GE95PIQnBBlA38vXp8TuOPaPZ13ZwdY6P5hpL2hY-YQIPBdX23MLz4VQtBd8cKQDcnduLKHCZldIYQIWjnAamJ1RgGGbT-B8xBDBNKf5JcJ-tdWimoYYIHe8qG4WsG4yNIp7ujgAB8Z9fScA1534fe4xA6JZHh-DAR2ESGk6IeYVnk44WHpWWLrJxyBGRq86ApkqysIAQzBHOqNj8KYA0vN4JHivTHf9TCsA1pmfa0N1T0fC9CDXO6d6hTHrHiNYACpBQcx0UGLr6qrOlr__xx-jNv-LtjvsSK4VE9BP7iZAJ-j6tE4d9EHW8X1TLOoEdz5SCxoGJgWu2uL0e47WSLIgHcOMAo9_E6NIuM83HRmNJ9EBVSCTFOlVNClGOXWOE48Jn4u5IZMxsMAp0K7nqvz8lwL5koAAG0WGPxE_y6CPwHXEOsiMvpf-RhIhB4aV-ppMlBp-Lf0w411tlfQcNRRw6spxoczx_BKf0oZQ3yVBQq_TUWVVCH_X0Eydrpm6yJf4iOLebhXVaBqBGe-7gyVruXyt0PPbBg3U4We6xHFg9faGeobv835O66oueJy_CK4FnmJ_t4-8GKSDC3GP2_3dJekweQ1r9ef09r1VZPgDQVneui_aMciydjpV-_pgucbzEhs_7GQ3E1Xv2VBliVZk9ynVvirXzy-3eUVRWSZwvkRuymtlN7_Pl1vV0u9upc2Dvb1KIPRvCoDLpmKr57w_wx3SKPh9_TARIRyqIMTb9Zfa1dadlbM9NAc2s1iqpAv9302o-gLix4RAjqNckV1KBLzauR6YdWTODfQwCc-w2-BsI03wSs0GHbue5DPDKbk5KrD2_kPgg5HAWlJxa8KVPpQKzZHNa9cb059WA6Z7Bs0n9IQdilnzkI9GibtScHlNhkECNtKX6uftbXqbKVfb427HOs5Sc3jRdH0v5KcsZsaz_0tiKdQ6vdonIL2Nnd3-PzyvRmvLgUn1dXi0BkpNz7h5vD2cQoLRsNmX5yR2WCuGytCO6aZ959SNWtJlVfk_6bZkxcNSddLDDIUHFDMH-yHDkDSckvIoIG7sHKvLGauEixyvCTJFygcK8EJNbdVAhu7LlIE2izxThsP6bUfaniExBRlRn7K8BoNi_pvi42dqzzC1qUDfvFvsEMCLt7RhvGKd0QWnsJeAe7jh5KlEsRkkEOrtHjFTG_NZ8W0cBGcghrPa2fCaQfD34YEM0c4zqX1qQ8ozNVxVQkGCCbLrlXcYkCSAK-Lc-Xq-bvazTaxgGQXxqJ3tVo-eGyDnedhpgTvoVxKywGCleOPmWFS1p91U6Y2XucpVZCoJA1e1Oq1ZBoVshyKRaOGUzHz9xQKrixoHImNXbLuSJGgl0t_XpRAs7dkQ7lxostPpdQRYKoxlmBjjkLAr2A9M1QHvLYrtEFAnOAq4scje-xfeAcTfeUD4Tr66mhKyksuitVCHExNNijroQPMUVWHTEgc-Rru43AwhKtRksuy1Hm2f1ibSE41uo9aLz1WtGyXou9Bd42xd6pCcrwSrdIW3SUv4XK1gwgU1helNMfKYhOZnhnx-IE9jzANINkJkewqWDfs2ouZMzTkpBsxMzykqa4KeMUx3FoqNPiKiPBWkl215Pxci22G_LS-8YCQzTdJAoC-7KrA5jo_ctNk_NqtCy0LSQ0e6Rh0hHPg5BHlUXz_d96g4gr4_ZyvNG_tbW1HJZQq4_JjzYHVM_c852xDjzucib11l6oeNb6t51hMFrVaKxtYkgwlWQxQoPK3ZMgOva0fpRxEcE5hjwx0weI9YXdk8wE3YattCtVnuPFSzG_0Wra_NuCjO9rTtMuyTsuCXwcR2nDQBIdqk6mm9suXHOIGI2ZdA_hCd9EGg9xS_mktL3t6iNRKO1sLw63TRkgD8voi3-bM4AjKAzdsMz196NE_m40
+: 1707112421:0;sudo rm temp.pdf
+: 1707112431:0;mv hLVVRngx4dxVlyBAVIXf0_rnfViG8L8AwGqg-I6WwaDLLMPts7NnsdliMHhQq__zsCjYrfWGjJayD7JyVT-CnpDZyrOZLLZcF7hvB1fA8aj52hc4N0gIqHKGb6GE95PIQnBBlA38vXp8TuOPaPZ13ZwdY6P5hpL2hY-YQIPBdX23MLz4VQtBd8cKQDcnduLKHCZldIYQIWjnAamJ1RgGGbT-B8xBDBNKf5JcJ-tdWimo temp.pdf
+: 1707112457:0;mv temp.pdf temp.png
+: 1707112465:0;firefox temp.png
+: 1707112559:0;inkscape temp.png --export-pdf=temp.pdf
+: 1707112577:0;firefox temp.pdf
+: 1707112675:0;code OneDrive/Misc/linux_config/dev_setup.sh
+: 1707112710:0;cd OneDrive/Misc/linux_config/
+: 1707112725:0;git commit -m "Updates"
+: 1707112868:0;mv ~/temp.pdf ../pokemonClassUML.pdf
+: 1707113088:0;git commit -m "pdf added for overall class diagram...temporary will iterate on it as we code"
+: 1707113718:0;wget http://www.plantuml.com/plantuml/dpng/fLTVSzg-4dttfz3aFfIq2VrpP-v3XY6baDum9NycqEb3fzCHzcAho9AljAQXlVtkFydOmaA4JWiF3Tqzv-ngjLg9jngfmZBdqSjdqKWIMIfIo2NaKf2Che2W97CWiP9QarZc1KKsvq2-Cyo8n0osy3b5D1wzrWYvleoccInvGWncVHaDj2vp9bAYPTT-5b8H8RztesWgBSIfC4qKw48ANSMnE2xJr5AJKfa_TPnBCiieaaI2Da98D41E54ip-xMWYY8pQd9XaXOnAA5DoXgwqQmLIsyod4CGag4cyhj184Ku8rHKw_2N6D23ZCtgFjaacVQMMD1uILCWWkPm6KNFNaQHNZ9Xayu9Pm9mNG2H2ZFPSWmvrNg0gDYyH1YRPKtP3o2legZHY_L__ltwrSN5VHtdPnGHyuajaMoDfFwSsvebv8AC1K8AgkN8wUCrmtl91EgzWBXK2WGU1XLAfCRnOAedyvPTBXOWD5l1TCaujzm9qzYxyypz5Y61lOGHF4NWLAFptiWL68gFZXpwHRsh7LaKKe10WxsRVuCOpqX2SrjOjxXJytKbMUB8_shgsl5hUTf2QC3XJhawMVCjrFQPD_JnJraAKgOHb5_FZhR_6hHlFi0VmLw-PmxvvmJf4aPLuJfX_G8qBGg-dkpkLyZStuQPb7f3s0keZ-W0qHoH2ZANaWCLWOQhYXFpwnGG_7HF_SBuX1HmSmQ297_jEQ7lgcuSIg6H2jGLu6UhMtyQExBu5vdE7kvk__jrTlrmDRs-cuoCDXEu3_dfQl3XCCvJ7CncW-67hvFnXwl9-FhkxW3ZtM0ok1rUZGvpmcmEu5rLG9HvKvIfuO9VYZhRvhyk5MUmSRQxSDwU9xAqanep1JgJt6l7gbKcR0cSPL8c-mHUU5brSYPcZT95hNqM25NBEsrff80tBQRfZORiWmQ-a04-NTe449J91pQPLPTWesfeNjxjKWk9K5-USX6YxEVAxiQAyX8qeGfC1WmPvUm79AJKzbwEcvOb2oNTpf6TVkuwnVTI4NYaUM7ALM-cKG8TDZOLoPEzkT43aLIBQ9yd_m1x5v-zUKqvfgXCubjxCE_RjuGlr_4apWY75N1l_ZjYzMfIC9ETwhqKZk13Gs44Vxc81qZA69aK-rVZT8zVZIzrS3NlIZwdcfRAcsZE-kGbUjvgjuvtYNZomuogd8e4V7rdFZh0z7ybKyYXBU-CnuhVioMDizBJhcr7I_CoPQ8vaRtUrIE24fJt-ruq3nR6FFB1j7_OU35TZ5d6T9sx-K99mMaCTao2gXxOrc9vpPkwwvWtT6qZr3zUCY02Oj2QglLcGAaoHgaqCI8vO2OJtILxHeYhrV_FpxSD6hfSRuK-rnYXfzvMpz7jzht9QoftKet3_ec7EtbzGfuRZPDNtUxpazqfPqWP_Hrd14zm7CabuR8A7YRj_CpECe6W5ZG6ClP_QlnLknX1xr7qdjfTMpl95B3sZAjqOkXK-5j_Zksqi8lSqlVNbjkz73TBYKmu_uBjzUGAb689cAEZIj7nCZwiM2X0DvdEVTmD5JIrqtIlEQhJO8rCBTk9DtydJ6nNxJBQXCcCduENJQS-DA-7UqfM-zuuts7XAU0K86cKWuA7Z0SZlu8MwN0DNH5SuGGyuiOpzQBLxast6VC6qzHE0zvwn0Ev6hYgicoXT_nIfLIm7pNYs8hMAI9LM0lkb8uctqfTLVfUQW_ZrMtZS9Lgid9zxzlV-FOw0K_s6VbeZtXInak2wyBaN4TwW0M7wdtn4HdNxc0oiJBYDzLaxSZvj-rXhyVjRd6eCWO4DLiNe8sZgbBlil_voncXAjLEuFENqzryOmKKuU04E4xVOiVsWPg3GEtcmYRIJ0upY9SjpJFYfc3Bwl_iTBhNLDUjDzpUIw5og55jomDmQgklCrRewe4yf2fXWdA6w-ZWL7EtWVdxssdLkXj-0mra_GCSQ8L-TzUuUT--OvwaR2njQBIZqkMmmAsuXHOIGI2ZdA_hDd91Gg9xfFmftL1t3egteW3jxau7w_LKQGBbO7zxiOHQeNxVij-2ICgS_mC0 pokemonClassUML.png
+: 1707113750:0;wget http://www.plantuml.com/plantuml/dpng/fLTVSzg-4dttfz3aFfIq2VrpP-v3XY6baDum9NycqEb3fzCHzcAho9AljAQXlVtkFydOmaA4JWiF3Tqzv-ngjLg9jngfmZBdqSjdqKWIMIfIo2NaKf2Che2W97CWiP9QarZc1KKsvq2-Cyo8n0osy3b5D1wzrWYvleoccInvGWncVHaDj2vp9bAYPTT-5b8H8RztesWgBSIfC4qKw48ANSMnE2xJr5AJKfa_TPnBCiieaaI2Da98D41E54ip-xMWYY8pQd9XaXOnAA5DoXgwqQmLIsyod4CGag4cyhj184Ku8rHKw_2N6D23ZCtgFjaacVQMMD1uILCWWkPm6KNFNaQHNZ9Xayu9Pm9mNG2H2ZFPSWmvrNg0gDYyH1YRPKtP3o2legZHY_L__ltwrSN5VHtdPnGHyuajaMoDfFwSsvebv8AC1K8AgkN8wUCrmtl91EgzWBXK2WGU1XLAfCRnOAedyvPTBXOWD5l1TCaujzm9qzYxyypz5Y61lOGHF4NWLAFptiWL68gFZXpwHRsh7LaKKe10WxsRVuCOpqX2SrjOjxXJytKbMUB8_shgsl5hUTf2QC3XJhawMVCjrFQPD_JnJraAKgOHb5_FZhR_6hHlFi0VmLw-PmxvvmJf4aPLuJfX_G8qBGg-dkpkLyZStuQPb7f3s0keZ-W0qHoH2ZANaWCLWOQhYXFpwnGG_7HF_SBuX1HmSmQ297_jEQ7lgcuSIg6H2jGLu6UhMtyQExBu5vdE7kvk__jrTlrmDRs-cuoCDXEu3_dfQl3XCCvJ7CncW-67hvFnXwl9-FhkxW3ZtM0ok1rUZGvpmcmEu5rLG9HvKvIfuO9VYZhRvhyk5MUmSRQxSDwU9xAqanep1JgJt6l7gbKcR0cSPL8c-mHUU5brSYPcZT95hNqM25NBEsrff80tBQRfZORiWmQ-a04-NTe449J91pQPLPTWesfeNjxjKWk9K5-USX6YxEVAxiQAyX8qeGfC1WmPvUm79AJKzbwEcvOb2oNTpf6TVkuwnVTI4NYaUM7ALM-cKG8TDZOLoPEzkT43aLIBQ9yd_m1x5v-zUKqvfgXCubjxCE_RjuGlr_4apWY75N1l_ZjYzMfIC9ETwhqKZk13Gs44Vxc81qZA69aK-rVZT8zVZIzrS3NlIZwdcfRAcsZE-kGbUjvgjuvtYNZomuogd8e4V7rdFZh0z7ybKyYXBU-CnuhVioMDizBJhcr7I_CoPQ8vaRtUrIE24fJt-ruq3nR6FFB1j7_OU35TZ5d6T9sx-K99mMaCTao2gXxOrc9vpPkwwvWtT6qZr3zUCY02Oj2QglLcGAaoHgaqCI8vO2OJtILxHeYhrV_FpxSD6hfSRuK-rnYXfzvMpz7jzht9QoftKet3_ec7EtbzGfuRZPDNtUxpazqfPqWP_Hrd14zm7CabuR8A7YRj_CpECe6W5ZG6ClP_QlnLknX1xr7qdjfTMpl95B3sZAjqOkXK-5j_Zksqi8lSqlVNbjkz73TBYKmu_uBjzUGAb689cAEZIj7nCZwiM2X0DvdEVTmD5JIrqtIlEQhJO8rCBTk9DtydJ6nNxJBQXCcCduENJQS-DA-7UqfM-zuuts7XAU0K86cKWuA7Z0SZlu8MwN0DNH5SuGGyuiOpzQBLxast6VC6qzHE0zvwn0Ev6hYgicoXT_nIfLIm7pNYs8hMAI9LM0lkb8uctqfTLVfUQW_ZrMtZS9Lgid9zxzlV-FOw0K_s6VbeZtXInak2wyBaN4TwW0M7wdtn4HdNxc0oiJBYDzLaxSZvj-rXhyVjRd6eCWO4DLiNe8sZgbBlil_voncXAjLEuFENqzryOmKKuU04E4xVOiVsWPg3GEtcmYRIJ0upY9SjpJFYfc3Bwl_iTBhNLDUjDzpUIw5og55jomDmQgklCrRewe4yf2fXWdA6w-ZWL7EtWVdxssdLkXj-0mra_GCSQ8L-TzUuUT--OvwaR2njQBIZqkMmmAsuXHOIGI2ZdA_hDd91Gg9xfFmftL1t3egteW3jxau7w_LKQGBbO7zxiOHQeNxVij-2ICgS_mC0 -d class.png
+: 1707113758:0;sudo rm fLTVSzg-4dttfz3aFfIq2VrpP-v3XY6baDum9NycqEb3fzCHzcAho9AljAQXlVtkFydOmaA4JWiF3Tqzv-ngjLg9jngfmZBdqSjdqKWIMIfIo2NaKf2Che2W97CWiP9QarZc1KKsvq2-Cyo8n0osy3b5D1wzrWYvleoccInvGWncVHaDj2vp9bAYPTT-5b8H8RztesWgBSIfC4qKw48ANSMnE2xJr5AJKfa_TPnBCiie
+: 1707113779:0;mv fLTVSzg-4dttfz3aFfIq2VrpP-v3XY6baDum9NycqEb3fzCHzcAho9AljAQXlVtkFydOmaA4JWiF3Tqzv-ngjLg9jngfmZBdqSjdqKWIMIfIo2NaKf2Che2W97CWiP9QarZc1KKsvq2-Cyo8n0osy3b5D1wzrWYvleoccInvGWncVHaDj2vp9bAYPTT-5b8H8RztesWgBSIfC4qKw48ANSMnE2xJr5AJKfa_TPnBCiie.1 pokemonClassUML.png
+: 1707114001:0;wget http://www.plantuml.com/plantuml/dpng/fLTVRng_4dtVJs7bFfIqWVwvqds842c5z0QL_56WwaDLLMPtO5syzbvxbeRszhl_x6KnEooXQiD3GsVEEJCUZyVchKLkiCXazF9PDDHC5uRbUWcPLYpbAs2esGnORBIrBDPPpb7C9B3l0bEcCOKTVCOHdSUkBK9cBw99gWkPC8TPNqHzQujCg0MpkkC_SssOqjyxKJJH7X9KX6K6RAwLBUDudDIBXQScXN5_gZWNR9foP8a6wuIGMO2C6R58_TUS6ux2gUcvIrh5O9HrALleHDDQBBl9S0QDa08jqzyT0Zd26UEgN0TTOeFUoDYjxfDFKbYon9p7Ixu0fdW65r7qx6KKsQLGFkcCIQ40rpamRJ3LDST0SclxY4RC2eIHMzP4_03sAegsUh7zpxzVlpe_lwlY_8mYvZwn9xATaLMVjgzPmixPI24imDGS6N-u4dYdXK9x410Nne32uw3Sg8LptBlgwQncr_CvA2jMC5aAAJrtB2nsRucvLoCaS90mXCS8abiCtckz0aUXw2YWNrIxsj9vhXKeTDZRsJU8yOmbFFE53OixTLzNMYI1_AzjNLkqbgSrX0KSx9MhbPB24MtAlEOFVyeoi10MmT1wjgp_rw6f-GX_20VvnDpajndo9GpBmhKQzMkYUPxBzNX_lvhCmssOQcqtX8E0weZs4TqHAI4phILmrT08LGbYj4uD0attb1Q64XQ0cpFGIFBNWHFwhkp6WLOMkK9R0dxMklMdiwE8Vx79zFxsvhzVfrVtbvEhs_7GQGk5Xv2VBliVZkE8OdywxGy-V1sFFboEHrUtjqSOx_hZ_itWSdYSqypc23vK1LIHROioSLoWfQYo3V_TfX8CFivk5zhrUQ8BFwanDM1JBKaxbgqo5akG8jKwEIJmWcJLoeIQRfNEA-spXb2vlDEQnWBmkiRqlL6HAQXFXHpmyT8cW61SFh39hBm4jwgEHlAkbrffXEhorFCcodyk_Mwik2p0Ccx0PI1GS2b-GC8Aw-_bUDkoR6vqs3csry-TeFXU6mOFFCjTkQhDT4fWcutDLV9eRsxqG2Nb8khdYHvWSl4fdldPCa7Z4j_P6_E-VajGkHQHE6CILY39_0_4yjLaOAfRvNkfEOAF3OKX_EKYxY4fOXHQ7LvDq7twQgZKqTMyA-ICMruOCj62zT5Bj5rhjnQvH8Zy8EKcuoe1gX_CJmum-LyX34eWyblZKyNln9B7QK6qAzkJfMMn46fx8hlTomS4exZizKWq0cl6VEg3wU2m8J53Z6agR9Mx-y9PBdaCVao2yGziRobvspTr9p2l-Tf7g7wyfC0Kn60jD-lDW395ZDfOvaGom5GdjiCEZ91Gg_-tsxi6RRf2RpLzeJ6QdcfRYQFJwP79woftKex3tWd1dRm-OS-TnichJkVvoVwKSwIK_uupX4SuWHII25ar7YRr_DpE2eLWvZm6Dg8_DVwgNPmWUHIzvtxNra5o0LXvHcKwCRHA_0sTOtij72BNzSdQCh-Ne-rI8XUENh3Thbw1CI81TtHCeLeau-EAkG4CawbDSTTSyOMVfWVDKPM6sCfKigruytSir6xLvCYrMUhy4aWshUhGl1uSA5dbUnDynuKdW1E0PAlSB7Y3SU_aLr0Z7QzXA48ed887t7Wc9Dh6NNMRCsymszfPm1j2F9AhWvioonfwpw_DWYlneq8yjQ9LYiWDLe9xfUF9jyAMbRxJbc18tJQEKAbjLg7lgVqDjLS94DbdxAC_uaaHBnckSvTp5UaUvXBAzyL75DA6WodKoebVbvErfMVVTeUz6hVxnU766H3CT9s3TOwoIjsBtkSlPuoRXGq2dx-SxkSR6-08HoV0q_GzTkGVg1aej64kR29DzI25U5dJF6DX2jQiz6TdqBtYjcgzmUvUQYetDSfjkGV9VVLjAd9RFf07t2H2SIbm7HsTQk4sS7z_EwrgTyFle4rPUe2fLjDVtJLatjVkc0CK6dFZeL68M4V277SnF3BN20e5bt9TTLE8rII6jygVqXrrxxmq5aRGuGeDi6xN52vG1ludc4Yu5-hrFFijgAJ8v3y0
+: 1707114016:0;mv fLTVRng_4dtVJs7bFfIqWVwvqds842c5z0QL_56WwaDLLMPtO5syzbvxbeRszhl_x6KnEooXQiD3GsVEEJCUZyVchKLkiCXazF9PDDHC5uRbUWcPLYpbAs2esGnORBIrBDPPpb7C9B3l0bEcCOKTVCOHdSUkBK9cBw99gWkPC8TPNqHzQujCg0MpkkC_SssOqjyxKJJH7X9KX6K6RAwLBUDudDIBXQScXN5_gZWNR9fo pokemonClassUML.png
+: 1707115514:0;wget http://www.plantuml.com/plantuml/dpng/fLTBRziu4BxhLn3PGvqsSHyBx24mdBfskZ7gF12xsqDH5BGqbbXBf9OSEN6x_UzBFKIBfgAWjG-DE_Dztmo7mo7zLY6Lc2Mnz_APDn54P9AaOWs9u2IY6o0eo1A8BuLIn1T9If4jOo3t32CYC88TV4aHjKTj5KAYphrv9B8u81gpFVT6IcK9uo5Hefz_La8IBkxxdZSNESIeC4Kag5HmLSJ9SR48mvmQP5B_gUASaqL4aGG2b1P2eW0I8baOvLzJAdMUMasiTDBS1ycLJbb1triqOgaomoKu8Hag8kur0Yd22Q6yM8UzH8VkPAnNzobFaYbhYIdrrpG4mca2vvxtxANdgJNZUT89YHa7tAP0XCH8D1pZc2erGfHicI5CzRBcx3kGLvvNw_dghpzVlpexkwtY_F0yeZz-JYGx8wa-ftdD0d96fXmX1Dbm9FJXak6jO1nLAy3Ff0IEtQ1Kyb0xxdJrHDAmYzKATB4sC5-pECwvCwPmS6EPXmr20As42Jn6q2j6uxqI6z0K6-qPz8jgLtiYJGK7ZXfxi_m6FfwGW2PvOStYZlNNZM218VzHrxLdr_AuWL20uxrozQBwcwjjCw_emw-o98HC8KYxdZsL_wlHjhc3Fu5Mlcrs-AS4wHecHU5wRlqSD4tJU3lRto-NsTw6aH2g9BG2gYCwGjH7f80iXOY1SaV3LCM8sNLo27QwntPXR488M9u19ycVBIVqNT6DOy4LKewg0FneTEiFRKVc_oJpnTtDzTzV5vTt5_FBczb4QpEERSXF5wCFdJXRSRHOZCOVliwc7ovcqykRcmx6kz5iT3s-cBYSxcmwyAOgmBEaBifSSy4kHPLj_L-JYZ7aSNQxSDgS9oBB9pL64bGaOgiTYrQPiJN4B18YQ1DuOMNLInXVr4fdbVQ98rGixxYX4G9UDPYwDsgo3HhPGXhuU6a3G90w7oWpAox1MbNJhBoRfUO2eReynSf5vP-BV3SsDCv04If1Py2GqLXVGG79L7ul-tNBafKKPkV8NZ_tZU9x8Gayq2JLvQesKok1SXkRyk3HtYprW0V58fhdoJx0riMNtxow77EKEl6TtPdtpLl2bkjP4YSaXWt4RVF_HVbgah0GlUAzv8oMpg4mWTzSn1q4cOzCyDRL6Dt3LsDBTQ_cNHOlgQAPj2QQiJvwYPussgrdNIAM_3YYCg4y05lVc0yECFytOn9ZiEHhuw7YjsnD_IYpj2lRmT9n5Z9UdyZ1uE81GN8Q3uTMD0lcn3pmmTG-REoO9iOYOghANN-X98sf3_cO15ayiBMbuDLlwjrKkQBRF4BruoK2mi47fQZSbWDAPZuAgOWMIG0Z4QYs2M9AzT_fwQu_NPTfBTTd-iBrLBjgEVhzeJLuTU6EYcauFB9mHw-Fo7EjSVIgttz-j3_aD2cYJt4cy0Z7a4mI9YldNTBCJsyiumXoHNqWK-kNnkzrYnQqtaJlQRvfMoCP0bQUQP6E3xq2VssFiRqEDf4T_NfjIRwNqtefdWvdtw-3WTY0b2m0VN9andT7xcd5L0AQmNHguwuefs4-J5lDNfK6gsKgsPvV_fqnlbkroQWC4sb_35OslUhCl1wtbApolJ6-Rk4vu1mWg9NTWZkCEos_WGQfkuQc2APm71wmzCojQAMxwZPjBZ5rxHJWjKNio5N3PP5b0xtd5pAad7sl48TMj4eHgSHASAzqDFYMgQBIjq9P6AjkfSDKgixAzBrjVsFRgmGisMVaOtx4WynV4zocEkSgqXsiOYYU5n-HnSeSJCOtMlog6AmziVosE-pLjDql3fNQW20NsnIKTXHL6fmFFtyv8LI6oWXy_dAydwylWI9qJ813zNFiD7-V9i1HcRbGHbg8SGJ-kg5vGimKR5ZjNvr6zvAgglN6ksl9LNOrp6wN3ILm9cW0mSM33ocotTnzpDzIf-ETwBNuXyOiQEJa2dTWkiNBlj0fcQAsvTs9whMsKMVKOjyuZUsfaikumJl0LWvAqN0lMETLOgvW_VUfAw9v8Jy5TMNjgUbgsVxgWhSksTt5taQnOvOUAuejrezXXRiOEJ8L21mPZUDjTOHDB9TeteU_IjVKlI7bBCn2ctUBWGq6CjE14Y2RlDrfBZGS5elSLzRyzkDMo64anRqEwxM4xJnmEfEAsvfozqcnsJNzwS8OMETPQ8_o5dYG9V7_
+: 1707115532:0;mv fLTBRziu4BxhLn3PGvqsSHyBx24mdBfskZ7gF12xsqDH5BGqbbXBf9OSEN6x_UzBFKIBfgAWjG-DE_Dztmo7mo7zLY6Lc2Mnz_APDn54P9AaOWs9u2IY6o0eo1A8BuLIn1T9If4jOo3t32CYC88TV4aHjKTj5KAYphrv9B8u81gpFVT6IcK9uo5Hefz_La8IBkxxdZSNESIeC4Kag5HmLSJ9SR48mvmQP5B_gUASaqL4 pokemonClassUML.png
+: 1707115644:0;wget http://www.plantuml.com/plantuml/dsvg/fLTBRziu4BxhLn3PGvqsSHyBx24mdBfskZ7gF12xsqDH5BGqbbXBf9OSEN6x_UzBFKIBfgAWjG-DE_Dztmo7mo7zLY6Lc2Mnz_APDn54P9AaOWs9u2IY6o0eo1A8BuLIn1T9If4jOo3t32CYC88TV4aHjKTj5KAYphrv9B8u81gpFVT6IcK9uo5Hefz_La8IBkxxdZSNESIeC4Kag5HmLSJ9SR48mvmQP5B_gUASaqL4aGG2b1P2eW0I8baOvLzJAdMUMasiTDBS1ycLJbb1triqOgaomoKu8Hag8kur0Yd22Q6yM8UzH8VkPAnNzobFaYbhYIdrrpG4mca2vvxtxANdgJNZUT89YHa7tAP0XCH8D1pZc2erGfHicI5CzRBcx3kGLvvNw_dghpzVlpexkwtY_F0yeZz-JYGx8wa-ftdD0d96fXmX1Dbm9FJXak6jO1nLAy3Ff0IEtQ1Kyb0xxdJrHDAmYzKATB4sC5-pECwvCwPmS6EPXmr20As42Jn6q2j6uxqI6z0K6-qPz8jgLtiYJGK7ZXfxi_m6FfwGW2PvOStYZlNNZM218VzHrxLdr_AuWL20uxrozQBwcwjjCw_emw-o98HC8KYxdZsL_wlHjhc3Fu5Mlcrs-AS4wHecHU5wRlqSD4tJU3lRto-NsTw6aH2g9BG2gYCwGjH7f80iXOY1SaV3LCM8sNLo27QwntPXR488M9u19ycVBIVqNT6DOy4LKewg0FneTEiFRKVc_oJpnTtDzTzV5vTt5_FBczb4QpEERSXF5wCFdJXRSRHOZCOVliwc7ovcqykRcmx6kz5iT3s-cBYSxcmwyAOgmBEaBifSSy4kHPLj_L-JYZ7aSNQxSDgS9oBB9pL64bGaOgiTYrQPiJN4B18YQ1DuOMNLInXVr4fdbVQ98rGixxYX4G9UDPYwDsgo3HhPGXhuU6a3G90w7oWpAox1MbNJhBoRfUO2eReynSf5vP-BV3SsDCv04If1Py2GqLXVGG79L7ul-tNBafKKPkV8NZ_tZU9x8Gayq2JLvQesKok1SXkRyk3HtYprW0V58fhdoJx0riMNtxow77EKEl6TtPdtpLl2bkjP4YSaXWt4RVF_HVbgah0GlUAzv8oMpg4mWTzSn1q4cOzCyDRL6Dt3LsDBTQ_cNHOlgQAPj2QQiJvwYPussgrdNIAM_3YYCg4y05lVc0yECFytOn9ZiEHhuw7YjsnD_IYpj2lRmT9n5Z9UdyZ1uE81GN8Q3uTMD0lcn3pmmTG-REoO9iOYOghANN-X98sf3_cO15ayiBMbuDLlwjrKkQBRF4BruoK2mi47fQZSbWDAPZuAgOWMIG0Z4QYs2M9AzT_fwQu_NPTfBTTd-iBrLBjgEVhzeJLuTU6EYcauFB9mHw-Fo7EjSVIgttz-j3_aD2cYJt4cy0Z7a4mI9YldNTBCJsyiumXoHNqWK-kNnkzrYnQqtaJlQRvfMoCP0bQUQP6E3xq2VssFiRqEDf4T_NfjIRwNqtefdWvdtw-3WTY0b2m0VN9andT7xcd5L0AQmNHguwuefs4-J5lDNfK6gsKgsPvV_fqnlbkroQWC4sb_35OslUhCl1wtbApolJ6-Rk4vu1mWg9NTWZkCEos_WGQfkuQc2APm71wmzCojQAMxwZPjBZ5rxHJWjKNio5N3PP5b0xtd5pAad7sl48TMj4eHgSHASAzqDFYMgQBIjq9P6AjkfSDKgixAzBrjVsFRgmGisMVaOtx4WynV4zocEkSgqXsiOYYU5n-HnSeSJCOtMlog6AmziVosE-pLjDql3fNQW20NsnIKTXHL6fmFFtyv8LI6oWXy_dAydwylWI9qJ813zNFiD7-V9i1HcRbGHbg8SGJ-kg5vGimKR5ZjNvr6zvAgglN6ksl9LNOrp6wN3ILm9cW0mSM33ocotTnzpDzIf-ETwBNuXyOiQEJa2dTWkiNBlj0fcQAsvTs9whMsKMVKOjyuZUsfaikumJl0LWvAqN0lMETLOgvW_VUfAw9v8Jy5TMNjgUbgsVxgWhSksTt5taQnOvOUAuejrezXXRiOEJ8L21mPZUDjTOHDB9TeteU_IjVKlI7bBCn2ctUBWGq6CjE14Y2RlDrfBZGS5elSLzRyzkDMo64anRqEwxM4xJnmEfEAsvfozqcnsJNzwS8OMETPQ8_o5dYG9V7_
+: 1707115656:0;mv fLTBRziu4BxhLn3PGvqsSHyBx24mdBfskZ7gF12xsqDH5BGqbbXBf9OSEN6x_UzBFKIBfgAWjG-DE_Dztmo7mo7zLY6Lc2Mnz_APDn54P9AaOWs9u2IY6o0eo1A8BuLIn1T9If4jOo3t32CYC88TV4aHjKTj5KAYphrv9B8u81gpFVT6IcK9uo5Hefz_La8IBkxxdZSNESIeC4Kag5HmLSJ9SR48mvmQP5B_gUASaqL4 pokemonClassUML.svg
+: 1707115684:0;inkscape pokemonClassUML.svg --export-filename=pokemonClassUML.png
+: 1707115956:0;git commit -m "update of class uml"
+: 1707120014:0;mv tPLDJzmm48Rl_XLp0wGjOlUuQX4Vg2g7ggkcxQcNmPa4QnqxjIT5_FiwDXXIJBJTGwKs4Y8xUUVZVP9CpZoZuw7JqDijTTPKz6CW8-bAOUkm4m8bMmTVFJdH1wcIgaV3i4do2sJMT6cx3arzRPXSWv9sK_QEUAxgHpJObWNlurJtaqifgQHUbe8h8GwW8geXzUd8i1XjmflJUNThYB9hqmyCXtJS7Y_04_jGQx4y4hEv pokemonClassUML.png
+: 1707120022:0;inkscape pokemonClassUML.png --export-filename=pokemonClassUML.pdf
+: 1707120058:0;git reset --hard pokemonClassUML.pdf
+: 1707120088:0;git restore pokemonClassUML.png
+: 1707120094:0;git restore pokemonClassUML.pdf
+: 1707120104:0;wget http://www.plantuml.com/plantuml/dpng/tPLDJzmm48Rl_XLp0wGjOlUuQX4Vg2g7ggkcxQcNmPa4QnqxjIT5_FiwDXXIJBJTGwKs4Y8xUUVZVP9CpZoZuw7JqDijTTPKz6CW8-bAOUkm4m8bMmTVFJdH1wcIgaV3i4do2sJMT6cx3arzRPXSWv9sK_QEUAxgHpJObWNlurJtaqifgQHUbe8h8GwW8geXzUd8i1XjmflJUNThYB9hqmyCXtJS7Y_04_jGQx4y4hEviyKJa3Liq7juk21crMdQ4hKrP56fLDRjD515d50TgkRHAiWaF7gbRAWxObh3kTmQUwUfRYaL2TL6zfz3qazbsXZSdxmRon2C8_sFx1EcHEwFIQVSUgHzRHGhv95tIj-V-4rKBYu6VOCU1xVOg2tAs-6VnP_toHek7I7JOpW-xydkaPXAdoKlNwObK9dGJFBgjUGfrCBeAR26Yj7bxPV-JOTBiQGJuY3_VjZqGblRms1OQR0cpt7WuSC678KXoCE9W72WPb1DBfqaft020N4sbAC2qf7rKzldp2YtO1rSKKEcpd9ZcS2fzfR1Day9-GmaQZbePF9GOnTuV3VZ04DVnvYzCs62uz_RhvwzALVAznhluLooiWRGn7S5bL6c3RanbKnTCBqgcbw-QderlHVpfZKroNFMPtJxULxkuJdyFNjAFWqiRKUYUElVlWk6f-roDv8Q7KMRo692v8NecqgVSzAUfgnBNLQxT5dET4a6AxPz_xGF8v1ATG5ovFE5NATCFDz_LVhGu--lnV87eMnDd0KSGwV5Bm00
+: 1707120120:0;mv tPLDJzmm48Rl_XLp0wGjOlUuQX4Vg2g7ggkcxQcNmPa4QnqxjIT5_FiwDXXIJBJTGwKs4Y8xUUVZVP9CpZoZuw7JqDijTTPKz6CW8-bAOUkm4m8bMmTVFJdH1wcIgaV3i4do2sJMT6cx3arzRPXSWv9sK_QEUAxgHpJObWNlurJtaqifgQHUbe8h8GwW8geXzUd8i1XjmflJUNThYB9hqmyCXtJS7Y_04_jGQx4y4hEv pokemonSequenceUML.png
+: 1707120153:0;inkscape pokemonSequenceUML.png --export-filename=pokemonSequenceUML.pdf
+: 1707120191:0;git commit -m "Update finished sequence maybe rough draft"
+: 1707120856:0;git ocmi
+: 1707120880:0;git add --ll
+: 1707265710:0;touch pokemonClassUML_white.svg
+: 1707265924:0;wget http://www.plantuml.com/plantuml/svg/tLLDRzim3BthL_3M5iYA9iTWA_fH3EjXMB1iE-t2oemhHAOyYLxHVpzPMjKQTOmiXm6RWI0o_HxvthCjNmH1BrrZ5Mfn7hu6yggD9QDDYoomSbjg75-XYALhrpJ8rIqB-GrgsW_PUfAfhX-HiHu7l4-g7WUNCcaCFHyhBfGwWZLH1NbEGoogjmblpgVTBI71Rhdj18xfj3wTGI09HDLiVg8ckPFDSo1BM648yFk2caHdjMEfBQ60Igint5w2rYGvgcEpUR8AEWDFThIDVVkObd2fj-mUB5KrvIQnMv_zvqZwQRXEnSEJztqRWbxI_vXzZYadzyT9PsxLfttBHWnAdtUc7vxuNKBEhZfxXm4xFrkPBUhxxf-Dl-mdIxZsX49FvVIyPxidQWXzGPw_fkMWIa8JvCKkSWbrb_HSMC9Qq9VTB_yDnULQnYbrLCxfHqUiILddMkXOZ0N7HSTHW0yhy1H5K80p1V50As0sfNM6dCCP85V5KAago4V13srVYg3UWlDmGnlYgi3P2O4tzRs0spmJoWeqMjrP50fGOOCrVUTUGDTMgUOUE2euBVqAx_bDkJ6XjVW8brgCOq1ExmeQDbn7Rg8ILoEc5wEcvpjDBuRtOjgqfKtoNF1bTQ3d-G6Uu-_5K_Af4-qQKgEt_ksxQ7WuhamZRT5Jiedo4hHu3VfcykUSRA11rgDJ5ljCcKzCoGRNujhsUJzCWQnD4qDE-NmXtnXEwyEtoX1d_FrjSVo3C6xjWhZg6liB
+: 1707265946:0;mv tLLDRzim3BthL_3M5iYA9iTWA_fH3EjXMB1iE-t2oemhHAOyYLxHVpzPMjKQTOmiXm6RWI0o_HxvthCjNmH1BrrZ5Mfn7hu6yggD9QDDYoomSbjg75-XYALhrpJ8rIqB-GrgsW_PUfAfhX-HiHu7l4-g7WUNCcaCFHyhBfGwWZLH1NbEGoogjmblpgVTBI71Rhdj18xfj3wTGI09HDLiVg8ckPFDSo1BM648yFk2caHd pokemonSequenceUML_white.svg
+: 1707283364:0;wget http://www.plantuml.com/plantuml/svg/fLTHSzeu47xdLsXoBquBcVPkvXuo35SANCCKcawWSm-TJaVO2rQH9P-qva9x_UydR24ivFZIXeV4ixlVjwjFgvNzIYDLM6ISv78BcHGZJhN-C9zrEdhBH4uLpGXd0d2V0v4AKrbpbC53HCLM1S8qbcB1lW9vqUdaDDxI3P1O__xRonVNr-yhTlAjqo7c5n-0v6GazjSZ6Y0XrsGg43QWQewCtjymV2-PGDqO41TAWS3se5o9ZN7SKP78h6QNwpK8pNQms3BE3zWPqzY_zSo36Y21Hi0O7W9mgj5vvt871k97TrpqSxAYY1mYcUTIW40JUxlw0Z5sIKApWx1kSPVcSITPui2_77MDV2qlQn4QS7GcLvGUdq9k7pcdzp-AKh1X6a7vUaRwyDT4--OM_1WQyPuvnFS8qYsCI-6YGBymckOvty_Ezoj4DhTXAgMk0Cq1EfK5JuQ8veYK8IifEL0HS3XL79clKm0Ompd0MaB01h0w0q6HtnjEwEko6qTIQAG2THdmhTQjtumTMVoTB9Ptj-_UV5xUt4qMDxUpiU5c0fiY_veCtxR6-Op3vN8uUljvDdqxcKrlRczR4A-7i-6xqMJSZWchQObtge0eigCe2uC5NmfRRNGkG_V1PRX3wSgEZWyrk7Es49HhY7nPkwMn3TJhrMUQB5OS2AOAT2gvToJATfsnBN2MIfaq4Jptb8ao9fP7fclBtGs8IealQnmRm7aDQVhp2FQ3XZwH2NnuUnD0KAOUg2fJnYgFh0RcrHqU0l_KURULe1aO_08L4vkJFHZIzT7kqqKUHPTms07tXhO3nZBBgOAbZ2Ice89vq7gIn_2JYxY3f8YHIT6y6iVxzDMCuT6hULtm5TMqKDuOSjRmvdEBOe8XevnzXSXD_e1-b5ALKP60p-_CJqwm-BjW2ZdKwPtngUJlsPR6QU5nMzkJgNcnOUButjRlJ-uHbA1yCF2oUM51pYU-vRYIX4GWAuaeCoBNVbANP9aoROit3vJadCPm62oWo5ggWwN47Tz_hnnoJlU752IbEo2O0X4GWzPKxKaiXKPLn2YL9eOa0qnbeYiiYAGihIhIQVLlhtTgqD3bUYlqkSO8FNPRFSVLrS0RQ4QvYqA39eCBB-xYvGLvPZWkNbnTFRiudt86bDB_mupX0Om3kI9SLS7RHBq-ixDC8AWrZO5ClU-3dsiNG-YzoVn93vksTvGRGEkPbkN449Nnx_mvTjR2BdF0_yRWB7dFrZkdWXgGmTJMxymsb4kQG683JEWDrUcSvdrRW4qtw3H-9DcrA8Y1xOomsQ6HehZwFsFYj9AFduuld1rBbPeG3cL93ccFmijHWnBMzsleSvhNYHU02u3ao6mBRm7S6VOTr37Dl2Zp8A2cfLNo4Plf1AblPR1DPtjgC9Nxg7tv6LsPd7okIqwgELEOjGAxF069jGTCnmf-97czw2WivGxM7Cex_mCohjrXOM9dgERbi8lawaijHrOQptk5AcD0KCjz3jeuogRf_p7u-AbBgDfeHs3wqZtRPB42Yj1wAf_4Nn9Eivn31WBrr8uTcsafHod4snfdbxZ9LBFwts-ErnnVsrwZqrKHC8SSGHEUjc9o7qEEh3OEgoCeSLRE3kTlaEeou2sNAoYVA2LLIDqQ5MMWDTsSqTS6eBqcEAonLputdYXtMtXGTq-uMLs_7pfDJ3PTbQhorA-YqkA8MnPlC375EFLIkIeSlehC9O90HZdVsrOjKI78lPVyE3GuY3KbmcXtNxgmVbyL9b46P4SvI-Y1Q30e5tVERF0jBMSOCLNo7vFPwVB80X-dksKti5SWaYBZ_m40
+: 1707283389:0;mv fLTHSzeu47xdLsXoBquBcVPkvXuo35SANCCKcawWSm-TJaVO2rQH9P-qva9x_UydR24ivFZIXeV4ixlVjwjFgvNzIYDLM6ISv78BcHGZJhN-C9zrEdhBH4uLpGXd0d2V0v4AKrbpbC53HCLM1S8qbcB1lW9vqUdaDDxI3P1O__xRonVNr-yhTlAjqo7c5n-0v6GazjSZ6Y0XrsGg43QWQewCtjymV2-PGDqO41TAWS3s pokemonClassUML.svg
+: 1707283444:0;git commit -m "Update"
+: 1707283676:0;ls -rt
+: 1707283684:0;firefox pokemonClassUML.svg
+: 1707449446:0;echo $XDG_CURRENT_DESKTOP
+: 1707449458:0;echo $XDG_SESSION_DESKTOP
+: 1707449526:0;echo $DISPLAY
+: 1707449544:0;echo $SERVER
+: 1707519570:0;su
+: 1707519574:0;what about that exi
+: 1707523859:0;yeah man i dont
+: 1707593265:0;sudo pacman -S maven
+: 1707593296:0;code dev_setup.sh
+: 1707593331:0;sudo pacman -Rns maven
+: 1707594893:0;git checkout -b feature/factory-using-reflection-utils
+: 1707595293:0;cd ~/OneDrive/Misc/linux_config/
+: 1707595320:0;git commit -m "Update to gnome settings"
+: 1707595631:0;git checkout jacob-temp-design-branch
+: 1707600424:0;git commit -m "Init commit for factory and reflection"
+: 1707600493:0;git commit -m "Added puml file for class diagram changes"
+: 1707605681:0;git commit -m "Changed IPokemon name to better reflect its purpose. Refactored factory some functionality into a PokemonManger to maintain separatiion of concerns and reduce coupling"
+: 1707605691:0;git push --set-upstream origin feature/factory-using-reflection-utils
+: 1707634944:0;cd .vscode
+: 1707634948:0;cd extensions
+: 1707634954:0;cd jebbs.plantuml-2.17.5/images
+: 1707635008:0;cd ....
+: 1707635010:0;cd jmogainz
+: 1707635815:0;git commit -m "Finalized out some stuff as far how the pokemon creation could go."
+: 1707680170:0;find -type f | grep pom
+: 1707799577:0;git checkout removal-of-unnecessary-classes
+: 1707799615:0;sudo rm src/cs6310/PokemonRegistry.java src/cs6310/PokemonDataStore.java
+: 1707799650:0;git checkout -b removal-of-unnecessary-classes
+: 1707805593:0;git diff docs/mbiznis3/Poke*
+: 1707805599:0;git diff 
+: 1707805609:0;git restore --staged *
+: 1707805620:0;git restore --staged --all
+: 1707805628:0;git restore --staged docs*
+: 1707805648:0;git diff docs/mbizanis3/PokemonSequenceDiagram.svg
+: 1707806290:0;cd OneDrive/OMSCSSpring2024/SWArchDesign/A2/CS6310-Team24/docs
+: 1707806315:0;inkscape sequence_model_diagram.svg --export-filename=sequence_model_diagram.pdf
+: 1707806342:0;l -h
+: 1707806524:0;inkscape sequence_model_diagram.svg --export-type=pdf --export-filename=sequence_model_diagram.pdf
+: 1707806561:0;inkscape sequence_model_diagram.svg --export-type=pdf --export-filename=sequence_model_diagram.pdf --export-dpi=300
+: 1707806572:0;inkscape sequence_model_diagram.svg --export-type=pdf --export-filename=sequence_model_diagram.pdf --export-dpi=1000
+: 1707806716:0;sudo pacman -S gimp
+: 1707806767:0;gimp -i -b '(let* ((image (car (file-svg-load RUN-NONINTERACTIVE "sequence_model_diagram.svg" "sequence_model_diagram.svg" 1.0 1.0))) (drawable (car (gimp-image-get-active-layer image)))) (file-pdf-save RUN-NONINTERACTIVE image drawable "output.pdf" "output.pdf" 0 0 0 0 0 0 0 0 0))' -b '(gimp-quit 0)'\
+
+: 1707806799:0;gimp -i -b '(let* ((image (car (file-svg-load RUN-NONINTERACTIVE "sequence_model_diagram.svg" "sequence_model_diagram.svg" 1.0 1.0))) (drawable (car (gimp-image-get-active-layer image)))) (file-pdf-save RUN-NONINTERACTIVE image drawable "output.pdf" "output.pdf"))' -b '(gimp-quit 0)'\
+
+: 1707806881:0;sudo pacman -Rns gimp
+: 1707807744:0;git commit -m "Changes to ReflectionUtils to be more Pokemon project specific....updated sequence and class model diagrams"
+: 1707807750:0;git push --set-upstream origin removal-of-unnecessary-classes
+: 1707808037:0;cd scripts
+: 1707808044:0;./batch.sh
+: 1707808090:0;cd test_scenarios
+: 1707808100:0;../scripts/batch.sh
+: 1707808315:0;docker rmi ae8a1 c4a57 451baa 
+: 1707808341:0;docker rmi c4a57
+: 1707808352:0;docker 451baa
+: 1707808355:0;docker rmi 451baa
+: 1707808509:0;docker run -it -d -v .:/CS6310-Team24 gatech/pokemon:latest /bin/bash
+: 1707808548:0;docker run -it -t pokemon -d -v .:/CS6310-Team24 gatech/pokemon:latest /bin/bash
+: 1707808601:0;docker stop upbeat_brattain
+: 1707808707:0;docker run -it -d -v .:/CS6310-Team24 --name pokemon gatech/pokemon:latest /bin/bash\
+
+: 1707808866:0;docker run --rm -ti gatech/pokemon sh\
+
+: 1707809043:0;git commit -m "Fixed build"
+: 1707809123:0;docker run -d --name pokemon gatech/pokemon tail -f /dev/null\
+
+: 1707809381:0;git statu
+: 1707894987:0;git checkout -b "Small changes to uml and warnings"
+: 1707895008:0;git checkout -b small-cleanup-and-update
+: 1707909899:0;docker rmi b81d5a
+: 1707909975:0;docker system prune
+: 1707910098:0;cd /home/jmogainz/OneDrive/OMSCSSpring2024/SWArchDesign/A2/CS6310-Team24/src/cs6310/
+: 1707910854:0;git commit -m "Fixes and misc cleanup"
+: 1707910859:0;git push --set-upstream origin small-cleanup-and-update
+: 1707911121:0;javac cs6310/Pokemon/Charmander.java
+: 1707911126:0;javac cs6310/Pokemon/Squirtle.java
+: 1707911134:0;java Main
+: 1707911459:0;git commit -m "Spacing"
+: 1707911489:0;git commit -m "Renamed sequence diagram"
+: 1707911528:0;git upll
+: 1707911751:0;docker build -t gatech/pokemon:latest .
+: 1707912506:0;git commit -m "Another one"
+: 1707913427:0;docker stop $(docker ps -a)
+: 1707913443:0;docker builder prune
+: 1707913487:0;docker rmi 83d ed1 ob4
+: 1707913500:0;docker rmi 0b4 386 a5b
+: 1707913503:0;docker rmi
+: 1707913516:0;docker rmi a5b a02 495
+: 1707913540:0;docker rmi a5b
+: 1707913551:0;docker rmi 5293
+: 1707913564:0;docker rmi b101
+: 1707913570:0;docker run --rm -ti gatech/pokemon sh
+: 1707913660:0;find . -name "*.java"
+: 1707913673:0;find . -name "*.java" -not -path "*/Test/*"
+: 1707913860:0;scripts/test.sh 00
+: 1707913931:0;git commit -m "Oh....I see. Supposed to only work for file input into stdin"
+: 1707914076:0;docker rmi 6dfe
+: 1707914086:0;docker rmi b5
+: 1708076693:0;git checkout refining-diagrams-aligning-with-code-better
+: 1708076698:0;git checkout -b refining-diagrams-aligning-with-code-better
+: 1708079956:0;docker rmi 98e85 47e78 5684 064e
+: 1708079969:0;docker stop $(docker ps -aq)
+: 1708079986:0;docker rmi 4fe
+: 1708080223:0;git reset
+: 1708080284:0;git commit -m "Updated diagrams and changed code in some places to match"
+: 1708080292:0;git push --set-upstream origin refining-diagrams-aligning-with-code-better
+: 1708477073:0;lspci -k | grep -i network
+: 1708477163:0;systemctl stop before_after_creator.service
+: 1708477218:0;nmcli
+: 1708477276:0;systemctl start before_after_creator.service
+: 1708477425:0;sudo pacman -S iwconfig
+: 1708477444:0;yay -S speedtest-cli
+: 1708477487:0;iwconfig
+: 1708477509:0;sudo pacman -S nethogs
+: 1708477514:0;nethogs
+: 1708477519:0;sudo nethogs
+: 1708477783:0;lspci | grep -i network
+: 1708477810:0;lspci -k 00:14.3
+: 1708477829:0;lspci -k Network Controller
+: 1708477832:0;lspci -k Network
+: 1708477835:0;lspci -k
+: 1708477882:0;lspci -k | xclip
+: 1708477973:0;iw
+: 1708477975:0;iw dev wlo1 link
+: 1708478031:0;speedtest-cli
+: 1708478860:0;realpath Pictures/Screenshots/Screenshot\ from\ 2024-02-20\ 19-26-51.png | xclip
+: 1708484079:0;git checkout updated-diagrams-b4-submissionnn
+: 1708484091:0;git checkout origin/updated-diagrams-b4-submissionnn
+: 1708484122:0;git checkout remotes/origin/updated-diagrams-b4-submissionn
+: 1708485163:0;git show 0d131a1
+: 1708485172:0;git show od131
+: 1708485178:0;git show 0d13
+: 1708485205:0;git history
+: 1708485296:0;git diff 0d13^..0d13
+: 1708485326:0;git diff 659^..659
+: 1708485349:0;git diff 6590b^..6590b
+: 1708486807:0;git tag v1.0.3 0d131
+: 1708486810:0;git tag list
+: 1708486817:0;git 
+: 1708486864:0;git tag --delete list
+: 1708486867:0;git tag
+: 1708486890:0;git push v1.0.3
+: 1708486904:0;git push origin v1.0.3
+: 1708493783:0;pkill teams
+: 1708754185:0;sensors-detect
+: 1708754361:0;info
+: 1708754369:0;pci
+: 1708754370:0;cpu
+: 1708754443:0;fancontrol
+: 1708754583:0;lsmod | grep fan
+: 1708754588:0;lsmod
+: 1708754601:0;lsmod | xclip
+: 1708754706:0;yay -S isw
+: 1708757616:0;sudo pacman -S pwmconfig
+: 1708757691:0;pwmconfig
+: 1708757806:0;sudo modprobe i8k
+: 1708757844:0;iws
+: 1708757847:0;isw
+: 1708757857:0;man isw
+: 1708757920:0;sudo modprobe ec_sys
+: 1708757936:0;sudo isw -cp MSI_ADDRESS_DEFAULT
+: 1708758224:0;isw -r
+: 1708758311:0;cat /etc/isw.conf | grep -i gs65
+: 1708758326:0;cat /etc/isw.conf | grep -i -l gs65
+: 1708758333:0;cat /etc/isw.conf | grep -iw gs65
+: 1708758344:0;vi
+: 1708758374:0;less /etc/isw.conf
+: 1708758495:0;isw -r 
+: 1708758649:0;isw -w 16Q4EMS1
+: 1708759082:0;sudo systemctl status isw
+: 1708759089:0;sudo systemctl status isw@.service
+: 1708759095:0;systemctl status isw@.service
+: 1708759107:0;systemctl list
+: 1708759114:0;systemctl list-jobs
+: 1708759118:0;jobs
+: 1708759494:0;systemctl enable isw
+: 1708759567:0;sudo systemctl enable isw@16Q4EMS1
+: 1708759635:0;sudo systemctl start isw@16Q4EMS1.service
+: 1708759674:0;isw -r 16Q4EMS1
+: 1708759844:0;sudo isw -w 16Q4EMS1
+: 1708760528:0;code
+: 1708760633:0;history | grep 1129
+: 1708760642:0;history 1129
+: 1708760684:0;history 1124
+: 1708760705:0;sudo systemctl status isw@16Q4EMS1.service
+: 1708760745:0;sudo isw -r 16Q4EMS1
+: 1708768779:0;lsram
+: 1708768873:0;sudo systemctl enable isw@.service
+: 1708768928:0;code /etc/isw.conf
+: 1708769773:0;sudo systemctl enable isw@16Q2EMS1.service
+: 1708769781:0;sudo systemctl start isw@16Q2EMS1.service
+: 1708770231:0;vi /etc/isw.conf
+: 1708915150:0;nautilus /home/jmogainz/OneDrive/Misc/BeforeAfterPhotoCreatorApp/processed/
+: 1708921228:0;gthumb Downloads/image0.jpg
+: 1708921410:0;sudo systemctl restart before_after_creator.service
+: 1708922949:0;rm Before\ And\ After\ Creator-imperium-dei*
+: 1708923215:0;cd OneDrive/Misc/testing_clustering
+: 1708923237:0;/bin/python /home/jmogainz/.vscode/extensions/ms-python.python-2024.0.1/pythonFiles/printEnvVariablesToFile.py /home/jmogainz/.vscode/extensions/ms-python.python-2024.0.1/pythonFiles/deactivate/zsh/envVars.txt
+: 1708924598:0;cd uploads
+: 1708924605:0;exiftool IMG_3410.jpeg
+: 1708924635:0;exiftool IMG_3410.jpeg | grep "Create Date"
+: 1708924647:0;exiftool IMG_3410.jpeg | grep "Date/Time"
+: 1708924776:0;exiftool IMG_3410.jpeg | grep "Orientation"
+: 1708927515:0;exiftool IMG_3421.jpeg | grep "Orientation"
+: 1708927525:0;exiftool IMG_3421.jpeg | grep "Date/Time"
+: 1708927955:0;exiftool IMG_3413.jpeg | grep "Date/Time"
+: 1708927974:0;exiftool IMG_3414.jpeg | grep "Date/Time"
+: 1708932543:0;nvidia-smi
+: 1708994992:0;mkdir E1
+: 1709017981:0;git init
+: 1709018000:0;git commit -m "Initial commit"
+: 1709220523:0;cd Obsidian
+: 1709220530:0;git commit -m "updates"
+: 1709220543:0;cd SWArchDesign
+: 1709220549:0;sudo rm -r E1
+: 1709220636:0;git clone git@github.com:jmogainz/E1.git
+: 1709220640:0;cd E1
+: 1709231272:0;git commit -m "Upgrade E1"
+: 1709610565:0;cd A2
+: 1709610572:0;code CS6310-Team24
+: 1709611214:0;sudo rm -r CS6310-Team24
+: 1709611323:0;git clone https://github.gatech.edu/hmelendez8/CS6310-Team24.git
+: 1709611331:0;cd CS6310-Team24
+: 1709616208:0;git show 3aa1843
+: 1709616408:0;git merge 3aa1843
+: 1709619793:0;git commit -m "Class diagram updated"
+: 1709620118:0;git commit -m "Update state diagram"
+: 1709681388:0;git checkout jacobs-uml
+: 1709681913:0;git commit -m "Pdf made"
+: 1709681942:0;git lgo
+: 1709681977:0;git log | grep 3aa
+: 1709688491:0;git checkout -b "continuous-uml-refining"
+: 1709689032:0;l | grep craig
+: 1709689036:0;l | grep lar
+: 1709689053:0;find -type f -name "*.pdf" | grep lar
+: 1709689068:0;find -type f -name "*.pdf" | grep -i craig
+: 1709689081:0;realpath Craig\ Larman\ -\ Applying\ UML\ and\ Patterns_\ An\ Introduction\ to\ Object-oriented\ Analysis\ and\ Design\ and\ Iterative\ Development-Prentice\ Hall\ PTR\ \(2005\).pdf | xclip
+: 1710004385:0;wc Hello, my name is Jacob, and I've been attending GCC for the past year. Reflecting on my life, it's clear to see how God's grace has transformed me from a state of prideful rebellion to a servant of Christ.\
+\
+Before coming to Christ, my life was dominated by a pursuit of worldly success and recognition. I measured my worth by my accomplishments and looked down on those who didn't meet my standards. This relentless pursuit of personal glory led me to a place of deep loneliness and despair, especially after a significant relationship ended, leaving me questioning the very purpose of my existence. In that darkness, my heart was a stone, incapable of seeing beyond my own pain and pride.\
+\
+My journey to Christ was not marked by a sudden, dramatic encounter, but by a gradual unfolding of God's grace. During my freshman year of college, amidst my lowest point, God reached out to me through a YouTube sermon that sparked a flame within my soul. This was followed by the influence of godly friends and the nourishing truth of Godâ€ƒ¹s Word in church and small groups. As I learned about the Gospel, the depth of my sin, and the unmerited favor of Christ's sacrifice, my heart began to soften. I realized that I was not the victim of my story but the perpetrator in need of redemption. It was through this revelation that God turned my heart of stone into a heart of flesh, eager to seek Him and do His will.\
+\
+Since embracing Christ, my life has been radically transformed. The chains of pride and despair that once held me captive have been broken, replaced with a peace and joy that surpasses all understanding. My desires have shifted from seeking personal glory to living as a bondservant of Christ. Every aspect of my life, from my relationships to my career, is now filtered through my desire to glorify God and grow in obedience to His Word. Depression and aimlessness have given way to a life filled with purpose and hope, anchored in the promise of eternal life with my Savior.\
+\
+I desire to be baptized and join GCC as a public declaration of my faith and a testament to God's incredible work in my life. Baptism represents my death to the old self and the birth of a new creation in Christ. It's an outward expression of the inward transformation that has taken place through God's grace. Joining GCC is an opportunity to grow in fellowship, accountability, and service, as I continue to walk this journey of faith.\
+\
+My testimony is not about my own strength or merit but about God's sovereign grace in saving a lost sinner like me. As I prepare to share this story with the church, my prayer is that it will not only bring glory to God but also serve as a beacon of hope for those who are still searching for the truth."
+: 1710004397:0;wc "Hello, my name is Jacob, and I've been attending GCC for the past year. Reflecting on my life, it's clear to see how God's grace has transformed me from a state of prideful rebellion to a servant of Christ.\
+\
+Before coming to Christ, my life was dominated by a pursuit of worldly success and recognition. I measured my worth by my accomplishments and looked down on those who didn't meet my standards. This relentless pursuit of personal glory led me to a place of deep loneliness and despair, especially after a significant relationship ended, leaving me questioning the very purpose of my existence. In that darkness, my heart was a stone, incapable of seeing beyond my own pain and pride.\
+\
+My journey to Christ was not marked by a sudden, dramatic encounter, but by a gradual unfolding of God's grace. During my freshman year of college, amidst my lowest point, God reached out to me through a YouTube sermon that sparked a flame within my soul. This was followed by the influence of godly friends and the nourishing truth of Godâ€ƒ¹s Word in church and small groups. As I learned about the Gospel, the depth of my sin, and the unmerited favor of Christ's sacrifice, my heart began to soften. I realized that I was not the victim of my story but the perpetrator in need of redemption. It was through this revelation that God turned my heart of stone into a heart of flesh, eager to seek Him and do His will.\
+\
+Since embracing Christ, my life has been radically transformed. The chains of pride and despair that once held me captive have been broken, replaced with a peace and joy that surpasses all understanding. My desires have shifted from seeking personal glory to living as a bondservant of Christ. Every aspect of my life, from my relationships to my career, is now filtered through my desire to glorify God and grow in obedience to His Word. Depression and aimlessness have given way to a life filled with purpose and hope, anchored in the promise of eternal life with my Savior.\
+\
+I desire to be baptized and join GCC as a public declaration of my faith and a testament to God's incredible work in my life. Baptism represents my death to the old self and the birth of a new creation in Christ. It's an outward expression of the inward transformation that has taken place through God's grace. Joining GCC is an opportunity to grow in fellowship, accountability, and service, as I continue to walk this journey of faith.\
+\
+My testimony is not about my own strength or merit but about God's sovereign grace in saving a lost sinner like me. As I prepare to share this story with the church, my prayer is that it will not only bring glory to God but also serve as a beacon of hope for those who are still searching for the truth."
+: 1710004412:0;wc "hello"
+: 1710004427:0;echo hello.txt
+: 1710004445:0;echo "Hello, my name is Jacob, and I've been attending GCC for the past year. Reflecting on my life, it's clear to see how God's grace has transformed me from a state of prideful rebellion to a servant of Christ.\
+\
+Before coming to Christ, my life was dominated by a pursuit of worldly success and recognition. I measured my worth by my accomplishments and looked down on those who didn't meet my standards. This relentless pursuit of personal glory led me to a place of deep loneliness and despair, especially after a significant relationship ended, leaving me questioning the very purpose of my existence. In that darkness, my heart was a stone, incapable of seeing beyond my own pain and pride.\
+\
+My journey to Christ was not marked by a sudden, dramatic encounter, but by a gradual unfolding of God's grace. During my freshman year of college, amidst my lowest point, God reached out to me through a YouTube sermon that sparked a flame within my soul. This was followed by the influence of godly friends and the nourishing truth of Godâ€ƒ¹s Word in church and small groups. As I learned about the Gospel, the depth of my sin, and the unmerited favor of Christ's sacrifice, my heart began to soften. I realized that I was not the victim of my story but the perpetrator in need of redemption. It was through this revelation that God turned my heart of stone into a heart of flesh, eager to seek Him and do His will.\
+\
+Since embracing Christ, my life has been radically transformed. The chains of pride and despair that once held me captive have been broken, replaced with a peace and joy that surpasses all understanding. My desires have shifted from seeking personal glory to living as a bondservant of Christ. Every aspect of my life, from my relationships to my career, is now filtered through my desire to glorify God and grow in obedience to His Word. Depression and aimlessness have given way to a life filled with purpose and hope, anchored in the promise of eternal life with my Savior.\
+\
+I desire to be baptized and join GCC as a public declaration of my faith and a testament to God's incredible work in my life. Baptism represents my death to the old self and the birth of a new creation in Christ. It's an outward expression of the inward transformation that has taken place through God's grace. Joining GCC is an opportunity to grow in fellowship, accountability, and service, as I continue to walk this journey of faith.\
+\
+My testimony is not about my own strength or merit but about God's sovereign grace in saving a lost sinner like me. As I prepare to share this story with the church, my prayer is that it will not only bring glory to God but also serve as a beacon of hope for those who are still searching for the truth." > temp.txt
+: 1710004452:0;less temp.txt
+: 1710004460:0;wc temp.txt
+: 1710004474:0;wc -h temp.txt
+: 1710004477:0;wc -v temp.txt
+: 1710004491:0;wc -w temp.txt
+: 1710004504:0;wc -m temp.txt
+: 1710095035:0;git commit -m "Uml diagrams"
+: 1710095117:0;git checkout -b feature/battle-lost-exception-propogation
+: 1710095225:0;git commit -m "Initial commit for ble"
+: 1710095241:0;git checkout origin/hmelendez8-phase2-kickoff
+: 1710095290:0;git branch -a
+: 1710100833:0;git commit -m "Updated for first pass at ble feature"
+: 1710100843:0;git push --set-upstream origin feature/battle-lost-exception-propogation
+: 1710101665:0;git commit -m "Updated other child pokemon as well"
+: 1710103224:0;git commit -m "Test cases passing now"
+: 1710103287:0;git commit -m "Updated a little more"
+: 1710103400:0;git commit -m "Fixed helders unit tests maybe"
+: 1710103809:0;git commit -m "Testing something"
+: 1710104658:0;git commit -m "Trying to fix unit tests"
+: 1710105145:0;git commit -m "Hopefully got it now"
+: 1710106515:0;git commit -m "Hopefully increased coverage"
+: 1710124675:0;git checkout -b class-diagram-improv
+: 1710124690:0;git commit -m "Updated the battlelostexception"
+: 1710124697:0;git push --set-upstream origin class-diagram-improv
+: 1710124895:0;git checkout -b class-diagram-update
+: 1710126544:0;code /home/jmogainz/OneDrive/Misc/BeforeAfterPhotoCreatorApp
+: 1710126563:0;/bin/python /home/jmogainz/.vscode/extensions/ms-python.python-2024.2.1/pythonFiles/printEnvVariablesToFile.py /home/jmogainz/.vscode/extensions/ms-python.python-2024.2.1/pythonFiles/deactivate/zsh/envVars.txt
+: 1710126612:0;cd /home/jmogainz/OneDrive/Misc/BeforeAfterPhotoCreatorApp
+: 1710126622:0;git commit -m "Updated"
+: 1710126681:0;git remote set-url origin git@github.com:jmogainz/BeforeAfterPhotoCreatorApp.git
+: 1710126713:0;git show 54c0eb6
+: 1710126764:0;git diff master^..origin/master
+: 1710126782:0;git diff origin/master^...master
+: 1710126790:0;git diff --stat origin/master^...master
+: 1710126843:0;git rm Before\ And\ After\ Creator.pptx
+: 1710126889:0;vi .gitignore
+: 1710127361:0;git commit -m "Removed the pptx"
+: 1710566915:0;git checkout class-diagram-update
+: 1710567089:0;cd OneDrive/OMSCSSpring2024/SWArchDesign/A2/CS6310-Team24
+: 1710567140:0;git diff main^..v1.0.3
+: 1710567404:0;git diff main^..v1.0.3 --name-only --diff-filter=ACMRTUXB -- '*.java'
+: 1710567477:0;git diff --diff-filter=ACMRTUXB main^..v1.0.3 -- '*.java'\
+
+: 1710567492:0;git diff --name-only --diff-filter=ACMRTUXB main^..v1.0.3 -- '*.java'\
+
+: 1710567529:0;git diff --name-only --diff-filter=ACMRTUXB v1.0.3^..main -- '*.java'\
+
+: 1710569194:0;git commit -m "Temporary commit"
+: 1710569244:0;git commit -m "Revert"
+: 1710570130:0;git diff --diff-filter=ACMRTUXB v1.0.3^..main -- '*.java' | grep heal\
+
+: 1710570138:0;git diff --diff-filter=ACMRTUXB v1.0.3^..main -- '*.java'\
+
+: 1710571833:0;git commit -m "Update class uml, still some things to check with helder before finalized"
+: 1710571845:0;git push --set-upstream origin class-diagram-update
+: 1710571898:0;git checkout -b class-diagram-and-code-name-mods
+: 1710572513:0;git commit -m "Small arrow change"
+: 1710573668:0;git restore --staged out/docs/class_model_diagram/class_model_diagram.svg
+: 1710573691:0;git commit -m "Diagrams updated temporarily"
+: 1710573701:0;git push --force
+: 1710701219:0;git add doc*
+: 1710701229:0;git add sr*
+: 1710701274:0;git commit -m "Updated class diagram for static public to private"
+: 1710701288:0;git push --set-upstream origin class-diagram-and-code-name-mods
+: 1710702378:0;git add docs/class_model_diagram.pdf
+: 1710702387:0;git commit -m "Updated pdf to match plant"
+: 1710705509:0;git commit -m "Updated again to add package for exception"
+: 1710711655:0;git commit -m "Updated code and uml for changes while on call"
+: 1710711825:0;git add src/*
+: 1710711836:0;git commit -m "Updated tournament not passing compilation"
+: 1710712208:0;git commit -m "Change isPowerOfTwo back to static"
+: 1710712531:0;git commit -m "Updated diagrams for PokemonGame to catch battlelostexception"
+: 1710733604:0;git add docs*
+: 1710733606:0;git add src*
+: 1710743476:0;git checkout -b final-submission-branch
+: 1710743497:0;git commit -m "All changes that I could think to make from everyone"
+: 1710744563:0;git commit -m "Merged from main"
+: 1710744742:0;git commit -m "All docs updated for submission"
+: 1710744751:0;git push --set-upstream origin final-submission-branch
+: 1710745092:0;code scripts/zip.sh
+: 1710745463:0;docker run -it -v .:/CS6310-Team24 --name pokemon gatech/pokemon:latest /bin/bash\
+
+: 1710745588:0;git stash list
+: 1710745606:0;scripts/zip.sh
+: 1710745635:0;scripts/zip.sh 2024_01_A4.zip
+: 1710745643:0;scripts/zip.sh 2024_01_A4
+: 1710745780:0;exiftool docs/state_diagram.
+: 1710745783:0;exiftool docs/state_diagram.pdf
+: 1710745808:0;ls docs/state_diagram.pdf
+: 1710745815:0;l docs/state_diagram.pdf
+: 1710749325:0;unzip 2024_01_A4-3.zip -d .
+: 1710749413:0;diff -r src ../OneDrive/OMSCSSpring2024/SWArchDesign/A2/CS6310-Team24/src
+: 1710749484:0;diff -ru src ../OneDrive/OMSCSSpring2024/SWArchDesign/A2/CS6310-Team24/src
+: 1710749614:0;git checkout -b what-was-ultimately-submitted-branch
+: 1710749625:0;git restore --staged out*
+: 1710749652:0;git commit -m "Last second fixes that I found"
+: 1710749659:0;git push --set-upstream origin what-was-ultimately-submitted-branch
+: 1710750900:0;pkill code
+: 1711587412:0;sudo isw -w 16Q2EMS1
+: 1711590246:0;find -type f | grep OR
+: 1711590252:0;find -type f | grep Or
+: 1711590263:0;find -type f | grep O'
+: 1711590267:0;find -type f | grep Rei
+: 1711590274:0;find -type f | grep Lar
+: 1711590284:0;find -type f | grep For
+: 1711590286:0;find -type f | grep Ford
+: 1711590290:0;find -type f | grep Richard
+: 1711590306:0;find -type f -name "*.pdf"
+: 1711590952:0;cp ~/Downloads/SWEBOKv3.pdf .
+: 1711591101:0;history > temp.txt
+: 1711591103:0;code temp.txt
+: 1711591131:0;code ../.zsh_history
+: 1711591217:0;git clone git@github.com:jmogainz/LinuxHistory.git
+: 1711591244:0;cd LinuxHistory
+: 1711591259:0;cp ../.zsh_history .
+: 1711591282:0;git commit -m "Initial commit. Added personal history file"
+: 1711591330:0;git push --set-upstream origin main
+: 1711591338:0;git remote get-url origin
+: 1711592724:0;cp Downloads/Mark\ Richards,\ Neal\ Ford\ -\ Fundamentals\ of\ Software\ Architecture_\ An\ Engineering\ Approach-O\'Reilly\ Media\ \(2020\).pdf OneDrive/Misc/.
+: 1711592768:0;l -rt OneDrive/Misc/
+: 1712103728:0;sudo rm -r out/docs/mbizanis3
+: 1712106870:0;sudo mkdir -p /etc/ssl/localhost ; sudo cp -r certs/nginx-selfsigned.crt /etc/ssl/localhost/localhost.crt
+: 1712106883:0;sudo security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain /etc/ssl/localhost/localhost.crt
+: 1712106951:0;sudo pacman -S p11-kit
+: 1712106983:0;sudo trust anchor /etc/ssl/localhost/localhost.crt\
+
+: 1712107503:0;sudo mkdir -p /etc/ssl/localhost ; sudo cp -r certs/nginx-selfsigned.crt /etc/ca-certificates/trust-source/anchors/.
+: 1712107510:0;sudo update-ca-trust
+: 1712108271:0;sudo systemctl stop before_after_creator.service
+: 1712108583:0;sudo systemctl start before_after_creator.service
+: 1712357287:0;make && make up
+: 1712358024:0;cp Downloads/Martin_Paper_Software_Principles.pdf OneDrive/Misc
+: 1712358048:0;cd OneDrive/Misc
+: 1712358082:0;cp Downloads/Gamma_Helm_Paper_Design_Patterns.pdf OneDrive/Misc/
+: 1712504403:0;top -m
+: 1712504414:0;top -h
+: 1712504418:0;top -h | grep memory
+: 1712504425:0;top -h | grep MEM
+: 1712504427:0;top -h | grep mem
+: 1712514314:0;mvn
+: 1712520935:0;git diff --stage
+: 1712520969:0;sudo rm src/pom.xml
+: 1712520983:0;ma
+: 1712521169:0;git checkout -b feature/cs6310-package-jar-maven-dependency
+: 1712521219:0;git commit -m "New branch initial commit for creating jar from cs6310 package and using it in the maven build process of the backend
+: 1712521221:0;git commit -m "New branch initial commit for creating jar from cs6310 package and using it in the maven build process of the backend"
+: 1712521226:0;git push --set-upstream origin feature/cs6310-package-jar-maven-dependency
+: 1712525814:0;cd cs6310
+: 1712525898:0;mv -p
+: 1712526687:0;cd backend/libs
+: 1712526700:0;unzip -p cs6310.jar | grep man
+: 1712526709:0;unzip -p cs6310.jar| grep cs6310
+: 1712526723:0;unzip -p cs6310.jar
+: 1712526732:0;unzip -p cs6310.jar | grep less
+: 1712527266:0;git commit -m "Update changes to hopefully work better with helders intellij"
+: 1712527752:0;git checkout -b feature/derived-offensive-skill-classes
+: 1712538618:0;git stash po
+: 1712544632:0;docker ps -a
+: 1712544646:0;docker container prune
+: 1712545083:0;git commit -m "Intermediate commit. Added overtimeeffects"
+: 1712545093:0;git push --set-upstream origin feature/derived-offensive-skill-classes
+: 1712545567:0;sudo systemctl status before_after_creator.service
+: 1712555946:0;git commit -m "Added new pokemon and full functionality for new skills"
+: 1712556169:0;git commit -m "Bug fixes to compile successfully."
+: 1712556480:0;git commit -m "Compiled. Fixed log spacing issue for attacking"
+: 1712558799:0;git commit -m "Syntax fix"
+: 1712558942:0;git diff --diff-filter=ACMRTUXB feature/derived-offensive-skill-classes^..main -- '*.java'\
+
+: 1712559236:0;docker system prune --all
+: 1712559874:0;git diff --diff-filter=ACMRTUXB feature/derived-offensive-skill-classes^..main -- '*.java' | xclip\
+
+: 1712562270:0;git commit -m "Updated test results"
+: 1712564071:0;git commit -m "Updated to abide by matthew insturctions"
+: 1712564369:0;git commit -m "New line at the bottoms of the test files"
+: 1712564403:0;docker build -t gatech/pokemon -f Dockerfile ./
+: 1712564432:0;scripts/batch.sh
+: 1712621448:0;l | .git
+: 1712621454:0;l | grep .git
+: 1712621464:0;l | grep vscode
+: 1712621467:0;l | grep src
+: 1712621474:0;l | grep git
+: 1712621479:0;cd .github
+: 1712621481:0;cd workflows
+: 1712621499:0;code blank.yml
+: 1712622604:0;cd OneDrive/OMSCSSpring2024/SWArchDesign/E1/
+: 1712624744:0;git commit -m "Previous changes"
+: 1712624807:0;javac Main.java
+: 1712633344:0;git commit -m "Only testing 0-13 for now"
+: 1712633821:0;git commit -m "First unit test fix"
+: 1712634137:0;git commit -m "Another unit test fix"
+: 1712640637:0;git commit -m "Increasing code coverage"
+: 1712719266:0;yay -Ss junit
+: 1712719303:0;yay -S junit
+: 1712719314:0;junit
+: 1712719357:0;cd /usr/share/java
+: 1712719872:0;find /src -name "*.java" > sources.txt
+: 1712719886:0;less sources.txt
+: 1712719928:0;javac -cp /usr/share/java/junit-4.13.2.jar -d out @sources.txt
+: 1712719956:0;yay -Rns junit
+: 1712720672:0;gh
+: 1712720881:0;cd out
+: 1712720890:0;cd l
+: 1712721071:0;java -jar /home/jmogainz/Downloads/jacoco-0.8.11/lib/jacococli.jar report /home/jmogainz/Downloads/jacoco-0.8.11/coverage/jacoco.exec --classfiles out --sourcefiles src /home/jmogainz/Downloads/jacoco-0.8.11/coverage/jacoco.xml
+: 1712721132:0;cd jacoco-0.8.11/lib
+: 1712721145:0;l out
+: 1712721151:0;l out/cs6310
+: 1712721214:0;java -jar /home/jmogainz/Downloads/jacoco-0.8.11/lib/jacococli.jar report /home/jmogainz/Downloads/jacoco-0.8.11/coverage/jacoco.exec --classfiles out --sourcefiles src --xml /home/jmogainz/Downloads/jacoco-0.8.11/coverage/ --html /home/jmogainz/Downloads/jacoco-0.8.11/coverage/ --csv /home/jmogainz/Downloads/jacoco-0.8.11/coverage/\
+
+: 1712721294:0;java -jar /home/jmogainz/Downloads/jacoco-0.8.11/lib/jacococli.jar report /home/jmogainz/Downloads/jacoco-0.8.11/coverage/jacoco.exec --classfiles out --sourcefiles src --xml /home/jmogainz/Downloads/jacoco-0.8.11/coverage/cs6310.xml
+: 1712722623:0;java -jar /home/jmogainz/Downloads/jacoco-0.8.11/lib/jacococli.jar report /home/jmogainz/Downloads/jacoco-0.8.11/coverage/jacoco.exec --classfiles out --sourcefiles src --html /home/jmogainz/Downloads/jacoco-0.8.11/coverage/cs6310.html
+: 1712722728:0;cd /home/jmogainz/Downloads/jacoco-0.8.11/coverage\
+          java jacoco_report_reader cs6310.html\
+          cov=`java jacoco_report_reader cs6310.html`\
+          mincov=`cat mincoverage.txt`\
+          if [ "$cov" -lt "$mincov" ]; then echo "OH OH: COVERAGE $cov% LESS THAN $mincov%. Cannot allow this."; exit 1; fi\
+          if [ "$cov" -eq "$mincov" ]; then echo "GOOD JOB: Code Coverage remains at $mincov%"; fi\
+          if [ "$cov" -gt "$mincov" ]; then echo "*** GREAT JOB: New Highwater Mark for Test Coverage. Was $micov%, will now be $cov% going forward"; echo $cov > mincoverage.txt; fi
+: 1712722769:0;cd /home/jmogainz/Downloads/jacoco-0.8.11/coverage &&\
+          java jacoco_report_reader cs6310.html &&\
+          cov=`java jacoco_report_reader cs6310.html` &&\
+          mincov=`cat mincoverage.txt` &&\
+          if [ "$cov" -lt "$mincov" ]; then echo "OH OH: COVERAGE $cov% LESS THAN $mincov%. Cannot allow this."; exit 1; fi\
+          if [ "$cov" -eq "$mincov" ]; then echo "GOOD JOB: Code Coverage remains at $mincov%"; fi\
+          if [ "$cov" -gt "$mincov" ]; then echo "*** GREAT JOB: New Highwater Mark for Test Coverage. Was $micov%, will now be $cov% going forward"; echo $cov > mincoverage.txt; fi
+: 1712722816:0;find -type f | grep report_reader
+: 1712722949:0;firefox index.html
+: 1712723072:0;firefox jacoco-sessions.html
+: 1712723104:0;firefox cs6310.html
+: 1712723115:0;firefox cs6310.xml
+: 1712723232:0;mkdir coverage
+: 1712723282:0;cd coverage
+: 1712723300:0;git add ../src*
+: 1712723328:0;sudo rm ../sources.txt
+: 1712723356:0;sudo rm -r coverage/
+: 1712723365:0;git commit -m "Trying increase code coverage again"
+: 1712723414:0;find -type f | index
+: 1712723417:0;find -type f | grep index
+: 1712723445:0;firefox coverage/cs6310.html/index.html
+: 1712724252:0;java -jar /home/jmogainz/Downloads/jacoco-0.8.11/lib/jacococli.jar report /home/jmogainz/Downloads/jacoco-0.8.11/coverage/jacoco.exec --classfiles out --sourcefiles src --html coverage/cs6310.html
+: 1712724277:0;firefox coverage/cs6310.html
+: 1712724454:0;sudo rm -r coverage
+: 1712724472:0;sudo rm -r sources.txt
+: 1712724488:0;git commit -m "Here we go again"
+: 1712725140:0;java jacoco_report_reader /home/jmogainz/Downloads/jacoco-0.8.11/coverage/cs6310.html/index.html
+: 1712725153:0;java jacoco_report_reader.java /home/jmogainz/Downloads/jacoco-0.8.11/coverage/cs6310.html/index.html
+: 1712725216:0;find src -name "*.java" > sources.txt
+: 1712725217:0;javac -cp /home/jmogainz/Downloads/junit-platform-console-standalone-1.9.3.jar -d out @sources.txt
+: 1712725231:0;java -javaagent:/home/jmogainz/Downloads/jacoco-0.8.11/lib/jacocoagent.jar=destfile=/home/jmogainz/Downloads/jacoco-0.8.11/coverage/jacoco.exec -jar /home/jmogainz/Downloads/junit-platform-console-standalone-1.9.3.jar -cp out --scan-class-path
+: 1712725297:0;java -jar /home/jmogainz/Downloads/jacoco-0.8.11/lib/jacococli.jar report /home/jmogainz/Downloads/jacoco-0.8.11/coverage/jacoco.exec --classfiles out --sourcefiles src --xml /jmogainz/Downloads/jacoco-0.8.11/coverage/cs6310.xml
+: 1712725386:0;touch /home/jmogainz/Downloads/jacoco-0.8.11/coverage/cs6310.xml
+: 1712725389:0;java -jar /home/jmogainz/Downloads/jacoco-0.8.11/lib/jacococli.jar report /home/jmogainz/Downloads/jacoco-0.8.11/coverage/jacoco.exec --classfiles out --sourcefiles src --html /home/jmogainz/Downloads/jacoco-0.8.11/coverage/cs6310.html --xml /jmogainz/Downloads/jacoco-0.8.11/coverage/cs6310.xml
+: 1712725409:0;java -jar /home/jmogainz/Downloads/jacoco-0.8.11/lib/jacococli.jar report /home/jmogainz/Downloads/jacoco-0.8.11/coverage/jacoco.exec --classfiles out --sourcefiles src --html /home/jmogainz/Downloads/jacoco-0.8.11/coverage/cs6310.html --xml /home/jmogainz/Downloads/jacoco-0.8.11/coverage/cs6310.xml
+: 1712725447:0;cd .github/workflows
+: 1712725455:0;java jacoco_report_reader.java /home/jmogainz/Downloads/jacoco-0.8.11/coverage/cs6310.xml
+: 1712726063:0;git reset --all
+: 1712726084:0;sudo rm ../../sources.txt
+: 1712983723:0;find . -name "*.java" -exec cat {} + > source.txt
+: 1713122566:0;cd ...
+: 1713123119:0;git checkout -b feaure/auth-sequence-diagram
+: 1713123122:0;cd doc
+: 1713123409:0;su root
+: 1713123418:0;su jacob
+: 1713123424:0;su jmogainz
+: 1713123444:0;/bin/zsh
+: 1713123561:0;cd docs
+: 1713123582:0;touch auth_sequence_diagram.puml
+: 1713123590:0;code auth_sequence_diagram.puml
+: 1713124462:0;cp ~/Downloads/backend.puml jmoore454/.
+: 1713128607:0;docker system prune -a
+: 1713151296:0;git push --set-upstream origin feaure/auth-sequence-diagram
+: 1713151477:0;git rm .vscode
+: 1713151485:0;git rm -r .vscode
+: 1713151521:0;git commit -m "Removed accidental push of .vscode folder"
+: 1713151642:0;git restore --staged .vscode/settings.json
+: 1713151648:0;git restore .vscode/settings.json
+: 1713151678:0;git restore --staged .gitignore
+: 1713151682:0;git dif
+: 1713151692:0;git restore .gitignore
+: 1713151710:0;git restore .vscode/
+: 1713151838:0;git commit -m "Did docs folder cleanup, deleted old files, added authentication sequence diagram"
+: 1713222837:0;make up
+: 1713313930:0;echo $PWD
+: 1713394826:0;make clear
+: 1713416438:0;git checkout -b feature/new-diagrams-backend-and-cs6310
+: 1713416463:0;git add --al
+: 1713416492:0;git commit -m "Have not committed in a while. This is diagram progress so far in the backend sequence diagram"
+: 1713422029:0;git commit -m "Put a setIsSeedSet to true on /setseed endpoint....don't know if this needs to be there but it seemed like it did. Update diagrams"
+: 1713422053:0;git push --set-upstream origin feature/new-diagrams-backend-and-cs6310
+: 1713422088:0;git checkout main
+: 1713422099:0;git checkout -
+: 1713422101:0;git merge main
+: 1713426690:0;git diff --staged src*
+: 1713426727:0;git commit -m "Update class_model_diagram and sequence_diagram_3 to match the new skills code, but not the new pokemon factor and pokedex stuff yet"
+: 1713429607:0;git commit -m "Updated cs6310 diagrams"
+: 1713429639:0;git reset 
+: 1713429829:0;git commit -m "Deleted the interface contract files. They are not used by any of our code anymore"
+: 1713431173:0;git commit -m "Updated all pdfs and pumls"
+: 1713433172:0;git commit -m "class diagram model organized...but relationships are nowhere near done"
+: 1713433366:0;git commit -m "Restored personal backend.puml so that it would not diff against main"
+: 1714345353:0;cd Downloads
+: 1714345358:0;l | grep -r Neal
+: 1714345364:0;l | grep Neal
+: 1714345370:0;firefox Mark\ Richards,\ Neal\ Ford\ -\ Fundamentals\ of\ Software\ Architecture_\ An\ Engineering\ Approach-O\'Reilly\ Media\ \(2020\).pdf
+: 1714361207:0;cp CS6310\ Udacity\ Transcripts.pdf ~/OneDrive/Misc/.
+: 1714371853:0;cd ~/OneDrive/Misc/
+: 1714371857:0;firefox Craig\ Larman\ -\ Applying\ UML\ and\ Patterns_\ An\ Introduction\ to\ Object-oriented\ Analysis\ and\ Design\ and\ Iterative\ Development-Prentice\ Hall\ PTR\ \(2005\).pdf
+: 1715646348:0;systemctl stop --user onedrive.service
+: 1715646432:0;onedrive --synchronize --resync --reauth
+: 1715646531:0;systemctl start --user onedrive.service
+: 1715646800:0;cd OneDrive/Misc/Obsidian
+: 1715646810:0;git stash
+: 1715646823:0;git stash pop
+: 1715646835:0;git commit -m "Obsidian notes"
+: 1715649677:0;cd OMSCSSpring2024
+: 1715649688:0;mv OMSCSSpring2024 OMSCS
+: 1715649695:0;mkdir Compilers
+: 1715650480:0;sudo pacman -S neovim
+: 1715650609:0;sudo pacman -S clang
+: 1715651105:0;sudo pacman -S python-pynvim
+: 1715651116:0;sudo pacman -S ripgrep
+: 1715651128:0;mkdir nvim
+: 1715653259:0;cd ../OneDrive/Misc/BeforeAfterPhotoCreatorApp
+: 1715653374:0;curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \\
+  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim\
+
+: 1715653686:0;cd .config
+: 1715653696:0;l | grep nvim
+: 1715653700:0;l | grep vim
+: 1715653709:0;mv init.vim nvim/.
+: 1715653711:0;cd nvim
+: 1715654367:0;git clone git@github.com:jmogainz/init.vim.git
+: 1715654387:0;cp ~/.config/nvim/init.vim init.vim
+: 1715654435:0;git commit -m "Upgraded init.vim"
+: 1715655510:0;systemctl status --user onedrive.service
+: 1715655916:0;cd OneDrive/Misc/linux_config
+: 1715655938:0;cd home/init.vim
+: 1715655946:0;cd gnome
+: 1715655976:0;dconf dump / > OneDrive/Misc/linux_config/gnome/settings/gnome-settings-home-dei.dconf
+: 1715655991:0;dconf dump / > gnome-settings-home-dei.dconf
+: 1715656022:0;git commit -m "Updated linux_config with the new neovim stuff"
+: 1715656286:0;sudo npm install -g pyright
+: 1715656304:0;npm install -g npm@10.7.0
+: 1715656315:0;sudo npm install -g npm@10.7.0
+: 1715656423:0;git commit -m "Updated dev setup for vim pyright install"
+: 1715656736:0;mamba list
+: 1715656744:0;mamba env list
+: 1715656759:0;mamba activate BAPhotoCreatorEnv
+: 1716259197:0;cd Misc/
+: 1716259200:0;cd 
+: 1716259210:0;find -type d | grep init
+: 1716259320:0;cp init.vim /home/jmogainz/.config/nvim/init.vim
+: 1716327025:0;sudo pacman -S pavucontrol
+: 1716327039:0;pavucontrol
+: 1716327271:0;pulseaudio -k
+: 1716327281:0;pulseaudio --start
+: 1716607223:0;cp init.vim ~/.config/nvim/.
+: 1716607450:0;sudo systemctl status --user onedrive.service
+: 1716607507:0;systemctl restart --user onedrive.service 
+: 1716607552:0;yay -S onedrive.service
+: 1716607606:0;one
+: 1716607610:0;yay 
+: 1716607668:0;ldd onedrive
+: 1716607680:0;ldd /usr/bin/onedrive
+: 1716607693:0;l /usr/lib | grep libphobos
+: 1716607701:0;yay -Rns onedrive-abraunegg
+: 1716607785:0;onedrive 
+: 1716791443:0;touch temp.txt
+: 1716791951:0;cd OneDrive/Misc/linux_config/home/init.vim
+: 1716791978:0;history -v
+: 1716791987:0;history -h
+: 1716791992:0;history --help
+: 1716792002:0;man history
+: 1716792060:0;nvim temp.txt
+: 1716792119:0;sudo rm -r temp.txt
+: 1716853584:0;history | grep chrome
+: 1716853598:0;history | firefox
+: 1716854142:0;cd OneDrive/OMSCS/Compilers
+: 1716854146:0;sudo rm HW1*
+: 1717033058:0;sudo pacman install zoxide
+: 1717033066:0;sudo pacman -s zoxide
+: 1717033070:0;sudo pacman -S zoxide
+: 1717033076:0;history
+: 1717033087:0;history | grep firefox
+: 1717033408:0;grep -r filter: invert
+: 1717033411:0;grep -r "filter: invert"
+: 1717033508:0;find -type f | grep userContent
+: 1717033534:0;cd .mozilla/firefox/
+: 1717033547:0;cd firefox-mpris
+: 1717033557:0;cd 0ch1mlbr.default-release
+: 1717033561:0;l | grep chrome
+: 1717033563:0;cd chrome
+: 1717039904:0;z user
+: 1717039907:0;z chrome
+: 1717039930:0;cd OneDrive/Misc/linux_config/home
+: 1717040001:0;nvim .zshrc
+: 1717040016:0;cp .zshrc ~/.
+: 1717040026:0;source .zshrc
+: 1717040031:0;z
+: 1717040090:0;nvim .config/nvim/init.vim
+: 1717040829:0;cd .mozilla/firefox/0ch1mlbr.default-release/chrome/
+: 1717040831:0;nvim userContent.css
+: 1717040915:0;man nv_queue
+: 1717040918:0;nv_queue
+: 1717045019:0;code .
+: 1717048265:0;graphviz
+: 1717201111:0;z init
+: 1717201123:0;cd linu
+: 1717201158:0;cp OneDrive/Misc/linux_config/home/init.vim/init.vim .
+: 1717201180:0;cp OneDrive/Misc/linux_config/home/init.vim/init.vim .config/nvim/.
+: 1717201767:0;sudo pacman -S nodejs
+: 1717201872:0;npm install -g yarn
+: 1717201881:0;sudo npm install -g yarn
+: 1717202020:0;nvim home/init.vim
+: 1717202025:0;cd init
+: 1717202154:0;git commit -m "dev_setup.sh updated for nvim stuff"
+: 1717202168:0;z OM
+: 1717202177:0;cd OneDrive
+: 1717202445:0;onedrive --help
+: 1717202453:0;onedrive --help | grep resync
+: 1717202459:0;onedrive --help | grep config
+: 1717202475:0;onedrive --display-config | grep OMS
+: 1717202535:0;z O
+: 1717202539:0;kl
+: 1717202551:0;onedrive --display-config
+: 1717202629:0;cd OMSCS
+: 1717202645:0;nvim hw1_jmoore454.pdf
+: 1717203720:0;cd .ssh
+: 1717203741:0;z OMS
+: 1717203753:0;git clone git@github.gatech.edu:jmoore454/TigerCompiler.git
+: 1717203994:0;git clone git@github.com:jmogainz/TigerCompiler.git
+: 1717204937:0;touch main.cpp
+: 1717204939:0;nvim main.cpp
+: 1717204967:0;sudo rm -r main.cpp
+: 1717206488:0;touch CMakeLists.txt
+: 1717206493:0;touch Makefile
+: 1717206498:0;touch Tiger.g4
+: 1717206503:0;mkdir src/
+: 1717206506:0;mkdir src
+: 1717206931:0;cd /usr/share
+: 1717206934:0;l | grep cmake
+: 1717206936:0;cd cm
+: 1717206939:0;cd cmake/l
+: 1717206970:0;l Modules | count -l
+: 1717206983:0;count -l $(l Modules/)
+: 1717206996:0;l Modules | count
+: 1717206998:0;l Modules | count -w
+: 1717207003:0;history | grep count
+: 1717207031:0;du Modules
+: 1717207039:0;ncdu
+: 1717207072:0;l | wc -l
+: 1717207081:0;l Modules | wc -l
+: 1717207088:0;count Modules
+: 1717207093:0;man count
+: 1717207095:0;man wc
+: 1717207106:0;cd Modules
+: 1717207109:0;l | grep find
+: 1717207120:0;l | grep -i findAn
+: 1717207123:0;l | grep -i findA
+: 1717207168:0;sudo pacman -S antlr4
+: 1717207199:0;sudo pacman -S antlr4-runtime
+: 1717207209:0;cd ../local/lib
+: 1717207227:0;l | grep ant
+: 1717207231:0;l | grep -i ant
+: 1717207256:0;cd lib
+: 1717207280:0;cd ../include
+: 1717207283:0;l | grep -i antlr
+: 1717207286:0;cd antlr4-runtime
+: 1717207321:0;l | grep -i yaml
+: 1717207324:0;l | grep -i ya
+: 1717207337:0;cd local/
+: 1717209776:0;z Com
+: 1717210864:0;cp ~/Downloads/\(Pragmatic\ Programmers\)\ Terence\ Parr\ -\ The\ Definitive\ ANTLR\ Reference_\ Building\ Domain-Specific\ Languages-Pragmatic\ Bookshelf\ \(2007\).pdf ../../../Misc/.
+: 1717211130:0;z Down
+: 1717211136:0;cd ~/Downloads
+: 1717211161:0;l -rt
+: 1717211220:0;unzip phase1_testfiles_v1.zip -d ../OneDrive/OMSCS/Compilers/TigerCompiler/phase1_testfiles_v1/.
+: 1717211227:0;unzip phase1_testfiles_v1.zip -d ../OneDrive/OMSCS/Compilers/TigerCompiler/phase1_testfiles_v1
+: 1717211872:0;l /usr/local | grep antlr
+: 1717211878:0;l /usr/include | grep antlr
+: 1717212855:0;l /usr/include/ | grep antlr
+: 1717212957:0;l /usr/include/antlr4-runtime
+: 1717214201:0;cs8803_bin/tigerc phase1_testfiles_v1/bad_parse1.tiger
+: 1717214207:0;cs8803_bin/tigerc -f phase1_testfiles_v1/bad_parse1.tiger
+: 1717214639:0;cs8803_bin/tigerc -f phase1_testfiles_v1/bad_parse2.tiger
+: 1717215121:0;sudo chmod +x phase1_functional_test.sh
+: 1717217477:0;cd src
+: 1717217515:0;clang-format -style=file -i src/include/CustomErrorListener.h
+: 1717217594:0;clang-format -dump-config
+: 1717217614:0;clang-format -dump-config | grep 120
+: 1717217623:0;clang-format -dump-config | grep brace
+: 1717217626:0;clang-format -dump-config | grep -i brace
+: 1717217646:0;clang-format -dump-config | xclip
+: 1717217768:0;clang-format -dump-config > temp.yaml
+: 1717217770:0;nvim temp.yaml
+: 1717218073:0;sudo rm -r temp.yaml
+: 1717218081:0;clang-format -dump-config | grep AfterClass
+: 1717219638:0;git commit -m "Setup file structure and all initial code to compile parser, makefile, cpp, headers, cmakelists, tests, etc."
+: 1717220104:0;cd deps
+: 1717220118:0;git submodule add git@github.com:antlr/antlr4.git
+: 1717220155:0;sudo rm -r antlr4
+: 1717220256:0;git submodule update
+: 1717220261:0;git submodule update https://github.com/antlr/antlr4.git
+: 1717220271:0;git submodule add https://github.com/antlr/antlr4.git
+: 1717220290:0;git submodule add https://github.com/antlr/antlr4.git --force
+: 1717220323:0;cd deps/
+: 1717220328:0;sudo rm -r --force
+: 1717220334:0;cd --force
+: 1717220341:0;sudo rm "--force"
+: 1717220355:0;sudo rm -r -- --force
+: 1717220373:0;git submodule add --force https://github.com/antlr/antlr4.git
+: 1717220377:0;cd antlr4
+: 1717220404:0;git commit -m "Added source code from antlr so that I can use it help me in my project"
+: 1717252508:0;cd /usr/share/cmake/Modules/
+: 1717252516:0;l | grep -i find
+: 1717252526:0;l | grep -findbi
+: 1717252544:0;l | grep -i findbi
+: 1717252550:0;nvim FindBISON.cmake
+: 1717252616:0;l | grep FindYA
+: 1717262324:0;make bulid
+: 1717262386:0;ldd cs8803_bin/tigerc
+: 1717263008:0;sudo rm -r build
+: 1717263030:0;cd cmake
+: 1717263206:0;cs8803_bin/tigerc
+: 1717263212:0;./tigerc
+: 1717263263:0;git commit -m "I think my build system is fully setup now. It is building, submodule if told to, otherwise the system lib is used"
+: 1717263424:0;make build | grep Built
+: 1717263441:0;make build | grep antlr4_tests
+: 1717263465:0;cd build
+: 1717263468:0;cd bin
+: 1717263478:0;cd deps/antlr4/runtime/Cpp/runtime/
+: 1717263485:0;./antlr4_tests
+: 1717263536:0;git commit -m "Made one final change to build system to not build the static library of antlr4runtime when building from submodule"
+: 1717266567:0;cd OneDrive/Misc/
+: 1717266574:0;git clone git@github.com:jmogainz/config-nvim.git
+: 1717266608:0;touch init.lua
+: 1717266612:0;mkdir lua
+: 1717266617:0;touch plugins.ua
+: 1717266621:0;mkdir settings
+: 1717266625:0;mkdir plugins
+: 1717266634:0;touch keymaps.lua
+: 1717266645:0;touch options.lua
+: 1717266657:0;mv plugins.ua plugins.lua
+: 1717266670:0;touch autopairs.lua
+: 1717266674:0;touch cmp.lua
+: 1717266678:0;tourch fidget.lua
+: 1717266685:0;touch fidget.lua
+: 1717266689:0;touch lspconfig.lua
+: 1717266693:0;touch treesitter.lua
+: 1717266699:0;touch copilot.lua
+: 1717266708:0;touch markdown-preview.lua
+: 1717266713:0;touch auto-save.lua
+: 1717266721:0;touch diffview.lua
+: 1717266725:0;touch ale.lua
+: 1717266812:0;nvim init.lua
+: 1717267079:0;git clone https://github.com/folke/lazy.nvim.git ~/.local/share/nvim/site/pack/lazy/start/lazy.nvim\
+
+: 1717269183:0;z init.vim
+: 1717269191:0;cp ~/.config/nvim/init.vim .
+: 1717269214:0;git commit -m "Final update before moving to lua"
+: 1717269223:0;sudo rm -r init.vim
+: 1717269279:0;cp -r ~/OneDrive/Misc/config-nvim/* .
+: 1717269676:0;cd plugsin
+: 1717269680:0;cd plugins
+: 1717269712:0;nvim cmp.lua
+: 1717270290:0;z linux
+: 1717270297:0;cd init.vim
+: 1717270302:0;nvim init.vim
+: 1717274574:0;nvim ~/.config/nvim/init.vim
+: 1717275019:0;cp ../config-nvim home/.
+: 1717275024:0;cp -r ../config-nvim home/.
+: 1717275063:0;git commit -m "Updated lua folder"
+: 1717275101:0;git reset ~HEAD
+: 1717275108:0;git og
+: 1717275139:0;history | grep HEAD
+: 1717275165:0;git reset HEAD~1
+: 1717275192:0;git reset 986d1
+: 1717275240:0;git commit -m "No longer tracking undodir"
+: 1717275250:0;git fetch
+: 1717275255:0;cd lua
+: 1717275257:0;cd settings
+: 1717275348:0;sudo rm -r ~/.config/nvim/init.lua
+: 1717275363:0;cp init.vim/init.vim ~/.config/nvim/.
+: 1717275428:0;sudo rm -r ~/.config/nvim/init.vim
+: 1717275441:0;cp config-nvim/init.lua ~/.config/nvim/.
+: 1717275888:0;git commit  -m "New"
+: 1717277204:0;git clone --depth 1 https://github.com/wbthomason/packer.nvim\\
+  ~/.local/share/nvim/site/pack/packer/start/packer.nvim\
+
+: 1717277925:0;cd -6
+: 1717277927:0;git add -all
+: 1717277940:0;git commit -m "added dev_setup changes"
+: 1717277945:0;cd -
+: 1717278115:0;nvim temp.sh
+: 1717278130:0;sudo chmod +x temp.sh
+: 1717278133:0;./temp.sh
+: 1717278168:0;sudo pacman -Rns npm
+: 1717278173:0;sudo pacman -S npm
+: 1717279468:0;sudo pacman -S lua-language-server
+: 1717280860:0;nvim m
+: 1717281532:0;nvimm .
+: 1717282551:0;sudo rm -r temp.sh
+: 1717283020:0;man fzf
+: 1717283063:0;man fzf | grep border
+: 1717283105:0;man fzf | grep BORDER
+: 1717283710:0;man fzf | nvim 
+: 1717284488:0;cp -r config-nvim/* ~/.config/nvim/
+: 1717284709:0;cd .config/nvim
+: 1717284715:0;cd undodir
+: 1717293134:0;cd .local/share/nvim
+: 1717293176:0;cd site
+: 1717293178:0;cd pack
+: 1717293184:0;sudo rm -r lazy
+: 1717293188:0;cd autoload
+: 1717293191:0;ol
+: 1717293195:0;cd plugged
+: 1717293204:0;nvim .netrwhist
+: 1717293810:0;cd -10
+: 1717293830:0;cp -r ~/.config/nvim/* config-nvim/.
+: 1717293850:0;touch .gitignore
+: 1717293882:0;sudo rm -r plugin
+: 1717293890:0;sudo rm -r .gitignore
+: 1717293898:0;sudo rm -r undodir
+: 1717294087:0;git commit -m "Updated to latest. Current working order. Changed form lazy to packer"
+: 1717309715:0;kill -9 87385
+: 1717312083:0;git commit -m "Added a few more plugins I needed to do heavy source code digging"
+: 1717312240:0;git restore --staged dist/*
+: 1717312263:0;nvim .git
+: 1717312269:0;nvim .gitignore
+: 1717312316:0;git add .gitignore
+: 1717312327:0;git restore dist/libantlr4-runtime.so.4.13.1
+: 1717312357:0;git status --staged
+: 1717312412:0;diff src/TigerErrorListener.cpp src/ReturnValueErrorListener.cpp
+: 1717312479:0;git commit -m "Layed some good ground work down. I have error codes going out like that should be, and now I need to write test"
+: 1717313520:0;cd dist
+: 1717313621:0;sudo pacman -S tig
+: 1717313731:0;git restore --staged
+: 1717313738:0;git restore --staged dist
+: 1717313745:0;git restore dist
+: 1717313862:0;git commit -m "Rewriting the history to get rid of the .so...that was an oopsies"
+: 1717313907:0;sudo rm -r dist
+: 1717314118:0;./cs8803_bin/tigerc -f tests/phase1_testfiles_v1/bad_parse1.tiger
+: 1717314229:0;./cs8803_bin/tigerc -f tests/phase1_testfiles_v1/bad_parse2.tiger
+: 1717314382:0;./cs8803_bin/tigerc -f tests/phase1_testfiles_v1/bad_parse3.tiger
+: 1717314599:0;cat Tiger.g4 | xclip
+: 1717315083:0;ls -h
+: 1717315088:0;ls -a
+: 1717315096:0;ls -l
+: 1717315129:0;l tests/phase1_testfiles_v1
+: 1717315138:0;l tests/phase1_testfiles_v1 | xclip
+: 1717315792:0;z -
+: 1717315802:0;z tests
+: 1717317243:0;sudo chmod +x zip.sh
+: 1717317266:0;unzip tiger_compiler_phase1_jmoore454.zip -d tiger_compiler_phase1_jmoore454
+: 1717317271:0;cd tiger_compiler_phase1_jmoore454
+: 1717317353:0;sudo rm -r tiger_compiler_phase1_jmoore454
+: 1717317456:0;git commit -m "Tests added, passing, archiver script added, CMakeList update for safety catch if I forget to take don't use system lib out of makefile, grammar updated to fix EOF issue"
+: 1717317608:0;sudo rm -r cs8803_bin
+: 1717317618:0;sudo rm -r build/tigerc
+: 1717317781:0;sudo rm -r cs8803_bin build
+: 1717317909:0;z config-
+: 1717365558:0;./cs8803_bin/tigerc -f tests/phase1_testfiles_v1/bad_parse4.tiger
+: 1717365731:0;sudo pacman -S graphviz
+: 1717365853:0;nvim bad_parse4.tree.gv
+: 1717366241:0;dot -Tpdf -O bad_parse4.tree.gv
+: 1717366413:0;cmake ..
+: 1717366426:0;./cs8803_bin/tigerc -f tests/phase1_testfiles_v1/bad_parse4.tiger -p
+: 1717366649:0;dot -Tpdf -O tests/phase1_testfiles_v1/bad_parse4.tree.gv
+: 1717366948:0;firefox tests/phase1_testfiles_v1/bad_parse4.tree.gv.pdf
+: 1717367890:0;make buiild
+: 1717368963:0;l tests/phase1_testfiles_v1/
+: 1717368983:0;cat tests/phase1_testfiles_v1/bad_parse4.tiger | xclip
+: 1717369008:0;cat tests/phase1_testfiles_v1/bad_parse4.tree.gv | xclip
+: 1717375771:0;./cs8803_bin/tigerc -f tests/phase1_testfiles_v1/parse_assignment.tiger -p
+: 1717375773:0;dot -Tpdf -O tests/phase1_testfiles_v1/parse_assignment.tree.gv
+: 1717389540:0;./phase1_functional_test.sh
+: 1717390194:0;cd .
+: 1717390565:0;make tests
+: 1717390759:0;make update
+: 1717392461:0;make build
+: 1717392467:0;./cs8803_bin/tigerc -f tests/phase1_testfiles_v1/parse_assignment.tiger -s
+: 1717392475:0;l | grep tokens
+: 1717394145:0;git commit -m "Been a while since I updated. Everything is fully implemented for phase1. Going to do review tmr...but this should work for now"
+: 1717394751:0;make configure
+: 1717396524:0;git restore ../M*
+: 1717396532:0;git restore ../Makefile
+: 1717396541:0;git restore --staged ../M*
+: 1717396562:0;git commit -m "Updated tests to make them even more robust"
+: 1717396563:0;git upsh
+: 1717396653:0;sudo rm -r tiger_compiler_phase1_jmoore454.zip
+: 1717396988:0;l /usr/bin | grep antlr
+: 1717397111:0;git clone https://github.gatech.edu/omscs8803-08/vagrant-vm.git
+: 1717397123:0;cd vagrant-vm
+: 1717397149:0;docker build -t compilers-env
+: 1717397153:0;docker build -t compilers-env .
+: 1717397565:0;docker run -it compilers-env:latest /bin/bash\
+
+: 1717397593:0;docker images
+: 1717397615:0;docker du system
+: 1717397623:0;docker system -du
+: 1717397628:0;docker du
+: 1717397633:0;docker system du
+: 1717397641:0;history | grep docker
+: 1717397649:0;history | grep docker | grep du
+: 1717397677:0;docker system df
+: 1717397690:0;cd ../TigerCompiler
+: 1717397760:0;git diff -staged Makefile
+: 1717397766:0;git diff -staged
+: 1717397773:0;git diff --staged Makefile
+: 1717397802:0;cd tests/phase1_testfiles_v1
+: 1717397815:0;l grep -r pdf
+: 1717397827:0;l | grep -r pdf
+: 1717397837:0;l | grep -r "*.pdf"
+: 1717397845:0;find -name "*.pdf"
+: 1717397854:0;l | grep -r \.pdf
+: 1717397863:0;l | grep tree
+: 1717397866:0;l | grep gv
+: 1717397871:0;l | grep pdf
+: 1717397927:0;git commit -m "Upgraded to pass gradescope with 'antlr' instead of 'antlr4'
+: 1717397940:0;git commit -m "Upgraded to pass gradescope with 'antlr' instead of "antlr4"\
+git commit -m "Upgraded to pass gradescope with 'antlr' instead of 'antlr4'"
+: 1717397943:0;git commit -m "Upgraded to pass gradescope with 'antlr' instead of 'antlr4'"
+: 1717398113:0;cd generated
+: 1717398543:0;git commit -m "Did not work. I think I got antlr exe working now?"
+: 1717398676:0;ldd tigerc
+: 1717399279:0;git restore --staged tigerc_phase1_jmoore454.zip
+: 1717399286:0;git restore tigerc_phase1_jmoore454.zip
+: 1717399304:0;sudo rm -r tiger
+: 1717399327:0;git reset HEAD
+: 1717399372:0;git reset HEAD~
+: 1717399427:0;git commit -m "Had to rewrite history"
+: 1717399429:0;git push -f
+: 1717399981:0;nvimi .
+: 1717400042:0;git commit -m "Final submission to phase1 assignment made"
+: 1717400069:0;cd cs8803_bin
+: 1717402126:0;git commit -m "My order was wrong for relation op"
+: 1717402964:0;git commit -m "Decided to make tests slightly more robust"
+: 1717474364:0;make test
+: 1717476206:0;nvim accept
+: 1717476219:0;sudo rm -r accept
+: 1717476287:0;git commit -m "Some more final cleanup and refinement"
+: 1717477060:0;git commit -m "Removed test that should not be there"
+: 1717477180:0;git commit -m "Updated all tests after a run, now testing in docker before putting up final submish"
+: 1717477461:0;make clean
+: 1717477486:0;sudo rm -r tigerc_phase1_jmoore454.zip
+: 1717477489:0;./zip.sh
+: 1717477584:0;docker run -it -v .:/TigerCompiler compilers-env:latest /bin/bash\
+
+: 1717477838:0;sudo rm -r docker
+: 1717505893:0;nvim 
+: 1717505941:0;git commit -m "Updating from dotfiles"
+: 1717542397:0;cp -r ../../OneDrive/Misc/linux_config/home/config-nvim/* .
+: 1717542408:0;git log
+: 1717542411:0;tig
+: 1717542917:0;z nvim
+: 1717544152:0;nvim Makefile
+: 1717564477:0;cd tests
+: 1717564491:0;sudo rm -r tests/Makefile tests/README.md
+: 1717567312:0;cd -3
+: 1717567315:0;cd config-nvim
+: 1717567401:0;git commit -m "Added commit"
+: 1717567751:0;sudo rm file
+: 1717567757:0;git reset -hard
+: 1717573192:0;nvim m.
+: 1717576440:0;cd -1
+: 1717576458:0;git diff --staged
+: 1717576479:0;git commit -m "had to improve configuration"
+: 1717576568:0;sudo pacman -S firefox-tridactyl
+: 1717576994:0;cp -r ~/.config/nvim/* .
+: 1717578121:0;git commit -m "Update dev_setup.sh"
+: 1717964299:0;sudo isw -r 16Q2EMS1
+: 1717966679:0;z Misc
+: 1717966684:0;cd linux_config
+: 1717966685:0;cd home
+: 1717966708:0;sudo rm -r home
+: 1717966766:0;git clone git@github.com:jmogainz/dotfiles.git
+: 1717966790:0;git commit -m "Yeah man here we with dotfiles now"
+: 1717966791:0;git puhs
+: 1717966824:0;cp -r OneDrive/Misc/linux_config/dotfiles/.config/nvim/* .config/nvim/.
+: 1717970124:0;ipconfig
+: 1717970152:0;ip
+: 1717978932:0;sudo df
+: 1717979058:0;pacman -Q headers
+: 1717979062:0;pacman -Qm headers
+: 1717979066:0;pacman -Q
+: 1717979071:0;pacman -Q | grep headers
+: 1717979328:0;uname -r
+: 1717979953:0;mhwd-kernel -i
+: 1717979958:0;sudo mhwd-kernel -li
+: 1717980263:0;sudo isw
+: 1717980503:0;sudo pacman -S lm_sensors
+: 1717980575:0;sudo systemctl status isw@16Q2EMS1.service
+: 1717980594:0;sudo systemctl stop isw@16Q2EMS1.service
+: 1717980599:0;sudo systemctl stop isw@16Q4EMS1.service
+: 1717980605:0;sudo systemctl disable isw@16Q4EMS1.service
+: 1717980620:0;sudo systemctl disable isw@16Q2EMS1.service
+: 1717980646:0;sudo sensors-detect
+: 1717980825:0;lspci -k | grep VGA
+: 1717980849:0;lsmod | grep -e i915 -e nouveau -e nvidia -e amdgpu\
+
+: 1717981267:0;sudo pacman -S fancontrol
+: 1717981332:0;sudo pwmconfig
+: 1717981383:0;lsmod | grep pwm
+: 1717981387:0;lsmod | grep -i pwm
+: 1717981426:0;sudo pacman -S linux-headers
+: 1717981457:0;sudo pacman -S base-devel dkms
+: 1717981660:0;sudo modprobe rtw89pci
+: 1717981669:0;sudo shutdown
+: 1717982620:0;sudo iw dev wlp3s0 scan\
+
+: 1717982678:0;nmcli device wifi connect "CJWifi" password "123Yahtzee"
+: 1717982765:0;sudo systemctl restart NetworkManager
+: 1717982823:0;sudo pkill wpa_supplicant\
+sudo pkill dhclient\
+
+: 1717982826:0;sudo iw dev wlp3s0 scan | grep CJWifi
+: 1717982859:0;nmcli device wifi list
+: 1717982965:0;sudo ip link set wlp3s0 up\
+
+: 1717982974:0;ip link show wlp3s0\
+
+: 1717983006:0;journalctl -u NetworkManager -e\
+
+: 1717983075:0;lspci -nnk | grep -iA3 net
+: 1717983329:0;cat /etc/modprobe.d/blacklist.conf\
+cat /etc/modprobe.d/blacklist-rtw89.conf\
+
+: 1717983362:0;sudo pacman -S linux-firmware\
+
+: 1717983389:0;journalctl -u NetworkManager -e | grep wlp3s0\
+
+: 1717983397:0;nmcli device wifi connect "CJWifi" password "123Yahtzee"\
+
+: 1717983774:0;sudo iwconfig wlp3s0 power off\
+
+: 1717983822:0;dmesg | grep firmware
+: 1717983839:0;sudo dmesg | grep ftw
+: 1717983849:0;sudo dmesg | grep rtw89
+: 1717983857:0;sudo dmesg | grep rtw
+: 1717983872:0;sudo dmesg | grep rtw | grep -i error
+: 1717984100:0;iw dev
+: 1717984119:0;sudo ip link set wlp3s0 up
+: 1717984192:0;sudo pacman -S iwctl
+: 1717984213:0;sudo pacman -S iwd
+: 1717984219:0;iwctl
+: 1717984240:0;sudo pacman -Rns iwd
+: 1717984273:0;sudo iw dev wlp3s0 scan | grep CJ
+: 1717984279:0;sudo iw dev wlp3s0 scan | less
+: 1717984390:0;nvim /etc/wpa_supplicant/.
+: 1717984408:0;cd /etc/wpa_supplicant
+: 1717984955:0;sudo pkill wpa_supplicant
+: 1717984964:0;sudo rm /run/wpa_supplicant/wlp3s0
+: 1717985002:0;sudo dhcpcd wlp3s0
+: 1717985111:0;sudo pkill wpa_supplicant\
+sudo systemctl stop NetworkManager\
+
+: 1717985127:0;sudo rm /run/wpa_supplicant/wlp3s0\
+
+: 1717985135:0;sudo iw dev wlp3s0 scan | grep CJWifi\
+
+: 1717985150:0;sudo ip link set wlp3s0 down\
+sudo ip link set wlp3s0 up\
+
+: 1717985156:0;lsmod | grep rtw89\
+
+: 1717985161:0;sudo wpa_supplicant -B -i wlp3s0 -c /etc/wpa_supplicant/wpa_supplicant.conf\
+
+: 1717985224:0;sudo dhcpcd wlp3s0\
+
+: 1717985232:0;sudo dhclient wlp3s0\
+
+: 1717985254:0;ip addr show wlp3s0\
+
+: 1717985280:0;sudo wpa_cli -i wlp3s0 status\
+
+: 1717985348:0;sudo pkill wpa_supplicant\
+sudo rm /run/wpa_supplicant/wlp3s0\
+sudo wpa_supplicant -B -i wlp3s0 -c /etc/wpa_supplicant/wpa_supplicant.conf\
+
+: 1717985368:0;sudo nvim wpa_supplicant.conf
+: 1717985465:0;sudo rm /run/wpa_supplicant/wlp3s0\
+sudo rm -rf /var/run/wpa_supplicant/*\
+
+: 1717985472:0;sudo wpa_supplicant -i wlp3s0 -c /etc/wpa_supplicant/wpa_supplicant.conf -d\
+
+: 1717985656:0;sudo rm -r *
+: 1717985667:0;sudo systemctl start NetworkManager
+: 1717985734:0;sudo systemctl status NetworkManager
+: 1717985750:0;ls
+: 1717985802:0;top
+: 1717986938:0;yay -Qs
+: 1717986943:0;yay -Qs | grep rtw
+: 1717987180:0;lspci
+: 1717987278:0;yay -S rtw89-dkms-git
+: 1717987394:0;sudo modprobe -v rtw89pci
+: 1717987460:0;sudo modprobe -v rtw_8852be
+: 1717987475:0;sudo modprobe -l
+: 1717988171:0;nvim /etc/modprobe.d/blacklist-rtw89.conf
+: 1717988288:0;sudo nvim /etc/modprobe.d/blacklist-rtw89.conf
+: 1717988387:0;sudo pacman -S linux-firmware
+: 1717988495:0;sudo modprobe -rv rtw89pci
+: 1717988612:0;nmcli radio wifi off\
+
+: 1717988616:0;sudo systemctl stop NetworkManager\
+
+: 1717988648:0;sudo pkill wpa_supplicant\
+
+: 1717988651:0;sudo modprobe -rv rtw89pci\
+sudo modprobe -rv rtw89core\
+
+: 1717988691:0;sudo rmmod rtw89pci\
+sudo rmmod rtw89core\
+
+: 1717988723:0;sudo modprobe -rv rtw_8852be\
+
+: 1717988731:0;sudo modprobe -rv rtw89pci\
+
+: 1717988735:0;sudo modprobe -rv rtw89core\
+
+: 1717988745:0;nmcli radio wifi off\
+sudo systemctl stop NetworkManager\
+
+: 1717988752:0;sudo modprobe -rv rtw_8852be\
+sudo modprobe -rv rtw89pci\
+sudo modprobe -rv rtw89core\
+
+: 1717988761:0;sudo modprobe -v rtw_8852be\
+
+: 1717988771:0;sudo systemctl start NetworkManager\
+nmcli radio wifi on\
+
+: 1717989089:0;modinfo 8852be\
+
+: 1717989095:0;modinfo rtw8852be\
+
+: 1717989134:0;modinfo rtw_8852be\
+
+: 1717989219:0;lsmod | grep rtw
+: 1717989331:0;sudo dmesg | grep firmware
+: 1717989478:0;lspci -nnk
+: 1717989559:0;yay -Rns rtw89-dkms-git
+: 1717989625:0;modprobe -rv rtw_8852be
+: 1717989645:0;mhwd-kernel -l
+: 1717990061:0;sudo rm /etc/modprobe.d/blacklist-rtw89.conf
+: 1717990065:0;sudo mkinitcpio -P
+: 1717990109:0;sudo mhwd-kernel -i linux66
+: 1717990229:0;sudo update-grub
+: 1717990260:0;sudo grub-mkconfig -o /boot/grub/grub.cfg\
+
+: 1717992130:0;z Tiger
+: 1717992451:0;mv /home/jmogainz/.local/state/nvim/shada/main.shada /home/jmogainz/.local/state/nvim/shada/main.shada.bak\
+
+: 1717992456:0;rm /home/jmogainz/.local/state/nvim/shada/main.shada.tmp.f\
+
+: 1717992545:0;nvim.
+: 1717993084:0;lscpu
+: 1717993131:0;git add cmake/FindANTLR4RUNTIME.cmake
+: 1717993267:0;git commit -m "Cleaned up line in project cmake that is done in FindANTLR already"
+: 1717995991:0;sudo pacman -S pandoc texlive-core
+: 1717996282:0;cd Compilers
+: 1717996315:0;touch hw2.md
+: 1717996500:0;nvim ~/.config/nvim/.
+: 1717996616:0;cp -r ~/.config/nvim/* ~/OneDrive/Misc/linux_config/dotfiles/.config/nvim/.
+: 1717996623:0;cd ~/OneDrive/Misc/linux_config/dotfiles/.config/nvim/.
+: 1717996650:0;cd lua/plugins/
+: 1717996655:0;sudo rm -r markdown-preview.lua
+: 1717996673:0;sudo rm -r plugin undodir
+: 1717996687:0;git commit -m "Deleted file not used anymore"
+: 1717996694:0;cd -5
+: 1717997341:0;pandoc hw2.md -o hw2.tex
+: 1717997420:0;fmtutil-sys --all\
+
+: 1717997438:0;sudo pdflatex hw2.tex
+: 1717997498:0;sudo pacman -S texlive-core texlive-bin texlive-latexextra texlive-science texlive-fontsextra\
+
+: 1717997553:0;sudo pacman -S texlive-bin
+: 1717997710:0;sudo pacman -S tree-sitter
+: 1717997817:0;tree-sitter
+: 1717997842:0;sudo npm install -g tree-sitter-cli\
+
+: 1717997861:0;z linux_config
+: 1717997865:0;cd dotfiles
+: 1717997877:0;nvim dev_setup.sh
+: 1717997960:0;git commit -m "update"
+: 1717998210:0;sudo pacman -Syu texlive-core texlive-bin texlive-latexextra\
+
+: 1717998334:0;sudo mktexlsr\
+
+: 1717998342:0;sudo fmtutil-sys --all\
+
+: 1717998375:0;export PATH=/usr/local/texlive/2024/bin/x86_64-linux:$PATH\
+
+: 1717998389:0;ls -l /usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt\
+
+: 1717998427:0;sudo texconfig rehash
+: 1717998494:0;sudo chmod -R 755 /usr/local/texlive/2024/texmf-var/web2c\
+sudo chmod -R 755 /usr/share/texmf\
+sudo chmod -R 755 /usr/share/texmf-dist\
+sudo chmod -R 755 /etc/texmf\
+sudo mktexlsr\
+
+: 1717998518:0;sudo find / -name pdflatex.fmt 2>/dev/null\
+
+: 1717998595:0;sudo find / -type -name texlive
+: 1717998601:0;sudo find / -type d -name texlive
+: 1717998682:0;pdflatex --version
+: 1717998735:0;nvim hw2.log
+: 1717998784:0;sudo pacman -S texlive-core texlive-bin texlive-latexextra texlive-latexrecommended texlive-fontsextra texlive-formatsextra texlive-pictures texlive-pstricks texlive-science\
+
+: 1717998883:0;cd -2
+: 1717999060:0;sudo rm -r hw2.tex
+: 1718001568:0;firefox hw2.pdf]
+: 1718064760:0;clear
+: 1718065090:0;git restore tests/phase1_testfiles_v1/parse_functions.tree.pdf
+: 1718067239:0;nvim OnlineToolGrammar.txt
+: 1718072321:0;make
+: 1718076395:0;git add tests/phase1_functional_test.sh TigerLL2.g4
+: 1718076416:0;git commit -m "Added updated grammer that is LL(2), update testing script"
+: 1718078959:0;pdflatex hw2.tex
+: 1718079460:0;firefox hw2.pdf
+: 1718079855:0;sudo rm -r hw2.md hw2.pdf hw2.log hw2.aux
+: 1718079863:0;nvim hw2.tex
+: 1718079997:0;sudo pacman -S latexmk zathura zathura-pdf-poppler\
+
+: 1718080059:0;sudo pacman -Syu
+: 1718080544:0;sudo pacman -S texlive-binextra zathura zathura-pdf-poppler\
+\
+
+: 1718080713:0;latex
+: 1718080731:0;latexmk
+: 1718080752:0;sudo pacman -S gnome-latex
+: 1718080760:0;gnome-latex
+: 1718087267:0;sudo nvim .
+: 1718087277:0;sudo nvim hw2.tex
+: 1718099008:0;nvi .
+: 1718162983:0;z home
+: 1718162989:0;z dot
+: 1718162996:0;git pull
+: 1718163009:0;git show HEAD
+: 1718163045:0;cp -r ~/.config/nvim/* .config/nvim/.
+: 1718163068:0;sudo rm -r .config/nvim/undodir .config/nvim/plugin
+: 1718163119:0;git commit -m "Full latex support"
+: 1718163121:0;git push
+: 1718163140:0;top 
+: 1718163359:0;lsattr
+: 1718163365:0;lshw
+: 1718163377:0;lsub
+: 1718163378:0;lsusb
+: 1718163440:0;systemctl status before_after_creator.service
+: 1718163738:0;crontab
+: 1718163745:0;crontab -l
+: 1718163875:0;yay -S onedrive-abraunegg
+: 1718163998:0;ifconfig
+: 1718164005:0;ip link
+: 1718164438:0;cd TigerCompiler
+: 1718164446:0;git diff
+: 1718164811:0;systemctl stop --user onedrive.service 
+: 1718164816:0;cd .config/onedrive
+: 1718164828:0;nvim sync_list
+: 1718164857:0;nvim config
+: 1718165031:0;onedrive --synchronize
+: 1718165041:0;onedrive --synchronize --resync
+: 1718165082:0;systemctl start --user onedrive.service 
+: 1718165088:0;systemctl status --user onedrive.service 
+: 1718165092:0;cd -4
+: 1718165109:0;git add --all
+: 1718165112:0;git reset --hard
+: 1718165114:0;git sttaus
+: 1718165120:0;cd deps/antlr4
+: 1718165122:0;git status
+: 1718165142:0;nvim .
+: 1718165310:0;sudo reboot
+: 1718170070:0;pkill firefox
+: 1718170653:0;less /etc/fstab
+: 1718170877:0;fdisk /
+: 1718171468:0;cd /mnt
+: 1718171469:0;l
+: 1718171477:0;find -type d | grep boot
+: 1718171482:0;cd boot
+: 1718171484:0;cd ..
+: 1718172615:0;cd
+: 1718250492:0;sudo shutdown now
+: 1718253445:0;parted
+: 1718253581:0;sensors
+: 1718253827:0;python
+: 1718253973:0;sudo parted
+: 1718254040:0;sudo mkfs.fat -F32 /dev/nvme0n1p5
+: 1718254100:0;sudo mkfs.ext4 /dev/nvme0n1p6
+: 1718254304:0;sudo parted /dev/nvme0n1
+: 1718254398:0;sudo mkswap /dev/nvme0n1p7
+: 1718254674:0;sudo mount /dev/nvme0n1p6 /mnt
+: 1718254680:0;sudo mkdir /mnt/home
+: 1718254704:0;sudo rm -r /mnt/home
+: 1718254708:0;l /mnt
+: 1718254742:0;sudo mkdir /mnt/boot
+: 1718254751:0;sudo mount /dev/nvme0n1p5 /mnt/boot
+: 1718254791:0;sudo swapon /dev/nvme0n1p7
+: 1718254932:0;sudo unmount /mnt/boot
+: 1718254972:0;sudo umount /mnt/boot
+: 1718255059:0;sudo mkdir /mnt/boot/efi
+: 1718255069:0;sudo mount /dev/nvme0n1p5 /mnt/boot/efi
+: 1718255203:0;sudo rsync -aAXv / /mnt --exclude={/mnt,/proc,/sys,/dev,/run,/tmp,/swapfile}
+: 1718262231:0;lsbk
+: 1718262232:0;lsblk
+: 1718262251:0;disk
+: 1718262253:0;fdisk
+: 1718262262:0;df -h
+: 1718262404:0;systemctl status --user onedrive
+: 1718262418:0;sudo systemctl status before_after_creator.service 
+: 1718262424:0;exit
+: 1718262474:0;z dotfiles
+: 1718262486:0;cp ~/.zsh_history .
+: 1718262488:0;git status
+: 1718262489:0;git diff
+: 1718262506:0;l
+: 1718262519:0;git reset --hard
+: 1718262541:0;cp ~/.zsh_history .zsh_history_personal
