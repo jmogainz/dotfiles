@@ -1,0 +1,81 @@
+# General settings for py3status
+general {
+    color_bad = "#dc322f"
+    color_degraded = "#cb4b16"
+    color_good = "#859900"
+    color_separator = "#586e75"
+    colors = true
+    interval = 60
+    markup = "pango"
+    output_format = "i3bar"
+}
+
+# Define the modules to be included in the status bar
+order += "do_not_disturb"
+order += "xrandr"
+order += "volume_status speakers"
+order += "volume_status mic"
+order += "wireless _first_"
+order += "ethernet _first_"
+order += "group tz"
+order += "tztime local"
+
+# Do not disturb status
+do_not_disturb {
+    format = '[\?color=state [\?if=state |]]'
+    thresholds = [(0, 'good'), (1, 'bad')]
+}
+
+# Volume control for speakers
+volume_status speakers {
+    command = "pactl"
+    format = ' {percentage}%'
+    format_muted = ' {percentage}%'
+    button_down = 5
+    button_mute = 1
+    button_up = 4
+    thresholds = [(0, 'bad'), (5, 'degraded'), (10, 'good')]
+    max_volume = 200
+}
+
+# Volume control for microphone
+volume_status mic {
+    format = ' {percentage}%'
+    format_muted = ' {percentage}%'
+    button_down = 5
+    button_mute = 1
+    button_up = 4
+    is_input = true
+    thresholds = [(0, 'bad'), (10, 'degraded'), (20, 'good')]
+}
+
+wireless _first_ {
+        format_up = "W: (%quality at %essid) %ip"
+        format_down = "W: down"
+}
+
+ethernet _first_ {
+        format_up = "E: %ip (%speed)"
+        format_down = "E: down"
+}
+
+# Timezones group
+group tz {
+    cycle = 10
+    format = "{output}"
+
+    tztime ga {
+        format = "GA %I:%M %p"
+        timezone = "America/New_York"
+    }
+
+    tztime al {
+        format = "AL %I:%M %p"
+        timezone = "America/Chicago"
+    }
+}
+
+# Local time
+tztime local {
+    format = "%d/%m %I:%M:%S %p"
+}
