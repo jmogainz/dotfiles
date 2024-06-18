@@ -221,12 +221,12 @@ ins_right {
   color = { fg = colors.green, gui = 'bold' },
 }
 
-ins_right {
-  'fileformat',
-  fmt = string.upper,
-  icons_enabled = false, -- I think icons are cool but Eviline doesn't have them. sigh
-  color = { fg = colors.green, gui = 'bold' },
-}
+-- ins_right {
+--   'fileformat',
+--   fmt = string.upper,
+--   icons_enabled = false, -- I think icons are cool but Eviline doesn't have them. sigh
+--   color = { fg = colors.green, gui = 'bold' },
+-- }
 
 ins_right {
   'filetype',
@@ -234,11 +234,11 @@ ins_right {
   color = { fg = colors.blue, gui = 'bold' },
 }
 
-ins_right {
-  'branch',
-  icon = '',
-  color = { fg = colors.violet, gui = 'bold' },
-}
+-- ins_right {
+--   'branch',
+--   icon = '',
+--   color = { fg = colors.violet, gui = 'bold' },
+-- }
 
 ins_right {
   'diff',

@@ -42,7 +42,7 @@ vim.api.nvim_create_user_command('Rg', function(opts)
 end, { bang = true, nargs = '*' })
 vim.env.FZF_DEFAULT_COMMAND = 'rg --files --hidden --glob "!.git/*"'
 vim.env.FZF_DEFAULT_OPTS = '--bind=ctrl-j:down,ctrl-k:up'
-vim.env.FZF_DEFAULT_OPTS = '--border=none --preview-window=border-none,wrap --bind=?:toggle-preview --preview "echo {}"'
+vim.env.FZF_DEFAULT_OPTS = '--border=none --preview-window=border-none,wrap,hidden --bind=?:toggle-preview --preview "echo {}"'
 
 -- Colorscheme settings
 vim.cmd('syntax enable')
@@ -58,7 +58,7 @@ end
 vim.o.undodir = target_path
 
 -- Copilot settings
-vim.g.copilot_enabled = 1
+vim.g.copilot_enabled = 0
 vim.g.copilot_no_tab_map = true
 vim.g.copilot_assume_mapped = true
 
