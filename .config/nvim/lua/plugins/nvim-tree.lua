@@ -49,7 +49,7 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
         full_name = false,
         root_folder_label = ":~:s?$?/..?",
         indent_width = 2,
-        special_files = { "Makefile", "README.md", "readme.md" },
+        special_files = { "Makefile", "README.md", "CMakeLists.txt", "readme.md" },
         symlink_destination = true,
         highlight_git = "none",
         highlight_diagnostics = "none",
