@@ -16,6 +16,9 @@ vim.o.smartindent = false
 vim.opt.fixeol = false
 vim.opt.shada = { "!", "'300", "<50", "s10", "h" } 
 
+-- Plantuml settings
+vim.g['plantuml_previewer#plantuml_jar_path'] = '/usr/share/java/plantuml/plantuml.jar'
+
 -- LaTeX settings
 vim.g.vimtex_view_method = 'zathura'
 vim.g.vimtex_compiler_method = 'latexmk'
