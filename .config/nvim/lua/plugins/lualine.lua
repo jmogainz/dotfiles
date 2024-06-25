@@ -14,7 +14,15 @@ local function get_diagnostics_line_numbers()
   local error_str = #error_lines > 0 and "E:" .. table.concat(error_lines, ",") or ""
   local warn_str = #warn_lines > 0 and "W:" .. table.concat(warn_lines, ",") or "" 
 
-  return error_str .. " " .. warn_str
+  if #error_str == 0 and #warn_str == 0 then
+    return ""
+  elseif #error_str == 0 then
+    return warn_str
+  elseif #warn_str == 0 then
+    return error_str
+  else
+    return error_str .. " " .. warn_str
+  end
 end
 
 -- Eviline config for lualine
