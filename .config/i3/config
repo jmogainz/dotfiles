@@ -130,6 +130,12 @@ bindsym $mod+Shift+space floating toggle
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
+# Move the currently focused floating window to the scratchpad and switch focus to the next tiling window
+bindsym $mod+Shift+BackSpace [floating] move scratchpad, [tiling] focus
+
+# Show the next floating window from the scratchpad (bringing it to the front)
+bindsym $mod+Ctrl+space scratchpad show
+
 # focus the child container
 #bindsym $mod+d focus child
 
@@ -145,6 +151,9 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
+
+bindsym $mod+ctrl+h workspace prev
+bindsym $mod+ctrl+l workspace next
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -215,4 +224,4 @@ exec --no-startup-id clipmenud
 bindsym Print exec --no-startup-id gnome-screenshot -i
 
 # Lock
-bindsym Mod1+L exec --no-startup-id ~/.config/i3/locki3.sh
+bindsym Mod1+L exec --no-startup-id i3lock
