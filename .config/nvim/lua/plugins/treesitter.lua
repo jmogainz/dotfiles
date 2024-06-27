@@ -3,6 +3,9 @@ require'nvim-treesitter.configs'.setup {
     "c", "json", "yaml", "cpp", "python", "make", "bash", "lua", "html", "gitignore",
     "dockerfile", "markdown", "vim", "cmake", "dot", "latex"
   },
+  ignore_install = {},
+  sync_install = false,
+  modules = {},
   highlight = {
     enable = true,
     disable = { "python", "cpp" },
