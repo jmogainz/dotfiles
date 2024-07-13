@@ -141,3 +141,8 @@ fi
 # <<< conda initialize <<<
 
 eval "$(zoxide init zsh)"
+
+# if tmux is installed, alias clear to do clear and tmux clear-history
+if command -v tmux &> /dev/null; then
+    alias clear='clear && tmux clear-history'
+fi
