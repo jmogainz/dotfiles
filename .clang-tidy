@@ -1,0 +1,5 @@
+Checks: 'modernize-*,performance-*,clang-analyzer-*,cppcoreguidelines-*,readability-*,google-*,bugprone-*,misc-unused-using-decls,misc-unused-alias-decls,misc-unused-parameters,misc-definitions-in-headers'
+WarningsAsHints: '*'
+HeaderFilterRegex: '.*'
+AnalyzeTemporaryDtors: true
+FormatStyle: file
