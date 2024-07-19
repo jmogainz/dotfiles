@@ -66,7 +66,7 @@ vim.g.copilot_assume_mapped = true
 vim.g.gitgutter_enabled = 1
 
 -- ALE settings
-vim.g.ale_cpp_clang_options = '-Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion'
+vim.g.ale_cpp_clang_options = '-Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion --header-insertion=never'
 vim.g.ale_cpp_gcc_options = '-std=c++17 -Wall -O2 -Wextra -Wpedantic -Wconversion -Wsign-conversion'
 vim.g.ale_cpp_cc_options = '-Wall -Wextra -Wpedantic Wsign-conversion'
 vim.g.ale_linters = {

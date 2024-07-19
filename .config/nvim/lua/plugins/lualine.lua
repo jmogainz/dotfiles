@@ -12,16 +12,22 @@ local function get_diagnostics_line_numbers()
   end
 
   local error_str = #error_lines > 0 and "E:" .. table.concat(error_lines, ",") or ""
-  local warn_str = #warn_lines > 0 and "W:" .. table.concat(warn_lines, ",") or "" 
+  -- local warn_str = #warn_lines > 0 and "W:" .. table.concat(warn_lines, ",") or "" 
 
-  if #error_str == 0 and #warn_str == 0 then
+  -- if #error_str == 0 and #warn_str == 0 then
+  --   return ""
+  -- elseif #error_str == 0 then
+  --   return warn_str
+  -- elseif #warn_str == 0 then
+  --   return error_str
+  -- else
+  --   return error_str .. " " .. warn_str
+  -- end
+  --
+  if #error_str == 0 then
     return ""
-  elseif #error_str == 0 then
-    return warn_str
-  elseif #warn_str == 0 then
-    return error_str
   else
-    return error_str .. " " .. warn_str
+    return error_str
   end
 end
 

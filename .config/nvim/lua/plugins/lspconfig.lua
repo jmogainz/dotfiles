@@ -15,12 +15,14 @@ local on_attach = function(client, bufnr)
     buf_set_keymap('n', 'gi', '<Cmd>lua vim.lsp.buf.implementation()<CR>', opts)
     buf_set_keymap('n', 'gr', '<Cmd>lua vim.lsp.buf.references()<CR>', opts)
     buf_set_keymap('n', 'gs', '<Cmd>ClangdSwitchSourceHeader<CR>', opts)
+    buf_set_keymap('n', 'gA', '<Cmd>lua vim.lsp.buf.code_action()<CR>', opts)
     buf_set_keymap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
     buf_set_keymap('n', '<Leader>rn', '<Cmd>lua vim.lsp.buf.rename()<CR>', opts)
     buf_set_keymap('n', '<Leader>f', '<Cmd>lua vim.lsp.buf.format({ async = true })<CR>', opts)
 end
 
 lspconfig.clangd.setup{
+    cmd = { "clangd", "--header-insertion=never", "--completion-style=detailed", "--cross-file-rename", "--clang-tidy" },
     capabilities = capabilities,
     on_attach = on_attach,
 }
@@ -28,6 +30,15 @@ lspconfig.clangd.setup{
 lspconfig.pyright.setup{
     capabilities = capabilities,
     on_attach = on_attach,
+    settings = {
+        python = {
+            analysis = {
+                autoSearchPaths = true,
+                useLibraryCodeForTypes = true,
+                typeCheckingMode = "standard",
+            },
+        },
+    },
 }
 
 lspconfig.lua_ls.setup {

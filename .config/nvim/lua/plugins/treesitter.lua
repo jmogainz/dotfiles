@@ -8,7 +8,7 @@ require'nvim-treesitter.configs'.setup {
   modules = {},
   highlight = {
     enable = true,
-    disable = { "python", "cpp" },
+    disable = { "cpp" },
     additional_vim_regex_highlighting = false
   },
   indent = {
