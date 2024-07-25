@@ -76,5 +76,22 @@ vim.g.ale_linters = {
 }
 vim.g.ale_verbose = 1
 
+-- UndoTree settings
 vim.g.undotree_SplitWidth = 60        -- Width of the undotree window
 vim.g.undotree_SetFocusWhenToggle = 1 -- Focus the undotree window when toggled
+
+-- Vim Illuminate
+-- Change the highlight style
+vim.api.nvim_set_hl(0, "IlluminatedWordText", { link = "Visual" })
+vim.api.nvim_set_hl(0, "IlluminatedWordRead", { link = "Visual" })
+vim.api.nvim_set_hl(0, "IlluminatedWordWrite", { link = "Visual" })
+
+-- Auto-update highlight style on colorscheme change
+vim.api.nvim_create_autocmd({ "ColorScheme" }, {
+  pattern = { "*" },
+  callback = function()
+    vim.api.nvim_set_hl(0, "IlluminatedWordText", { link = "Visual" })
+    vim.api.nvim_set_hl(0, "IlluminatedWordRead", { link = "Visual" })
+    vim.api.nvim_set_hl(0, "IlluminatedWordWrite", { link = "Visual" })
+  end
+})

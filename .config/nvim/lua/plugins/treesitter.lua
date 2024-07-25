@@ -11,9 +11,6 @@ require'nvim-treesitter.configs'.setup {
     disable = { "cpp" },
     additional_vim_regex_highlighting = false
   },
-  indent = {
-    enable = true,
-  },
   auto_install = false,
   textobjects = {
     select = {

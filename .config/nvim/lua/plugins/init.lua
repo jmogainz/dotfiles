@@ -48,6 +48,7 @@ require('packer').startup(function(use)
   use 'weirongxu/plantuml-previewer.vim'
   use 'tyru/open-browser.vim'
   use 'lervag/vimtex'
+  use 'RRethy/vim-illuminate'
 end)
 
 -- Load individual plugin configurations
@@ -62,3 +63,4 @@ require('plugins.nvim-web-devicons')
 require('plugins.treesitter')
 require('plugins.nvim-tree')
 require('plugins.lualine')
+require('plugins.illuminate')
