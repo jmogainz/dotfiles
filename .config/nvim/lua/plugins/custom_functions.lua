@@ -291,4 +291,197 @@ M.copy_and_print_dir_path = function()
     print("Path copied to clipboard: " .. path) -- Print to command line
 end
 
+-- Create a unique namespace for our diagnostics
+local custom_ns = vim.api.nvim_create_namespace("custom")
+
+-- Function to log messages
+local function log_message(message)
+    vim.notify(message, vim.log.levels.INFO)
+end
+
+M.check_function_definitions = function()
+    local bufnr = vim.api.nvim_get_current_buf()
+    local header_file = vim.api.nvim_buf_get_name(bufnr)
+    log_message("Checking definitions for header file: " .. header_file)
+    local Path = require('plenary.path')
+    local scan = require('plenary.scandir')
+
+    -- Function to find the corresponding .cpp file
+    local function find_source_file(project_root, source_base_name)
+        local found_files = {}
+        scan.scan_dir(project_root, {
+            depth = 10,
+            search_pattern = source_base_name,
+            on_insert = function(entry)
+                table.insert(found_files, entry)
+            end,
+        })
+        return found_files
+    end
+
+    -- Function to create search paths
+    local function create_search_paths(header_file)
+        local base_name = header_file:match("([^/]+)$")
+        local source_base_name = base_name:gsub("%.h$", ".cpp"):gsub("%.hpp$", ".cpp")
+        local dir_name = header_file:match("(.*/)")
+        
+        -- Assume the project root is a few levels up from the source file directory
+        local project_root = Path:new(dir_name):parent():parent():parent().filename
+        local found_files = find_source_file(project_root, source_base_name)
+        
+        -- Convert all paths to absolute paths
+        for i, path in ipairs(found_files) do
+            found_files[i] = vim.fn.fnamemodify(path, ":p")
+        end
+
+        return found_files
+    end
+
+    local search_paths = create_search_paths(header_file)
+    local found_source_file = nil
+    for _, path in ipairs(search_paths) do
+        if vim.fn.filereadable(path) == 1 then
+            found_source_file = path
+            break
+        end
+    end
+
+    if not found_source_file then
+        log_message("No corresponding source file found for: " .. header_file)
+        return
+    end
+
+    log_message("Found corresponding source file: " .. found_source_file)
+
+    -- Open the .cpp file buffer and read its contents
+    local cpp_bufnr = vim.fn.bufadd(found_source_file)
+    vim.fn.bufload(cpp_bufnr)
+    vim.api.nvim_buf_set_option(cpp_bufnr, 'filetype', 'cpp')
+
+    -- Extract function declarations from the header file
+    local function extract_function_signatures(bufnr)
+        local lines = vim.api.nvim_buf_get_lines(bufnr, 0, -1, false)
+        local signatures = {}
+        local in_function_declaration = false
+        local current_signature = ""
+        local start_line = 0
+        local in_block_comment = false
+
+        for i, line in ipairs(lines) do
+            -- Handle block comments
+            if in_block_comment then
+                if line:match("%*/") then
+                    in_block_comment = false
+                end
+                goto continue
+            end
+
+            if line:match("/%*") then
+                in_block_comment = true
+                goto continue
+            end
+
+            -- Handle single-line comments
+            if line:match("^%s*//") then
+                goto continue
+            end
+
+            if in_function_declaration then
+                current_signature = current_signature .. " " .. line
+                if line:match(";%s*$") and (i == #lines or lines[i + 1]:match("^%s*$")) then
+                    in_function_declaration = false
+                    local func_name = current_signature:match("([%w_~]+)%s*%b()%s*[%w%s]*;")
+                    if func_name then
+                        table.insert(signatures, {name = func_name, line = start_line})
+                        log_message("Found function declaration: " .. func_name .. " at line " .. start_line)
+                    end
+                    current_signature = ""
+                elseif line:match("{") or line:match("=") or line:match("}%s*$") then
+                    -- Skip function definitions or defaulted/deleted functions
+                    in_function_declaration = false
+                end
+            else
+                if line:match("%(") and line:match(";%s*$") and (i == #lines or lines[i + 1]:match("^%s*$")) and not line:match("{%s*$") and not line:match("=%s*$") and not line:match("}%s*$") then
+                    local func_name = line:match("([%w_~]+)%s*%b()%s*[%w%s]*;")
+                    if func_name then
+                        table.insert(signatures, {name = func_name, line = i - 1})
+                        log_message("Found function declaration: " .. func_name .. " at line " .. (i - 1))
+                    end
+                elseif line:match("%(") and not line:match("{%s*$") and not line:match("=%s*$") and not line:match("}%s*$") then
+                    in_function_declaration = true
+                    start_line = i - 1
+                    current_signature = line
+                end
+            end
+
+            ::continue::
+        end
+        return signatures
+    end
+
+    -- Check if a function declaration has a corresponding definition in the source file
+    local function check_definition_in_cpp(bufnr, func_name)
+        local lines = vim.api.nvim_buf_get_lines(bufnr, 0, -1, false)
+        local in_function = false
+        local pattern = func_name .. "%("
+        local function_pattern = pattern .. "%s*{"
+
+        for i, line in ipairs(lines) do
+            if in_function then
+                -- If we find a '{' before a ';', it's a definition
+                if line:match("{") then
+                    return true
+                -- If we find a ';', it's not a definition
+                elseif line:match(";") then
+                    in_function = false
+                end
+            elseif line:match(function_pattern) then
+                return true
+            elseif line:match(pattern) then
+                in_function = true
+                if line:match(";") then
+                    in_function = false
+                end
+                if line:match("{") then
+                    return true
+                end
+            end
+        end
+        return false
+    end
+
+    local signatures = extract_function_signatures(bufnr)
+    local missing_definitions = {}
+
+    for _, sig in ipairs(signatures) do
+        if not check_definition_in_cpp(cpp_bufnr, sig.name) then
+            table.insert(missing_definitions, sig)
+            log_message("Missing function definition for: " .. sig.name)
+        end
+    end
+
+    -- Generate diagnostics for missing function definitions
+    local diagnostics = {}
+    for _, missing in ipairs(missing_definitions) do
+        table.insert(diagnostics, {
+            bufnr = bufnr,
+            lnum = missing.line,
+            col = 0,
+            end_lnum = missing.line,
+            end_col = #vim.api.nvim_buf_get_lines(bufnr, missing.line, missing.line + 1, false)[1],
+            severity = vim.diagnostic.severity.WARN,
+            message = "Function '" .. missing.name .. "' declaration has no corresponding definition in the source file",
+        })
+    end
+
+    vim.diagnostic.set(custom_ns, bufnr, diagnostics)
+end
+
+-- Register an autocommand to run the check automatically when opening .h files
+vim.api.nvim_create_autocmd("BufEnter", {
+    pattern = "*.h,*.hpp",
+    callback = function()
+        M.check_function_definitions()
+    end
+})
 return M
