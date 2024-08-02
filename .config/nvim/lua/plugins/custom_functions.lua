@@ -484,4 +484,5 @@ vim.api.nvim_create_autocmd("BufEnter", {
         M.check_function_definitions()
     end
 })
+
 return M

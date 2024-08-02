@@ -36,3 +36,4 @@ vim.g.VM_maps = {
 vim.api.nvim_set_keymap('n', '<C-l>', ':NvimTreeFindFile<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>u', ':UndotreeToggle<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>i', ':IlluminateToggle<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', '<leader>re', "<cmd>lua require('refactoring').refactor('Extract Function')<CR>", { noremap = true, silent = true })

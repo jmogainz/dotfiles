@@ -49,6 +49,7 @@ require('packer').startup(function(use)
   use 'tyru/open-browser.vim'
   use 'lervag/vimtex'
   use 'RRethy/vim-illuminate'
+  use 'ThePrimeagen/refactoring.nvim'
 end)
 
 -- Load individual plugin configurations
@@ -65,3 +66,4 @@ require('plugins.nvim-tree')
 require('plugins.lualine')
 require('plugins.illuminate')
 require('plugins.custom_functions')
+require('plugins.refactoring')
