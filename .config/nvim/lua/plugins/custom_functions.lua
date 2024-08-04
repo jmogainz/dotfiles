@@ -296,7 +296,7 @@ local custom_ns = vim.api.nvim_create_namespace("custom")
 
 -- Function to log messages
 local function log_message(message)
-    vim.notify(message, vim.log.levels.INFO)
+    -- vim.notify(message, vim.log.levels.INFO)
 end
 
 M.check_function_definitions = function()
