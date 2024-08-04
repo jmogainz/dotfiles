@@ -52,7 +52,9 @@ require('packer').startup(function(use)
   use 'ThePrimeagen/refactoring.nvim'
   use 'p00f/clangd_extensions.nvim'
   use 'Badhi/nvim-treesitter-cpp-tools'
-  use {'echasnovski/mini.nvim', branch = 'stable'}
+  -- use {'echasnovski/mini.nvim', branch = 'stable'}
+  use 'nvim-treesitter/nvim-treesitter-context'
+  use 'stevearc/aerial.nvim'
 end)
 
 -- Load individual plugin configurations
@@ -71,4 +73,5 @@ require('plugins.illuminate')
 require('plugins.custom_functions')
 require('plugins.refactoring')
 require('plugins.cpp-tools')
-require('plugins.animate')
+-- require('plugins.animate')
+require('plugins.aerial')
