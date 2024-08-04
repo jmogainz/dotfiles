@@ -50,6 +50,9 @@ require('packer').startup(function(use)
   use 'lervag/vimtex'
   use 'RRethy/vim-illuminate'
   use 'ThePrimeagen/refactoring.nvim'
+  use 'p00f/clangd_extensions.nvim'
+  use 'Badhi/nvim-treesitter-cpp-tools'
+  use {'echasnovski/mini.nvim', branch = 'stable'}
 end)
 
 -- Load individual plugin configurations
@@ -67,3 +70,5 @@ require('plugins.lualine')
 require('plugins.illuminate')
 require('plugins.custom_functions')
 require('plugins.refactoring')
+require('plugins.cpp-tools')
+require('plugins.animate')
