@@ -55,6 +55,7 @@ require('packer').startup(function(use)
   -- use {'echasnovski/mini.nvim', branch = 'stable'}
   use 'nvim-treesitter/nvim-treesitter-context'
   use 'stevearc/aerial.nvim'
+  use 'folke/trouble.nvim'
 end)
 
 -- Load individual plugin configurations
@@ -75,3 +76,4 @@ require('plugins.refactoring')
 require('plugins.cpp-tools')
 -- require('plugins.animate')
 require('plugins.aerial')
+require('plugins.trouble')
