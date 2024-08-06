@@ -366,6 +366,7 @@ M.check_function_definitions = function()
         local current_signature = ""
         local start_line = 0
         local in_block_comment = false
+        local scope_stack = {}
 
         for i, line in ipairs(lines) do
             -- Handle block comments
@@ -386,28 +387,43 @@ M.check_function_definitions = function()
                 goto continue
             end
 
+            -- Update current class scope
+            local class_declaration = line:match("^%s*class%s+([%w_]+)")
+            if class_declaration and not line:match(";%s*$") then
+                table.insert(scope_stack, class_declaration)
+            end
+
+            -- Handle end of class scope
+            if line:match("^%s*};") and #scope_stack > 0 then
+                table.remove(scope_stack)
+            end
+
+            local current_scope = table.concat(scope_stack, "::")
+
             if in_function_declaration then
                 current_signature = current_signature .. " " .. line
-                if line:match(";%s*$") and (i == #lines or lines[i + 1]:match("^%s*$")) then
+                -- Check if the line ends with a semicolon
+                if line:match(";%s*$") then
                     in_function_declaration = false
                     local func_name = current_signature:match("([%w_~]+)%s*%b()%s*[%w%s]*;")
                     if func_name then
-                        table.insert(signatures, {name = func_name, line = start_line})
+                        table.insert(signatures, {name = func_name, line = start_line, class = current_scope})
                         log_message("Found function declaration: " .. func_name .. " at line " .. start_line)
                     end
                     current_signature = ""
-                elseif line:match("{") or line:match("=") or line:match("}%s*$") then
-                    -- Skip function definitions or defaulted/deleted functions
+                elseif line:match("{") or line:match("=") or line:match(":") or line:match("}%s*$") then
+                    -- Skip function definitions or defaulted/deleted functions or member initializers
                     in_function_declaration = false
                 end
             else
-                if line:match("%(") and line:match(";%s*$") and (i == #lines or lines[i + 1]:match("^%s*$")) and not line:match("{%s*$") and not line:match("=%s*$") and not line:match("}%s*$") then
+                -- Check if the line contains a function declaration and ends with a semicolon
+                if line:match("%(") and not line:match(":") and line:match(";%s*$") and not line:match("{%s*$") and not line:match("=%s*$") and not line:match("}%s*$") then
                     local func_name = line:match("([%w_~]+)%s*%b()%s*[%w%s]*;")
                     if func_name then
-                        table.insert(signatures, {name = func_name, line = i - 1})
+                        table.insert(signatures, {name = func_name, line = i - 1, class = current_scope})
                         log_message("Found function declaration: " .. func_name .. " at line " .. (i - 1))
                     end
-                elseif line:match("%(") and not line:match("{%s*$") and not line:match("=%s*$") and not line:match("}%s*$") then
+                elseif line:match("%(") and not line:match("{%s*$") and not line:match("=%s*$") and not line:match(":") and not line:match("}%s*$") then
                     in_function_declaration = true
                     start_line = i - 1
                     current_signature = line
@@ -420,10 +436,10 @@ M.check_function_definitions = function()
     end
 
     -- Check if a function declaration has a corresponding definition in the source file
-    local function check_definition_in_cpp(bufnr, func_name)
+    local function check_definition_in_cpp(bufnr, class_name, func_name)
         local lines = vim.api.nvim_buf_get_lines(bufnr, 0, -1, false)
         local in_function = false
-        local pattern = func_name .. "%("
+        local pattern = class_name .. "::" .. func_name .. "%("
         local function_pattern = pattern .. "%s*{"
 
         for i, line in ipairs(lines) do
@@ -454,9 +470,9 @@ M.check_function_definitions = function()
     local missing_definitions = {}
 
     for _, sig in ipairs(signatures) do
-        if not check_definition_in_cpp(cpp_bufnr, sig.name) then
+        if not check_definition_in_cpp(cpp_bufnr, sig.class, sig.name) then
             table.insert(missing_definitions, sig)
-            log_message("Missing function definition for: " .. sig.name)
+            log_message("Missing function definition for: " .. sig.class .. "::" .. sig.name)
         end
     end
 
@@ -470,7 +486,7 @@ M.check_function_definitions = function()
             end_lnum = missing.line,
             end_col = #vim.api.nvim_buf_get_lines(bufnr, missing.line, missing.line + 1, false)[1],
             severity = vim.diagnostic.severity.WARN,
-            message = "Function '" .. missing.name .. "' declaration has no corresponding definition in the source file",
+            message = "Function '" .. missing.class .. "::" .. missing.name .. "' declaration has no corresponding definition in the source file",
         })
     end
 
