@@ -14,7 +14,7 @@ vim.api.nvim_set_keymap('n', '<C-l>', ':NERDTreeFind<CR>', { noremap = true, sil
 vim.api.nvim_set_keymap('n', '<Leader>tn', ':tabnext<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>tc', ':tabclose<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', 'mp', ':MarkdownPreview<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<Leader>e', '<cmd>lua vim.diagnostic.open_float()<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>d', '<cmd>lua vim.diagnostic.open_float()<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('x', '<C-s>', '<Cmd>lua require("plugins.custom_functions").copy_snippet_info()<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>mm', ':BookmarkToggle<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>mi', ':BookmarkAnnotate<CR>', { noremap = true, silent = true })
@@ -38,3 +38,11 @@ vim.api.nvim_set_keymap('n', '<leader>i', ':IlluminateToggle<CR>', { noremap = t
 vim.api.nvim_set_keymap('v', '<leader>re', "<cmd>lua require('refactoring').refactor('Extract Function')<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap('v', 'cd', ':TSCppDefineClassFunc<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>a', ':AerialOpen<CR>', { noremap = true, silent = true })
+vim.cmd [[
+amenu PopUp.Go\ to\ Definition :lua vim.lsp.buf.definition()<CR>
+amenu PopUp.Go\ to\ Declaration :lua vim.lsp.buf.declaration()<CR>
+amenu PopUp.Go\ to\ References :lua vim.lsp.buf.references()<CR>
+]]
+-- Map the mouse buttons to jump commands using :lua command
+vim.api.nvim_set_keymap('n', '<LeftMouse><ScrollWheelDown>', '<C-o>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<LeftMouse><ScrollWheelUp>', '<C-i>', { noremap = true, silent = true })
