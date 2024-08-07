@@ -42,6 +42,8 @@ vim.cmd [[
 amenu PopUp.Go\ to\ Definition :lua vim.lsp.buf.definition()<CR>
 amenu PopUp.Go\ to\ Declaration :lua vim.lsp.buf.declaration()<CR>
 amenu PopUp.Go\ to\ References :lua vim.lsp.buf.references()<CR>
+amenu PopUp.Go\ to\ Tree :NvimTreeFindFile<CR>'
+amenu PopUp.Go\ to\ Header/Source :ClangdSwitchSourceHeader<CR>
 ]]
 -- Map the mouse buttons to jump commands using :lua command
 vim.api.nvim_set_keymap('n', '<LeftMouse><ScrollWheelDown>', '<C-o>', { noremap = true, silent = true })
