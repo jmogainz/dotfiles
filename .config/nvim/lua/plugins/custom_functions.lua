@@ -411,19 +411,19 @@ M.check_function_definitions = function()
                         log_message("Found function declaration: " .. func_name .. " at line " .. start_line)
                     end
                     current_signature = ""
-                elseif line:match("{") or line:match("=") or line:match(":") or line:match("}%s*$") then
+                elseif line:match("{") or line:match("=") or line:match("%)%s*:") or line:match("}%s*$") then
                     -- Skip function definitions or defaulted/deleted functions or member initializers
                     in_function_declaration = false
                 end
             else
                 -- Check if the line contains a function declaration and ends with a semicolon
-                if line:match("%(") and not line:match(":") and line:match(";%s*$") and not line:match("{%s*$") and not line:match("=%s*$") and not line:match("}%s*$") then
+                if line:match("%(") and not line:match("%)%s*:") and line:match(";%s*$") and not line:match("{%s*$") and not line:match("=%s*$") and not line:match("}%s*$") then
                     local func_name = line:match("([%w_~]+)%s*%b()%s*[%w%s]*;")
                     if func_name then
                         table.insert(signatures, {name = func_name, line = i - 1, class = current_scope})
                         log_message("Found function declaration: " .. func_name .. " at line " .. (i - 1))
                     end
-                elseif line:match("%(") and not line:match("{%s*$") and not line:match("=%s*$") and not line:match(":") and not line:match("}%s*$") then
+                elseif line:match("%(") and not line:match("{%s*$") and not line:match("=%s*$") and not line:match("%)%s*:") and not line:match("}%s*$") then
                     in_function_declaration = true
                     start_line = i - 1
                     current_signature = line
