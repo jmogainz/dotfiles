@@ -1,0 +1,5 @@
+@-moz-document url-prefix("file://"), url-prefix("http://"), url-prefix("https://") {
+    .pdfViewer {
+        filter: invert(100%);
+    }
+}
