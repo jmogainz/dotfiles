@@ -56,6 +56,7 @@ require('packer').startup(function(use)
   use 'nvim-treesitter/nvim-treesitter-context'
   use 'stevearc/aerial.nvim'
   use 'folke/trouble.nvim'
+  use { 'MeanderingProgrammer/render-markdown.nvim', after = 'nvim-treesitter' }
 end)
 
 -- Load individual plugin configurations
@@ -74,6 +75,5 @@ require('plugins.illuminate')
 require('plugins.custom_functions')
 require('plugins.refactoring')
 require('plugins.cpp-tools')
--- require('plugins.animate')
 require('plugins.aerial')
 require('plugins.trouble')
