@@ -400,6 +400,14 @@ M.check_function_definitions = function()
 
             local current_scope = table.concat(scope_stack, "::")
 
+            if in_function_definition then
+                -- We're inside a function definition, so skip until we find the closing brace
+                if line:match("}%s*$") then
+                    in_function_definition = false
+                end
+                goto continue
+            end
+
             if in_function_declaration then
                 current_signature = current_signature .. " " .. line
                 -- Check if the line ends with a semicolon
@@ -411,7 +419,11 @@ M.check_function_definitions = function()
                         log_message("Found function declaration: " .. func_name .. " at line " .. start_line)
                     end
                     current_signature = ""
-                elseif line:match("{") or line:match("=") or line:match("%)%s*:") or line:match("}%s*$") then
+                elseif line:match("{") then
+                    -- Enter function definition scope
+                    in_function_definition = true
+                    in_function_declaration = false
+                elseif line:match("=") or line:match("%)%s*:") or line:match("}%s*$") then
                     -- Skip function definitions or defaulted/deleted functions or member initializers
                     in_function_declaration = false
                 end
