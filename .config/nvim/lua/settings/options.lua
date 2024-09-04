@@ -40,7 +40,7 @@ vim.api.nvim_create_user_command('Rg', function(opts)
     local command = 'rg --column --line-number --no-heading --color=always ' .. args
     vim.fn['fzf#vim#grep'](command, 1, vim.fn['fzf#vim#with_preview'](), opts.bang)
 end, { bang = true, nargs = '*' })
-vim.env.FZF_DEFAULT_COMMAND = 'rg --files -u --hidden --glob "!.git/*"'
+vim.env.FZF_DEFAULT_COMMAND = 'rg --files -u --hidden --glob "!.git/*" --glob "!.cache/*"'
 vim.env.FZF_DEFAULT_OPTS = '--bind=ctrl-j:down,ctrl-k:up'
 vim.env.FZF_DEFAULT_OPTS = '--border=none --preview-window=border-none,wrap,hidden --bind=?:toggle-preview --preview "echo {}"'
 
