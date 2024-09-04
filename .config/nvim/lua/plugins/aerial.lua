@@ -4,4 +4,5 @@ require('aerial').setup{
         max_width = 70,
         default_direction = 'left'
     },
+    close_on_select = true,
 }
