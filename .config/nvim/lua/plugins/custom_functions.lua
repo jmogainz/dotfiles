@@ -451,15 +451,18 @@ M.check_function_definitions = function()
     local function check_definition_in_cpp(bufnr, class_name, func_name)
         local lines = vim.api.nvim_buf_get_lines(bufnr, 0, -1, false)
         local in_function = false
-        local pattern = class_name .. "::" .. func_name .. "%("
+        local pattern
+        if class_name == "" then
+            pattern = func_name .. "%("
+        else
+            pattern = class_name .. "::" .. func_name .. "%("
+        end
         local function_pattern = pattern .. "%s*{"
 
         for i, line in ipairs(lines) do
             if in_function then
-                -- If we find a '{' before a ';', it's a definition
                 if line:match("{") then
                     return true
-                -- If we find a ';', it's not a definition
                 elseif line:match(";") then
                     in_function = false
                 end
