@@ -363,10 +363,13 @@ M.check_function_definitions = function()
         local lines = vim.api.nvim_buf_get_lines(bufnr, 0, -1, false)
         local signatures = {}
         local in_function_declaration = false
+        local in_function_definition = false
         local current_signature = ""
         local start_line = 0
         local in_block_comment = false
         local scope_stack = {}
+        local current_scope = ""
+        local brace_depth = 0  -- Brace depth counter
 
         for i, line in ipairs(lines) do
             -- Handle block comments
@@ -390,6 +393,7 @@ M.check_function_definitions = function()
             -- Update current class scope
             local class_declaration = line:match("^%s*class%s+([%w_]+)")
             if class_declaration and not line:match(";%s*$") then
+                class_declaration = class_declaration .. "<?.*>?"
                 table.insert(scope_stack, class_declaration)
             end
 
@@ -398,12 +402,23 @@ M.check_function_definitions = function()
                 table.remove(scope_stack)
             end
 
-            local current_scope = table.concat(scope_stack, "::")
+            -- Update current scope based on the scope stack
+            current_scope = table.concat(scope_stack, "::")
+            
+            -- Reset current_scope if there's no active class scope
+            if #scope_stack == 0 then
+                current_scope = ""
+            end
 
             if in_function_definition then
-                -- We're inside a function definition, so skip until we find the closing brace
-                if line:match("}%s*$") then
-                    in_function_definition = false
+                -- We're inside a function definition, so keep track of the braces
+                if line:match("{") then
+                    brace_depth = brace_depth + 1
+                elseif line:match("}") then
+                    brace_depth = brace_depth - 1
+                    if brace_depth == 0 then
+                        in_function_definition = false  -- Exit function definition mode
+                    end
                 end
                 goto continue
             end
@@ -422,20 +437,26 @@ M.check_function_definitions = function()
                 elseif line:match("{") then
                     -- Enter function definition scope
                     in_function_definition = true
+                    brace_depth = 1  -- Start brace depth tracking
                     in_function_declaration = false
                 elseif line:match("=") or line:match("%)%s*:") or line:match("}%s*$") then
                     -- Skip function definitions or defaulted/deleted functions or member initializers
                     in_function_declaration = false
                 end
             else
-                -- Check if the line contains a function declaration and ends with a semicolon
-                if line:match("%(") and not line:match("%)%s*:") and line:match(";%s*$") and not line:match("{%s*$") and not line:match("=%s*$") and not line:match("}%s*$") then
+                -- Check if the line contains a one-line function definition
+                if line:match("%b()%s*{.*}") then
+                    -- This is a one-line function definition; skip it
+                    goto continue
+                elseif line:match("%(") and not line:match("%)%s*:") and line:match(";%s*$") and not line:match("{%s*$") and not line:match("=%s*$") and not line:match("}%s*$") then
+                    -- This is a function declaration ending with a semicolon
                     local func_name = line:match("([%w_~]+)%s*%b()%s*[%w%s]*;")
                     if func_name then
                         table.insert(signatures, {name = func_name, line = i - 1, class = current_scope})
                         log_message("Found function declaration: " .. func_name .. " at line " .. (i - 1))
                     end
                 elseif line:match("%(") and not line:match("{%s*$") and not line:match("=%s*$") and not line:match("%)%s*:") and not line:match("}%s*$") then
+                    -- This is the start of a multi-line function declaration
                     in_function_declaration = true
                     start_line = i - 1
                     current_signature = line
@@ -458,6 +479,9 @@ M.check_function_definitions = function()
             pattern = class_name .. "::" .. func_name .. "%("
         end
         local function_pattern = pattern .. "%s*{"
+
+        -- log the pattern
+        log_message("Checking for pattern: " .. pattern)
 
         for i, line in ipairs(lines) do
             if in_function then
@@ -494,6 +518,13 @@ M.check_function_definitions = function()
     -- Generate diagnostics for missing function definitions
     local diagnostics = {}
     for _, missing in ipairs(missing_definitions) do
+        local func_display_name
+        if missing.class == "" then
+            func_display_name = missing.name
+        else
+            func_display_name = missing.class .. "::" .. missing.name
+        end
+
         table.insert(diagnostics, {
             bufnr = bufnr,
             lnum = missing.line,
@@ -501,7 +532,7 @@ M.check_function_definitions = function()
             end_lnum = missing.line,
             end_col = #vim.api.nvim_buf_get_lines(bufnr, missing.line, missing.line + 1, false)[1],
             severity = vim.diagnostic.severity.WARN,
-            message = "Function '" .. missing.class .. "::" .. missing.name .. "' declaration has no corresponding definition in the source file",
+            message = "Function '" .. func_display_name .. "' declaration has no corresponding definition in the source file",
         })
     end
 
