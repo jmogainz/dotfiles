@@ -322,12 +322,24 @@ M.check_function_definitions = function()
     -- Function to create search paths
     local function create_search_paths(header_file)
         local base_name = header_file:match("([^/]+)$")
-        local source_base_name = base_name:gsub("%.h$", ".cpp"):gsub("%.hpp$", ".cpp")
         local dir_name = header_file:match("(.*/)")
+        
+        -- Generate possible source file names based on the header file name
+        local source_base_names = {
+            base_name:gsub("%.h$", ".cpp"),
+            base_name:gsub("%.h$", ".c"),
+            base_name:gsub("%.hpp$", ".cpp")
+        }
         
         -- Assume the project root is a few levels up from the source file directory
         local project_root = Path:new(dir_name):parent():parent():parent().filename
-        local found_files = find_source_file(project_root, source_base_name)
+        local found_files = {}
+
+        -- Search for all possible source files
+        for _, source_base_name in ipairs(source_base_names) do
+            local files = find_source_file(project_root, source_base_name)
+            vim.list_extend(found_files, files)
+        end
         
         -- Convert all paths to absolute paths
         for i, path in ipairs(found_files) do
@@ -356,7 +368,16 @@ M.check_function_definitions = function()
     -- Open the .cpp file buffer and read its contents
     local cpp_bufnr = vim.fn.bufadd(found_source_file)
     vim.fn.bufload(cpp_bufnr)
-    vim.api.nvim_buf_set_option(cpp_bufnr, 'filetype', 'cpp')
+
+    -- -- Determine the appropriate filetype based on the file extension
+    local file_extension = vim.fn.fnamemodify(found_source_file, ":e")
+    log_message("File extension: " .. file_extension)
+
+    if file_extension == "cpp" or file_extension == "hpp" or file_extension == "cxx" or file_extension == "cc" then
+        vim.api.nvim_buf_set_option(cpp_bufnr, 'filetype', 'cpp')
+    elseif file_extension == "c" then
+        vim.api.nvim_buf_set_option(cpp_bufnr, 'filetype', 'c')
+    end
 
     -- Extract function declarations from the header file
     local function extract_function_signatures(bufnr)
