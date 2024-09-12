@@ -71,8 +71,10 @@ vim.g.ale_cpp_gcc_options = '-std=c++17 -Wall -O2 -Wextra -Wpedantic -Wconversio
 vim.g.ale_cpp_cc_options = '-Wall -Wextra -Wpedantic Wsign-conversion'
 vim.g.ale_linters = {
     cpp = {'clang', 'g++'},
+    c = {},
     python = {'flake8', 'pylint', 'mypy'},
-    tex = {}
+    tex = {},
+    lua = {}
 }
 vim.g.ale_verbose = 1
 
