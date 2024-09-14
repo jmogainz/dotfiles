@@ -583,7 +583,12 @@ end)
 vim.api.nvim_create_autocmd("BufEnter", {
     pattern = "*.h,*.hpp",
     callback = function()
-        M.check_function_definitions()
+        local file_path = vim.api.nvim_buf_get_name(0)
+        if file_path:match("^/home/") then
+            M.check_function_definitions()
+        else
+            log_message("Skipping check, file not in /home/** folder: " .. file_path)
+        end
     end
 })
 
