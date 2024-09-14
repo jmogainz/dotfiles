@@ -291,6 +291,10 @@ M.copy_and_print_dir_path = function()
     print("Path copied to clipboard: " .. path) -- Print to command line
 end
 
+----------------------------
+---- FIND FUNCTION DEFS ----
+----------------------------
+
 -- Create a unique namespace for our diagnostics
 local custom_ns = vim.api.nvim_create_namespace("custom")
 
@@ -299,12 +303,14 @@ local function log_message(message)
     -- vim.notify(message, vim.log.levels.INFO)
 end
 
-M.check_function_definitions = function()
+local async = require('plenary.async').void
+local Path = require('plenary.path')
+local scan = require('plenary.scandir')
+
+M.check_function_definitions = async(function()
     local bufnr = vim.api.nvim_get_current_buf()
     local header_file = vim.api.nvim_buf_get_name(bufnr)
     log_message("Checking definitions for header file: " .. header_file)
-    local Path = require('plenary.path')
-    local scan = require('plenary.scandir')
 
     -- Function to find the corresponding .cpp file
     local function find_source_file(project_root, source_base_name)
@@ -322,12 +328,24 @@ M.check_function_definitions = function()
     -- Function to create search paths
     local function create_search_paths(header_file)
         local base_name = header_file:match("([^/]+)$")
-        local source_base_name = base_name:gsub("%.h$", ".cpp"):gsub("%.hpp$", ".cpp")
         local dir_name = header_file:match("(.*/)")
+        
+        -- Generate possible source file names based on the header file name
+        local source_base_names = {
+            base_name:gsub("%.h$", ".cpp"),
+            base_name:gsub("%.h$", ".c"),
+            base_name:gsub("%.hpp$", ".cpp")
+        }
         
         -- Assume the project root is a few levels up from the source file directory
         local project_root = Path:new(dir_name):parent():parent():parent().filename
-        local found_files = find_source_file(project_root, source_base_name)
+        local found_files = {}
+
+        -- Search for all possible source files
+        for _, source_base_name in ipairs(source_base_names) do
+            local files = find_source_file(project_root, source_base_name)
+            vim.list_extend(found_files, files)
+        end
         
         -- Convert all paths to absolute paths
         for i, path in ipairs(found_files) do
@@ -337,8 +355,10 @@ M.check_function_definitions = function()
         return found_files
     end
 
+    -- Run the path search asynchronously
     local search_paths = create_search_paths(header_file)
     local found_source_file = nil
+
     for _, path in ipairs(search_paths) do
         if vim.fn.filereadable(path) == 1 then
             found_source_file = path
@@ -356,9 +376,18 @@ M.check_function_definitions = function()
     -- Open the .cpp file buffer and read its contents
     local cpp_bufnr = vim.fn.bufadd(found_source_file)
     vim.fn.bufload(cpp_bufnr)
-    vim.api.nvim_buf_set_option(cpp_bufnr, 'filetype', 'cpp')
 
-    -- Extract function declarations from the header file
+    -- -- Determine the appropriate filetype based on the file extension
+    local file_extension = vim.fn.fnamemodify(found_source_file, ":e")
+    log_message("File extension: " .. file_extension)
+
+    if file_extension == "cpp" or file_extension == "hpp" or file_extension == "cxx" or file_extension == "cc" then
+        vim.api.nvim_buf_set_option(cpp_bufnr, 'filetype', 'cpp')
+    elseif file_extension == "c" then
+        vim.api.nvim_buf_set_option(cpp_bufnr, 'filetype', 'c')
+    end
+
+    -- Extract function signatures from the header file
     local function extract_function_signatures(bufnr)
         local lines = vim.api.nvim_buf_get_lines(bufnr, 0, -1, false)
         local signatures = {}
@@ -479,7 +508,10 @@ M.check_function_definitions = function()
         return signatures
     end
 
-    -- Check if a function declaration has a corresponding definition in the source file
+    local signatures = extract_function_signatures(bufnr)
+    local missing_definitions = {}
+
+    -- Extracted the helper function definition here
     local function check_definition_in_cpp(bufnr, class_name, func_name)
         local lines = vim.api.nvim_buf_get_lines(bufnr, 0, -1, false)
         local in_function = false
@@ -516,9 +548,6 @@ M.check_function_definitions = function()
         return false
     end
 
-    local signatures = extract_function_signatures(bufnr)
-    local missing_definitions = {}
-
     for _, sig in ipairs(signatures) do
         if not check_definition_in_cpp(cpp_bufnr, sig.class, sig.name) then
             table.insert(missing_definitions, sig)
@@ -548,9 +577,9 @@ M.check_function_definitions = function()
     end
 
     vim.diagnostic.set(custom_ns, bufnr, diagnostics)
-end
+end)
 
--- Register an autocommand to run the check automatically when opening .h files
+-- Register an autocommand to run the check asynchronously when opening .h files
 vim.api.nvim_create_autocmd("BufEnter", {
     pattern = "*.h,*.hpp",
     callback = function()
