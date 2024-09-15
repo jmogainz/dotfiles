@@ -4,7 +4,7 @@ import = ["~/.config/alacritty/dracula.toml"]
 
 [font]
 normal = { family = "JetBrainsMono Nerd Font" }
-size = 15.5
+size = 11.5
 
 [env]
 TERM = "xterm-256color"
@@ -13,3 +13,13 @@ TERM = "xterm-256color"
 
 [scrolling]
 history = 20000
+
+[[keyboard.bindings]]
+key = "K"
+mods = "Control"
+chars = "\u001b[A"  # This sends the "Up" arrow key sequence
+
+[[keyboard.bindings]]
+key = "J"
+mods = "Control"
+chars = "\u001b[B"  # This sends the "Down" arrow key sequence
