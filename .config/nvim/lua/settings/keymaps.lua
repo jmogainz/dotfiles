@@ -37,6 +37,7 @@ vim.api.nvim_set_keymap('n', '<Leader>u', ':UndotreeToggle<CR>', { noremap = tru
 vim.api.nvim_set_keymap('n', '<leader>i', ':IlluminateToggle<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('v', '<leader>re', "<cmd>lua require('refactoring').refactor('Extract Function')<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap('v', 'cd', ':TSCppDefineClassFunc<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', 'cD', '<Cmd>lua require("plugins.custom_functions").create_cpp_declaration()<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>a', ':AerialOpen<CR>', { noremap = true, silent = true })
 vim.cmd [[
 amenu PopUp.Go\ to\ Definition :lua vim.lsp.buf.definition()<CR>
