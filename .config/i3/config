@@ -49,6 +49,9 @@ exec --no-startup-id xset s off
 # Disable screen saver activation
 exec --no-startup-id xset s noblank
 
+# Startup flameshot screenshotter
+exec --no-startup-id flameshot &
+
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
@@ -221,7 +224,7 @@ bar {
 
 # Start the clipmenu daemon
 exec --no-startup-id clipmenud
-bindsym Print exec --no-startup-id gnome-screenshot -i
+bindsym Print exec --no-startup-id flameshot gui
 
 # Lock
 bindsym Mod1+L exec --no-startup-id i3lock -c 000000
