@@ -52,6 +52,9 @@ exec --no-startup-id xset s noblank
 # Startup flameshot screenshotter
 exec --no-startup-id flameshot &
 
+# Startup polki
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
