@@ -3,18 +3,27 @@ vim.o.mouse = 'a'
 vim.o.number = true
 vim.o.relativenumber = true
 vim.o.clipboard = 'unnamedplus'
-vim.o.tabstop = 4
-vim.o.shiftwidth = 4
-vim.o.expandtab = true
 vim.o.autoindent = true
 vim.o.incsearch = true
 vim.o.hlsearch = true
 vim.o.wrap = true
 vim.o.cursorline = true
 vim.o.timeoutlen = 300
-vim.o.smartindent = false
 vim.opt.fixeol = false
 vim.opt.shada = { "!", "'300", "<50", "s10", "h" } 
+
+-- Filetype plugins and indentation
+vim.cmd('filetype plugin indent on')
+
+-- Syntax highlighting and title display
+vim.cmd('syntax on')
+vim.o.title = true
+
+-- Tab and indentation settings (for C-style code)
+vim.o.tabstop = 8
+vim.o.softtabstop = 8
+vim.o.shiftwidth = 8
+vim.o.expandtab = false -- Overrides any previous expandtab setting to match 8-space tabs
 
 -- Plantuml settings
 vim.g['plantuml_previewer#plantuml_jar_path'] = '/usr/share/java/plantuml/plantuml.jar'
@@ -116,3 +125,4 @@ vim.g.clipboard = {
     ['*'] = require('vim.ui.clipboard.osc52').paste('*'),
   },
 }
+
