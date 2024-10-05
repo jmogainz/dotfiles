@@ -14,17 +14,20 @@ fi
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+export COLORTERM=truecolor
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # ZSH_THEME="random"
+ZSH_THEME="cloud"
 # ZSH_THEME="obraun"
 # ZSH_THEME="xiong-chiamiov"
 # ZSH_THEME="minimal"
 # ZSH_THEME="agnoster"
 # ZSH_THEME="frontcube"
-ZSH_THEME="powerlevel10k/powerlevel10k"
+# ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # DISABLE_LS_COLORS="true"
 
