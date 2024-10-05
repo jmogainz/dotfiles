@@ -1,0 +1,73 @@
+# ~/.muttrc
+
+# Personal Information
+set realname = "Jacob Moore"
+set from = "moorejlinux@gmail.com"
+set use_from = yes
+
+# IMAP Settings for Gmail
+set imap_user = "moorejlinux@gmail.com"
+set imap_pass = "uqcaauquzlhgmusw"
+set folder = "imaps://imap.gmail.com/"
+set spoolfile = "+INBOX"
+set record = "+[Gmail]/Sent Mail"
+set postponed = "+[Gmail]/Drafts"
+set trash = "+[Gmail]/Trash"
+
+# SMTP Settings for Gmail
+set smtp_url = "smtps://moorejlinux@gmail.com@smtp.gmail.com:465/"
+set smtp_pass = "uqcaauquzlhgmusw"
+set smtp_authenticators = "plain"
+set ssl_starttls = yes
+set ssl_force_tls = yes
+
+# Mailbox and Folders
+set folder = "imaps://imap.gmail.com/"
+set spoolfile = "+INBOX"
+set record = "+[Gmail]/Sent Mail"
+set postponed = "+[Gmail]/Drafts"
+
+# Ensure Emails are Sent in Plain Text (for Linux Kernel Development)
+set text_flowed = no
+set content_type = text/plain
+
+# GPG Support (Commented out)
+# set crypt_use_gpgme = yes
+# set pgp_autosign = yes
+# set pgp_sign_as = "your-gpg-key-id"  # Replace with your GPG key ID
+# set pgp_use_gpg_agent = yes
+
+# Display Options
+set hdrs = yes
+set date_format="%F %T"       # 2021-05-06 09:20:03
+set index_format="%4C %Z %D %-15.15L (%4c) %s"
+set sort = 'reverse-date'
+
+# Check for new mail every 5 minutes
+set timeout = 300
+set mail_check = 300
+
+# Colors
+source ~/.mutt/dracula.muttrc
+set pager_index_lines = 8
+# set pager_context = 3
+# color normal white black
+# color index brightyellow black "~N"   # Highlight new messages
+# color index brightgreen black "~O"    # Highlight old messages
+
+# Bindings
+bind index,pager G imap-fetch-mail  # Fetch new mail from the server
+bind index D delete-message         # Mark message for deletion
+
+# Signature (Optional)
+# set signature = "~/.signature"
+
+# Misc configurations
+set recall = ask-yes
+
+# Use Vim as the default editor for composing emails
+set editor = "nvim"
+
+# Message Sending Options
+set use_envelope_from = yes
+set envelope_from_address = "moorejlinux@gmail.com"
