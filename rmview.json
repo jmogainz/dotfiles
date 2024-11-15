@@ -1,0 +1,22 @@
+{
+  "ssh": {
+    "address": "10.0.0.240",
+    "auth_method": "password",
+    "username": "root",
+    "password": "w8c6ykVwO0",
+    "timeout": 5,
+    "host_key_policy": "ask",
+    "tunnel": false,
+    "tunnel_compression": false
+  },
+  "backend": "auto",
+  "orientation": "landscape",
+  "pen_size": 15,
+  "pen_color": "red",
+  "pen_trail": 200,
+  "background_color": "white",
+  "invert_colors": false,
+  "hide_pen_on_press": true,
+  "show_pen_on_lift": true,
+  "forward_mouse_events": false
+}
