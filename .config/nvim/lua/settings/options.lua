@@ -37,7 +37,7 @@ vim.g.bookmark_no_default_key_mappings = 1
 vim.g.fzf_layout = { window = { width = 1.00, height = 1.00, wrap = true } }
 vim.api.nvim_create_user_command('Rg', function(opts)
     local args = table.concat(opts.fargs, " ")
-    local command = 'rg --column --line-number --no-heading --color=always ' .. args
+    local command = 'rg --no-ignore --column --line-number --no-heading --color=always --glob "!.git/*" --glob "!.cache/*" ' .. args
     vim.fn['fzf#vim#grep'](command, 1, vim.fn['fzf#vim#with_preview'](), opts.bang)
 end, { bang = true, nargs = '*' })
 vim.env.FZF_DEFAULT_COMMAND = 'rg --files -u --hidden --glob "!.git/*" --glob "!.cache/*"'
