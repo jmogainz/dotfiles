@@ -57,6 +57,13 @@ require('packer').startup(function(use)
   use 'stevearc/aerial.nvim'
   use 'folke/trouble.nvim'
   use { 'MeanderingProgrammer/render-markdown.nvim', after = 'nvim-treesitter' }
+  use 'mfussenegger/nvim-dap'
+  use {'nvim-neotest/neotest', requires = {'nvim-neotest/nvim-nio', 'nvim-lua/plenary.nvim', 'antoinemadec/FixCursorHold.nvim',
+       'nvim-treesitter/nvim-treesitter'}}
+  use 'nvim-neotest/neotest-go'
+  use 'stevearc/dressing.nvim'
+  use 'MunifTanjim/nui.nvim'
+  -- use {'yetone/avante.nvim', run = 'make BUILD_FROM_SOURCE=true'}
 end)
 
 -- Load individual plugin configurations
@@ -77,3 +84,5 @@ require('plugins.refactoring')
 require('plugins.cpp-tools')
 require('plugins.aerial')
 require('plugins.trouble')
+require('plugins.neotest')
+-- require('plugins.avante')

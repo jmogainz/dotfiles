@@ -58,7 +58,7 @@ end
 vim.o.undodir = target_path
 
 -- Copilot settings
-vim.g.copilot_enabled = 0
+vim.g.copilot_enabled = 1
 vim.g.copilot_no_tab_map = true
 vim.g.copilot_assume_mapped = true
 
@@ -74,7 +74,9 @@ vim.g.ale_linters = {
     c = {},
     python = {'flake8', 'pylint', 'mypy'},
     tex = {},
-    lua = {}
+    lua = {},
+    dart = {},
+    go = {},
 }
 vim.g.ale_verbose = 1
 

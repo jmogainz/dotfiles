@@ -9,7 +9,6 @@ vim.api.nvim_set_keymap('n', '<Leader>rg', ':Rg<Space>', { noremap = true, silen
 vim.api.nvim_set_keymap('n', '<Leader>fp', '<Cmd>lua require("plugins.custom_functions").copy_and_print_file_path()<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>p', '<Cmd>lua require("plugins.custom_functions").copy_and_print_dir_path()<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>w', '<Plug>(easymotion-bd-w)', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<Leader>c', '<Plug>(easymotion-s)', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<C-l>', ':NERDTreeFind<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>tn', ':tabnext<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>tc', ':tabclose<CR>', { noremap = true, silent = true })
@@ -37,7 +36,6 @@ vim.api.nvim_set_keymap('n', '<Leader>u', ':UndotreeToggle<CR>', { noremap = tru
 vim.api.nvim_set_keymap('n', '<leader>i', ':IlluminateToggle<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('v', '<leader>re', "<cmd>lua require('refactoring').refactor('Extract Function')<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap('v', 'cd', ':TSCppDefineClassFunc<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', 'cD', '<Cmd>lua require("plugins.custom_functions").create_cpp_declaration()<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>a', ':AerialOpen<CR>', { noremap = true, silent = true })
 vim.cmd [[
 amenu PopUp.Go\ to\ Definition :lua vim.lsp.buf.definition()<CR>
@@ -49,3 +47,13 @@ amenu PopUp.Go\ to\ Header/Source :ClangdSwitchSourceHeader<CR>
 -- Map the mouse buttons to jump commands using :lua command
 vim.api.nvim_set_keymap('n', '<LeftMouse><ScrollWheelDown>', '<C-o>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<LeftMouse><ScrollWheelUp>', '<C-i>', { noremap = true, silent = true })
+-- Run the nearest test
+vim.api.nvim_set_keymap('n', '<leader>gn', '<cmd>lua require("neotest").run.run()<CR>', { noremap = true, silent = true })
+-- Run all tests in the current file
+vim.api.nvim_set_keymap('n', '<leader>gf', '<cmd>lua require("neotest").run.run(vim.fn.expand("%"))<CR>', { noremap = true, silent = true })
+-- Stop the nearest running test
+vim.api.nvim_set_keymap('n', '<leader>gs', '<cmd>lua require("neotest").run.stop()<CR>', { noremap = true, silent = true })
+-- Toggle the test summary window
+vim.api.nvim_set_keymap('n', '<leader>gt', '<cmd>lua require("neotest").summary.toggle()<CR>', { noremap = true, silent = true })
+-- Show the output of the nearest test
+vim.api.nvim_set_keymap('n', '<leader>go', '<cmd>lua require("neotest").output.open({ enter = true })<CR>', { noremap = true, silent = true })

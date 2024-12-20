@@ -23,6 +23,7 @@ end
 
 lspconfig.clangd.setup{
     cmd = { "clangd", "--header-insertion=never", "--completion-style=detailed", "--cross-file-rename", "--clang-tidy" },
+    filetypes = { "c", "cpp", "objc", "objcpp" },
     capabilities = capabilities,
     on_attach = on_attach,
 }
@@ -64,4 +65,14 @@ lspconfig.lua_ls.setup {
   },
   capabilities = capabilities,
   on_attach = on_attach,
+}
+
+lspconfig.dartls.setup{
+    capabilities = capabilities,
+    on_attach = on_attach,
+}
+
+lspconfig.gopls.setup{
+    capabilities = capabilities,
+    on_attach = on_attach,
 }

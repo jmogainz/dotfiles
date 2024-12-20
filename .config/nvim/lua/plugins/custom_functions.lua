@@ -580,16 +580,16 @@ M.check_function_definitions = async(function()
 end)
 
 -- Register an autocommand to run the check asynchronously when opening .h files
-vim.api.nvim_create_autocmd("BufEnter", {
-    pattern = "*.h,*.hpp",
-    callback = function()
-        local file_path = vim.api.nvim_buf_get_name(0)
-        if file_path:match("^/home/") and not file_path:match("^/home/[^/]+/git/kernels/") then
-            M.check_function_definitions()
-        else
-            log_message("Skipping check, file not in /home/** or excluded path: " .. file_path)
-        end
-    end
-})
+-- vim.api.nvim_create_autocmd("BufEnter", {
+--     pattern = "*.h,*.hpp",
+--     callback = function()
+--         local file_path = vim.api.nvim_buf_get_name(0)
+--         if file_path:match("^/home/") and not file_path:match("^/home/[^/]+/git/kernels/") then
+--             M.check_function_definitions()
+--         else
+--             log_message("Skipping check, file not in /home/** or excluded path: " .. file_path)
+--         end
+--     end
+-- })
 
 return M
