@@ -1,7 +1,7 @@
 require'nvim-treesitter.configs'.setup {
   ensure_installed = {
     "c", "json", "yaml", "cpp", "python", "make", "bash", "lua", "html", "gitignore",
-    "dockerfile", "markdown", "vim", "cmake", "dot", "latex"
+    "dockerfile", "markdown", "vim", "cmake", "dot", "latex", "dart", "go"
   },
   ignore_install = {},
   sync_install = false,
