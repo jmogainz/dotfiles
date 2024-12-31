@@ -13,6 +13,7 @@ general {
 # Define the modules to be included in the status bar
 order += "do_not_disturb"
 order += "dpms"
+order += "battery all"
 order += "memory"
 order += "cpu_usage"
 order += "sysdata"
@@ -26,14 +27,14 @@ order += "tztime local"
 
 # Do not disturb status
 do_not_disturb {
-    format = '[\?color=state [\?if=state |]]'
+    format = '[\?color=state [\?if=state  | ]]'
     thresholds = [(0, 'good'), (1, 'bad')]
 }
 
 # DPMS status
 dpms {
-    icon_off = ""
-    icon_on = ""
+    icon_off = " "
+    icon_on = " "
 }
 
 # Memory usage
@@ -105,4 +106,8 @@ group tz {
 # Local time
 tztime local {
     format = "%d/%m %I:%M:%S %p"
+}
+
+battery all {
+        format = "%status %percentage %remaining"
 }
