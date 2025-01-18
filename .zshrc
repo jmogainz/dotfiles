@@ -148,3 +148,7 @@ eval "$(zoxide init zsh)"
 if command -v tmux &> /dev/null; then
     alias clear='clear && tmux clear-history'
 fi
+
+export ANTHROPIC_API_KEY=""
+export RMVIEW_CONF=~/rmview.json
+export ANDROID_HOME=/home/jmogainz/Android/Sdk
