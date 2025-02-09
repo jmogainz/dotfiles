@@ -182,7 +182,7 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
       },
       filesystem_watchers = {
         enable = true,
-        debounce_delay = 50,
+        debounce_delay = 200,
         ignore_dirs = {},
       },
       actions = {

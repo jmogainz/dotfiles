@@ -9,7 +9,6 @@ vim.api.nvim_set_keymap('n', '<Leader>rg', ':Rg<Space>', { noremap = true, silen
 vim.api.nvim_set_keymap('n', '<Leader>fp', '<Cmd>lua require("plugins.custom_functions").copy_and_print_file_path()<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>p', '<Cmd>lua require("plugins.custom_functions").copy_and_print_dir_path()<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>w', '<Plug>(easymotion-bd-w)', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<C-l>', ':NERDTreeFind<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>tn', ':tabnext<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>tc', ':tabclose<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', 'mp', ':MarkdownPreview<CR>', { noremap = true, silent = true })
