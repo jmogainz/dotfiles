@@ -1,20 +1,21 @@
 require'nvim-treesitter.configs'.setup {
   ensure_installed = {
     "c", "json", "yaml", "cpp", "python", "make", "bash", "lua", "html", "gitignore",
-    "dockerfile", "markdown", "vim", "cmake", "dot", "latex", "dart", "go"
+    "dockerfile", "markdown", "vim", "cmake", "dot", "latex", "dart", "go", "just"
   },
   ignore_install = {},
   sync_install = false,
   modules = {},
   highlight = {
     enable = true,
-    disable = { "cpp" },
+    disable = { "cpp", "dart" },
     additional_vim_regex_highlighting = false
   },
   auto_install = false,
   textobjects = {
     select = {
       enable = true,
+      disable = { "dart" },
       keymaps = {
         ["af"] = "@function.outer",
         ["if"] = "@function.inner",
