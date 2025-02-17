@@ -37,7 +37,7 @@ vim.g.bookmark_no_default_key_mappings = 1
 vim.g.fzf_layout = { window = { width = 1.00, height = 1.00, wrap = true } }
 vim.api.nvim_create_user_command('Rg', function(opts)
     local args = table.concat(opts.fargs, " ")
-    local command = 'rg --column --line-number --no-heading --color=always ' .. args
+    local command = 'rg --no-ignore --column --line-number --no-heading --color=always --glob "!.git/*" --glob "!.cache/*" ' .. args
     vim.fn['fzf#vim#grep'](command, 1, vim.fn['fzf#vim#with_preview'](), opts.bang)
 end, { bang = true, nargs = '*' })
 vim.env.FZF_DEFAULT_COMMAND = 'rg --files -u --hidden --glob "!.git/*" --glob "!.cache/*"'
@@ -66,19 +66,19 @@ vim.g.copilot_assume_mapped = true
 vim.g.gitgutter_enabled = 1
 
 -- ALE settings
--- vim.g.ale_cpp_clang_options = '-Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion --header-insertion=never'
--- vim.g.ale_cpp_gcc_options = '-std=c++17 -Wall -O2 -Wextra -Wpedantic -Wconversion -Wsign-conversion'
--- vim.g.ale_cpp_cc_options = '-Wall -Wextra -Wpedantic Wsign-conversion'
--- vim.g.ale_linters = {
---     cpp = {'clang', 'g++'},
---     c = {},
---     python = {'flake8', 'pylint', 'mypy'},
---     tex = {},
---     lua = {},
---     dart = {},
---     go = {},
--- }
--- vim.g.ale_verbose = 1
+vim.g.ale_cpp_clang_options = '-Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion --header-insertion=never'
+vim.g.ale_cpp_gcc_options = '-std=c++17 -Wall -O2 -Wextra -Wpedantic -Wconversion -Wsign-conversion'
+vim.g.ale_cpp_cc_options = '-Wall -Wextra -Wpedantic Wsign-conversion'
+vim.g.ale_linters = {
+    cpp = {'clang', 'g++'},
+    c = {},
+    python = {'flake8', 'pylint', 'mypy'},
+    tex = {},
+    lua = {},
+    dart = {},
+    go = {},
+}
+vim.g.ale_verbose = 1
 
 -- UndoTree settings
 vim.g.undotree_SplitWidth = 60        -- Width of the undotree window
