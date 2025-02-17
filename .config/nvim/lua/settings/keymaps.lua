@@ -43,16 +43,16 @@ amenu PopUp.Go\ to\ References :lua vim.lsp.buf.references()<CR>
 amenu PopUp.Go\ to\ Tree :NvimTreeFindFile<CR>'
 amenu PopUp.Go\ to\ Header/Source :ClangdSwitchSourceHeader<CR>
 ]]
--- Map the mouse buttons to jump commands using :lua command
 vim.api.nvim_set_keymap('n', '<LeftMouse><ScrollWheelDown>', '<C-o>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<LeftMouse><ScrollWheelUp>', '<C-i>', { noremap = true, silent = true })
--- Run the nearest test
 vim.api.nvim_set_keymap('n', '<leader>gn', '<cmd>lua require("neotest").run.run()<CR>', { noremap = true, silent = true })
--- Run all tests in the current file
 vim.api.nvim_set_keymap('n', '<leader>gf', '<cmd>lua require("neotest").run.run(vim.fn.expand("%"))<CR>', { noremap = true, silent = true })
--- Stop the nearest running test
 vim.api.nvim_set_keymap('n', '<leader>gs', '<cmd>lua require("neotest").run.stop()<CR>', { noremap = true, silent = true })
--- Toggle the test summary window
 vim.api.nvim_set_keymap('n', '<leader>gt', '<cmd>lua require("neotest").summary.toggle()<CR>', { noremap = true, silent = true })
--- Show the output of the nearest test
 vim.api.nvim_set_keymap('n', '<leader>go', '<cmd>lua require("neotest").output.open({ enter = true })<CR>', { noremap = true, silent = true })
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "qf",
+    callback = function()
+        vim.keymap.set("n", "<CR>", "<CR><C-w>p", { buffer = true, silent = true })
+    end,
+})
