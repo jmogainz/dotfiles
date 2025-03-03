@@ -6,8 +6,8 @@ After=network.target
 User=root
 Group=root
 WorkingDirectory=/etc/squid
-Environment="PATH=/home/you/.conda/envs/web_env/bin"
-ExecStart=/home/you/.conda/envs/BAPhotoCreatorEnv/bin/python app.py
+Environment="PATH=/home/you/.local/share/mamba/envs/web_env/bin"
+ExecStart=/home/you/.local/share/mamba/envs/web_env/bin/python app.py
 
 [Install]
 WantedBy=multi-user.target
