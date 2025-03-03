@@ -204,6 +204,7 @@ ins_left {
   end,
 }
 
+ins_left {
   -- LSP server name.
   function()
     local msg = 'No Active Lsp'
