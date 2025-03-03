@@ -1,0 +1,14 @@
+[Unit]
+Description=Squid Restart Service
+After=network.target
+
+[Service]
+User=root
+Group=root
+WorkingDirectory=/etc/squid
+Environment="PATH=/home/jmogainz/.conda/envs/web_env/bin"
+ExecStart=/home/jmogainz/.conda/envs/BAPhotoCreatorEnv/bin/python app.py
+
+[Install]
+WantedBy=multi-user.target
+
