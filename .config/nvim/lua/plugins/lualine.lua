@@ -171,7 +171,7 @@ ins_left {
   cond = conditions.buffer_not_empty,
   -- Here you might want the anchor effect. For example, if you want the parent (anchor)
   -- to stand out, you could change this to use colors.darkblue or even a bold variant.
-  color = { fg = colors.darkblue, gui = 'bold' },
+  color = { fg = colors.fg, gui = 'bold' },
 }
 
 ins_left { 'location' }

@@ -49,6 +49,11 @@ vim.cmd('syntax enable')
 vim.o.background = 'light'
 vim.cmd('colorscheme gruvbox')
 
+vim.api.nvim_set_hl(0, "DiagnosticError", { fg = "#fb4934", bold = true })
+vim.api.nvim_set_hl(0, "DiagnosticWarn",  { fg = "#fabd2f", bold = true })
+vim.api.nvim_set_hl(0, "DiagnosticInfo",  { fg = "#83a598", bold = true })
+vim.api.nvim_set_hl(0, "DiagnosticHint",  { fg = "#8ec07c", bold = true })
+
 -- Enable persistent undo
 vim.o.undofile = true
 local target_path = vim.fn.expand('~/.config/nvim/undodir')
