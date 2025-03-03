@@ -1,6 +1,6 @@
 # ~/.config/alacritty/alacritty.toml
 
-import = ["~/.config/alacritty/dracula.toml"]
+general.import = ["~/.config/alacritty/gruvbox_light.toml"]
 
 [font]
 normal = { family = "JetBrainsMono Nerd Font" }
