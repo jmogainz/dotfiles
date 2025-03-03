@@ -1,11 +1,9 @@
 import subprocess
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify
 
 app = Flask(__name__)
 
-# Inline HTML template for a simple web UI
-HTML_TEMPLATE = """
-<!DOCTYPE html>
+HTML_TEMPLATE = """<!DOCTYPE html>
 <html>
 <head>
     <title>Squid Restart UI</title>
@@ -17,25 +15,45 @@ HTML_TEMPLATE = """
             height: 16px;
             border-radius: 50%;
             margin-left: 8px;
+            vertical-align: middle;
         }
         /* Fade the restart button while disabled */
         #restart-button:disabled {
             opacity: 0.5;
             cursor: not-allowed;
         }
+        
+        /* Spinner is hidden by default */
+        #spinner {
+            display: none;
+            margin-left: 10px;
+            vertical-align: middle;
+            width: 24px;
+            height: 24px;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #888;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0%   { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
     </style>
 </head>
 <body>
     <h1>Squid Proxy Restart UI</h1>
     <div>
-        <span>Status: 
+        <span>Status:
             <span id="status-circle" style="background-color: grey;"></span>
         </span>
         <button id="restart-button" onclick="restartSquid()">Restart Squid</button>
+        <div id="spinner"></div>
     </div>
 
     <script>
-        // Poll the Squid status every few seconds to update the UI.
+        // Poll the Squid status every 5 seconds to update the UI.
         setInterval(getStatus, 5000);
         window.onload = getStatus;
 
@@ -45,11 +63,13 @@ HTML_TEMPLATE = """
                 .then(data => {
                     const circle = document.getElementById('status-circle');
                     const button = document.getElementById('restart-button');
+                    const spinner = document.getElementById('spinner');
                     
                     if (data.status === 'active') {
-                        // Green circle, enable button
+                        // Green circle, enable button, hide spinner
                         circle.style.backgroundColor = 'green';
                         button.disabled = false;
+                        spinner.style.display = 'none';
                     } else {
                         // Red circle, disable button
                         circle.style.backgroundColor = 'red';
@@ -57,25 +77,27 @@ HTML_TEMPLATE = """
                     }
                 })
                 .catch(err => {
-                    console.log("Error fetching status:", err);
+                    console.log('Error fetching status:', err);
                 });
         }
 
         function restartSquid() {
-            // Immediately set circle to red and disable the button
+            // Immediately set circle to red, disable button, show spinner
             const circle = document.getElementById('status-circle');
             const button = document.getElementById('restart-button');
+            const spinner = document.getElementById('spinner');
+
             circle.style.backgroundColor = 'red';
             button.disabled = true;
+            spinner.style.display = 'inline-block';
 
             // Send a POST request to trigger the restart
             fetch('/restart', { method: 'POST' })
                 .then(response => response.json())
                 .then(data => {
-                    console.log("Restart initiated:", data);
+                    console.log('Restart initiated:', data);
 
-                    // After initiating the restart, poll every second
-                    // until we get 'active' again
+                    // Poll every second until we get 'active' again
                     const pollInterval = setInterval(() => {
                         fetch('/status')
                             .then(res => res.json())
@@ -83,62 +105,55 @@ HTML_TEMPLATE = """
                                 if (statusData.status === 'active') {
                                     circle.style.backgroundColor = 'green';
                                     button.disabled = false;
+                                    spinner.style.display = 'none';
                                     clearInterval(pollInterval);
                                 }
                             })
                             .catch(err => {
-                                console.log("Error polling status:", err);
+                                console.log('Error polling status:', err);
                             });
                     }, 1000);
                 })
                 .catch(err => {
-                    console.log("Error restarting Squid:", err);
+                    console.log('Error restarting Squid:', err);
                 });
         }
     </script>
 </body>
-</html>
-"""
+</html>"""
 
 def is_squid_active():
     """
-    Checks if the Squid service is currently active using systemctl is-active.
-    Returns the status string (e.g., 'active', 'inactive', 'failed', etc.).
+    Return 'active' if Squid is running, otherwise 'inactive' or 'failed'.
+    Uses the absolute path to systemctl so it can be found by systemd.
     """
     try:
         output = subprocess.check_output(
-            ["systemctl", "is-active", "squid.service"],
+            ["/usr/bin/systemctl", "is-active", "squid.service"],
             stderr=subprocess.STDOUT
         )
-        return output.decode('utf-8').strip()
+        return output.decode("utf-8").strip()
     except subprocess.CalledProcessError:
         return "inactive"
 
 @app.route("/")
 def index():
-    """
-    Serve the main HTML interface.
-    """
+    # Return the HTML page
     return HTML_TEMPLATE
 
 @app.route("/status")
 def get_squid_status():
-    """
-    Returns JSON with the current status of the Squid service.
-    """
+    # Return JSON with the Squid service's current status
     status = is_squid_active()
     return jsonify({"status": status})
 
 @app.route("/restart", methods=["POST"])
 def restart_squid():
-    """
-    Triggers a systemctl restart for the Squid service. Returns a JSON response.
-    """
-    # Since this script will run as root, no sudo is needed:
-    subprocess.Popen(["systemctl", "restart", "squid.service"])
+    # Spawn systemctl to restart squid without waiting for it to finish
+    subprocess.Popen(["/usr/bin/systemctl", "restart", "squid.service"])
     return jsonify({"message": "Restart initiated"})
 
 if __name__ == "__main__":
-    # Serve on port 80, available on all interfaces
+    # Listen on port 80 (requires root privileges or capability)
     app.run(host="0.0.0.0", port=80)
 
