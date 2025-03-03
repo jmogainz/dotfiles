@@ -83,9 +83,9 @@
   typeset -g POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 
   # Magenta prompt symbol if the last command succeeded.
-  typeset -g POWERLEVEL9K_PROMPT_CHAR_OK_{VIINS,VICMD,VIVIS}_FOREGROUND=249
+  typeset -g POWERLEVEL9K_PROMPT_CHAR_OK_{VIINS,VICMD,VIVIS}_FOREGROUND='#282828'
   # Red prompt symbol if the last command failed.
-  typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_{VIINS,VICMD,VIVIS}_FOREGROUND=249
+  typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_{VIINS,VICMD,VIVIS}_FOREGROUND='#282828'
   # Default prompt symbol.
   typeset -g POWERLEVEL9K_PROMPT_CHAR_{OK,ERROR}_VIINS_CONTENT_EXPANSION='▷'
   # Prompt symbol in overwrite vi mode is the same as in command mode.
@@ -101,9 +101,6 @@
   typeset -g POWERLEVEL9K_ANACONDA_ICON=''
   typeset -g POWERLEVEL9K_ANACONDA_BACKGROUND=
   typeset -g POWERLEVEL9K_ANACONDA_FOREGROUND=$grey
-
-  # Blue current directory.
-  typeset -g POWERLEVEL9K_DIR_FOREGROUND=39
 
   # Context format when root: user@host. The first part white, the rest grey.
   typeset -g POWERLEVEL9K_CONTEXT_ROOT_TEMPLATE="%F{$white}%n%f%F{$grey}@%m%f"
@@ -122,7 +119,7 @@
   typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND=$yellow
 
   # Grey Git prompt. This makes stale prompts indistinguishable from up-to-date ones.
-  typeset -g POWERLEVEL9K_VCS_FOREGROUND=159
+  typeset -g POWERLEVEL9K_VCS_FOREGROUND='#cc241d'
 
   # Disable async loading indicator to make directories that aren't Git repositories
   # indistinguishable from large Git repositories without known state.
@@ -166,7 +163,7 @@
 
 ######################### DIR PROMPT #########################
   # Default current directory color.
-  typeset -g POWERLEVEL9K_DIR_FOREGROUND=218
+  typeset -g POWERLEVEL9K_DIR_FOREGROUND='#458588'
   # If directory is too long, shorten some of its segments to the shortest possible unique
   # prefix. The shortened directory can be tab-completed to the original.
   typeset -g POWERLEVEL9K_SHORTEN_STRATEGY=truncate_to_unique
@@ -176,7 +173,7 @@
   typeset -g POWERLEVEL9K_DIR_SHORTENED_FOREGROUND=103
   # Color of the anchor directory segments. Anchor segments are never shortened. The first
   # segment is always an anchor.
-  typeset -g POWERLEVEL9K_DIR_ANCHOR_FOREGROUND=200
+  typeset -g POWERLEVEL9K_DIR_ANCHOR_FOREGROUND='#458588'
   # Display anchor directory segments in bold.
   typeset -g POWERLEVEL9K_DIR_ANCHOR_BOLD=true
   # If set to `0`, directory will always be shortened to its minimum length.

@@ -46,8 +46,8 @@ vim.env.FZF_DEFAULT_OPTS = '--border=none --preview-window=border-none,wrap,hidd
 
 -- Colorscheme settings
 vim.cmd('syntax enable')
-vim.o.background = 'dark'
-vim.cmd('colorscheme dracula')
+vim.o.background = 'light'
+vim.cmd('colorscheme gruvbox')
 
 -- Enable persistent undo
 vim.o.undofile = true

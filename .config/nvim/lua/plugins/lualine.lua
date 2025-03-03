@@ -36,20 +36,19 @@ end
 -- Credit: glepnir
 local lualine = require('lualine')
 
--- Color table for highlights
--- stylua: ignore
+-- Gruvbox-inspired color table for highlights.
 local colors = {
-  bg       = '#202328',
-  fg       = '#bbc2cf',
-  yellow   = '#ECBE7B',
-  cyan     = '#008080',
-  darkblue = '#081633',
-  green    = '#98be65',
-  orange   = '#FF8800',
-  violet   = '#a9a1e1',
-  magenta  = '#c678dd',
-  blue     = '#51afef',
-  red      = '#ec5f67',
+  bg       = '#282828', -- Gruvbox dark background
+  fg       = '#ebdbb2', -- light foreground
+  yellow   = '#fabd2f',
+  cyan     = '#8ec07c',
+  darkblue = '#83a598', -- used for mode component etc.
+  green    = '#b8bb26',
+  orange   = '#fe8019',
+  violet   = '#d3869b',
+  magenta  = '#fb4934',
+  blue     = '#83a598', -- bright blue
+  red      = '#fb4934',
 }
 
 local conditions = {
@@ -81,25 +80,23 @@ local config = {
     component_separators = '',
     section_separators = '',
     theme = {
-      -- We are going to use lualine_c and lualine_x as left and
-      -- right section. Both are highlighted by c theme .  So we
-      -- are just setting default looks of statusline
+      -- We are going to use lualine_c and lualine_x as left and right sections.
       normal = { c = { fg = colors.fg, bg = colors.bg } },
       inactive = { c = { fg = colors.fg, bg = colors.bg } },
     },
   },
   sections = {
-    -- these are to remove the defaults
+    -- These are to remove the defaults.
     lualine_a = {},
     lualine_b = {},
     lualine_y = {},
     lualine_z = {},
-    -- These will be filled later
+    -- These will be filled later.
     lualine_c = {},
     lualine_x = {},
   },
   inactive_sections = {
-    -- these are to remove the defaults
+    -- Remove defaults.
     lualine_a = {},
     lualine_b = {},
     lualine_y = {},
@@ -109,12 +106,12 @@ local config = {
   },
 }
 
--- Inserts a component in lualine_c at left section
+-- Inserts a component in lualine_c at the left section.
 local function ins_left(component)
   table.insert(config.sections.lualine_c, component)
 end
 
--- Inserts a component in lualine_x at right section
+-- Inserts a component in lualine_x at the right section.
 local function ins_right(component)
   table.insert(config.sections.lualine_x, component)
 end
@@ -123,17 +120,16 @@ ins_left {
   function()
     return '▊'
   end,
-  color = { fg = colors.blue }, -- Sets highlighting of component
-  padding = { left = 0, right = 1 }, -- We don't need space before this
+  color = { fg = colors.blue }, -- Uses bright blue for the block
+  padding = { left = 0, right = 1 },
 }
 
 ins_left {
-  -- mode component
+  -- Mode component.
   function()
     return '🕇'
   end,
   color = function()
-    -- auto change color according to neovims mode
     local mode_color = {
       n = colors.red,
       i = colors.green,
@@ -162,24 +158,26 @@ ins_left {
 }
 
 ins_left {
-  -- filesize component
+  -- Filesize component.
   'filesize',
   cond = conditions.buffer_not_empty,
 }
 
 ins_left {
-  -- Use custom function to show parent directory and file name
+  -- Parent directory and file name.
   function()
     return get_parent_dir_and_filename()
   end,
   cond = conditions.buffer_not_empty,
-  color = { fg = colors.magenta, gui = 'bold' },
+  -- Here you might want the anchor effect. For example, if you want the parent (anchor)
+  -- to stand out, you could change this to use colors.darkblue or even a bold variant.
+  color = { fg = colors.darkblue, gui = 'bold' },
 }
 
 ins_left { 'location' }
 
 ins_left {
-  -- custom diagnostic component
+  -- Custom diagnostic component.
   function()
     return get_diagnostics_line_numbers()
   end,
@@ -198,8 +196,7 @@ ins_left {
   },
 }
 
--- Insert mid section. You can make any number of sections in neovim :)
--- for lualine it's any number greater than 2
+-- Insert mid section. You can have any number of sections greater than 2.
 ins_left {
   function()
     return '%='
@@ -207,7 +204,7 @@ ins_left {
 }
 
 ins_left {
-  -- Lsp server name .
+  -- LSP server name.
   function()
     local msg = 'No Active Lsp'
     local buf_ft = vim.api.nvim_buf_get_option(0, 'filetype')
@@ -224,13 +221,13 @@ ins_left {
     return msg
   end,
   icon = ' LSP:',
-  color = { fg = '#ffffff', gui = 'bold' },
+  color = { fg = colors.fg, gui = 'bold' },
 }
 
--- Add components to right sections
+-- Add components to the right sections.
 ins_right {
-  'o:encoding', -- option component same as &encoding in viml
-  fmt = string.upper, -- I'm not sure why it's upper case either ;)
+  'o:encoding',
+  fmt = string.upper,
   cond = conditions.hide_in_width,
   color = { fg = colors.green, gui = 'bold' },
 }
@@ -238,7 +235,7 @@ ins_right {
 ins_right {
   'fileformat',
   fmt = string.upper,
-  icons_enabled = false, -- I think icons are cool but Eviline doesn't have them. sigh
+  icons_enabled = false,
   color = { fg = colors.green, gui = 'bold' },
 }
 
@@ -274,5 +271,6 @@ ins_right {
   padding = { left = 1 },
 }
 
--- Now don't forget to initialize lualine
+-- Initialize lualine.
 lualine.setup(config)
+
