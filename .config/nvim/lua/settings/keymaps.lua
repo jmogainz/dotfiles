@@ -57,3 +57,4 @@ vim.api.nvim_create_autocmd("FileType", {
         vim.keymap.set("n", "<CR>", "<CR><C-w>p", { buffer = true, silent = true })
     end,
 })
+vim.api.nvim_set_keymap('n', '<Leader>rp', ':!realpath %<CR>', { noremap = true, silent = false })

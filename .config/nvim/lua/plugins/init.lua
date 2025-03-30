@@ -63,6 +63,7 @@ require('packer').startup(function(use)
   use 'nvim-neotest/neotest-go'
   use 'stevearc/dressing.nvim'
   use 'MunifTanjim/nui.nvim'
+  use 'jose-elias-alvarez/null-ls.nvim'
   -- use {'yetone/avante.nvim', run = 'make BUILD_FROM_SOURCE=true'}
 end)
 
@@ -85,4 +86,5 @@ require('plugins.cpp-tools')
 require('plugins.aerial')
 require('plugins.trouble')
 require('plugins.neotest')
+require('plugins.null_ls')
 -- require('plugins.avante')
