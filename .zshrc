@@ -152,3 +152,5 @@ fi
 export ANTHROPIC_API_KEY=""
 export RMVIEW_CONF=~/rmview.json
 export ANDROID_HOME=/home/jmogainz/Android/Sdk
+export PUB_CACHE=/home/jmogainz/.pub-cache
+export GRADLE_USER_HOME=/home/jmogainz/.gradle
