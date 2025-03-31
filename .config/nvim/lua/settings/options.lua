@@ -14,6 +14,7 @@ vim.o.cursorline = true
 vim.o.timeoutlen = 300
 vim.o.smartindent = false
 vim.opt.fixeol = false
+vim.opt.cmdheight = 2
 vim.opt.shada = "'1000,<50,:1000,s10,h"
 
 -- Plantuml settings
