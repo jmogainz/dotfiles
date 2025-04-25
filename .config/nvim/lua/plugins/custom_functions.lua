@@ -266,7 +266,13 @@ M.copy_snippet_info = function()
         return
     end
     local snippet = table.concat(lines, "\n")
-    local formatted = string.format("File: %s\nLines: %d-%d\n\n%s", file, startline, endline, snippet)
+    local formatted = string.format(
+        "File: %s\nLines: %d-%d\n\n```\n%s\n```",
+        file,
+        startline,
+        endline,
+        snippet
+    )
 
     local before_clipboard_time = vim.loop.hrtime()
     vim.fn.setreg('+', formatted)

@@ -149,8 +149,16 @@ if command -v tmux &> /dev/null; then
     alias clear='clear && tmux clear-history'
 fi
 
+function gcap() {
+  if [ -z "$1" ]; then
+    echo "Usage: gcap \"commit message\""
+    return 1
+  fi
+
+  git commit -am "$1" && git push
+}
+
 export ANTHROPIC_API_KEY=""
 export RMVIEW_CONF=~/rmview.json
 export ANDROID_HOME=/home/you/Android/Sdk
-export PUB_CACHE=/home/you/.pub-cache
 export GRADLE_USER_HOME=/home/you/.gradle

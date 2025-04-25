@@ -77,7 +77,7 @@ lspconfig.gopls.setup{
     on_attach = on_attach,
     settings = {
         gopls = {
-            buildFlags = { "-tags=dev,dev_test,integration,unit" },
+            buildFlags = { "-tags=dev_test,integration,unit" },
         },
     },
 }
