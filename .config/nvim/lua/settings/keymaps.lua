@@ -1,6 +1,7 @@
 -- Key mappings
 vim.api.nvim_set_keymap('n', '<Leader>mp', ':MarkdownPreview<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('i', '<C-l>', 'copilot#Accept("<CR>")', { silent = true, expr = true, script = true })
+vim.api.nvim_set_keymap('i', '<M-u>', 'copilot#AcceptWord("<CR>")', { silent = true, expr = true, script = true })
 vim.api.nvim_set_keymap('n', '<Leader>s', ':Files<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<C-h>', ':History<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>eh', ':split <bar> :History<CR>', { noremap = true, silent = true })
@@ -57,4 +58,4 @@ vim.api.nvim_create_autocmd("FileType", {
         vim.keymap.set("n", "<CR>", "<CR><C-w>p", { buffer = true, silent = true })
     end,
 })
-vim.api.nvim_set_keymap('n', '<Leader>rp', ':!realpath %<CR>', { noremap = true, silent = false })
+vim.api.nvim_set_keymap('n', '<Leader>rp', [[:lua print(vim.fn.system('realpath ' .. vim.fn.expand('%')))<CR>]], { noremap = true, silent = true })

@@ -3,14 +3,18 @@ vim.cmd [[packadd packer.nvim]]
 
 require('packer').startup(function(use)
   use 'wbthomason/packer.nvim' -- Packer can manage itself
+  -- use {
+  --   'zbirenbaum/copilot.lua',
+  -- }
   use 'github/copilot.vim'
+  use 'CopilotC-Nvim/CopilotChat.nvim'
   use 'nvim-lua/plenary.nvim'
   use 'farmergreg/vim-lastplace'
   use { 'junegunn/fzf', run = function() vim.fn['fzf#install']() end }
   use 'junegunn/fzf.vim'
   use 'windwp/nvim-autopairs'
   use 'sheerun/vim-polyglot'
-  use { 'dracula/vim', as = 'dracula' }
+--use { 'dracula/vim', as = 'dracula' }
   use { 'morhetz/gruvbox', as = 'gruvbox'}
   use 'nvim-tree/nvim-web-devicons'
   use 'nvim-tree/nvim-tree.lua'
@@ -87,4 +91,6 @@ require('plugins.aerial')
 require('plugins.trouble')
 require('plugins.neotest')
 require('plugins.null_ls')
+require('plugins.copilot_chat')
+-- require('plugins.copilot_lua')
 -- require('plugins.avante')
