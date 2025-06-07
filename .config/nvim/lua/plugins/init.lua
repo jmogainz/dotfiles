@@ -14,7 +14,7 @@ require('packer').startup(function(use)
   use 'junegunn/fzf.vim'
   use 'windwp/nvim-autopairs'
   use 'sheerun/vim-polyglot'
---use { 'dracula/vim', as = 'dracula' }
+  use { 'dracula/vim', as = 'dracula' }
   use { 'morhetz/gruvbox', as = 'gruvbox'}
   use 'nvim-tree/nvim-web-devicons'
   use 'nvim-tree/nvim-tree.lua'
@@ -67,7 +67,7 @@ require('packer').startup(function(use)
   use 'nvim-neotest/neotest-go'
   use 'stevearc/dressing.nvim'
   use 'MunifTanjim/nui.nvim'
-  use 'jose-elias-alvarez/null-ls.nvim'
+  use 'nvimtools/none-ls.nvim'
   -- use {'yetone/avante.nvim', run = 'make BUILD_FROM_SOURCE=true'}
 end)
 
