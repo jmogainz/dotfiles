@@ -1,5 +1,5 @@
 require("CopilotChat").setup({
-    model = "gemini-2.5-pro",
+    model = "claude-sonnet-4",
     context = {"buffers"},
     window = {
         position = "right",
