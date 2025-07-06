@@ -127,20 +127,20 @@ LINUX_CONFIG_PATH=~/linux_config
 
 alias xclip='xclip -selection clipboard'
 
-# >>> conda initialize >>>
-if [ -f "/opt/mambaforge/etc/profile.d/conda.sh" ]; then
-    . "/opt/mambaforge/etc/profile.d/conda.sh"
-else
-    export PATH="/opt/mambaforge/bin:$PATH"
-fi
+# # >>> conda initialize >>>
+# if [ -f "/opt/mambaforge/etc/profile.d/conda.sh" ]; then
+#     . "/opt/mambaforge/etc/profile.d/conda.sh"
+# else
+#     export PATH="/opt/mambaforge/bin:$PATH"
+# fi
 
-if [ -f "/opt/mambaforge/etc/profile.d/mamba.sh" ]; then
-    . "/opt/mambaforge/etc/profile.d/mamba.sh"
-else
-    export PATH="/opt/mambaforge/bin:$PATH"
-fi
+# if [ -f "/opt/mambaforge/etc/profile.d/mamba.sh" ]; then
+#     . "/opt/mambaforge/etc/profile.d/mamba.sh"
+# else
+#     export PATH="/opt/mambaforge/bin:$PATH"
+# fi
 
-# <<< conda initialize <<<
+# # <<< conda initialize <<<
 
 eval "$(zoxide init zsh)"
 
