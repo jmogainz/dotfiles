@@ -3,7 +3,7 @@
 general.import = ["~/.config/alacritty/dracula.toml"]
 
 [font]
-normal = { family = "JetBrainsMono Nerd Font" }
+normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
 size = 14.5
 
 [env]
@@ -23,3 +23,14 @@ chars = "\u001b[A"  # This sends the "Up" arrow key sequence
 key = "J"
 mods = "Control"
 chars = "\u001b[B"  # This sends the "Down" arrow key sequence
+
+# make ⌥⌘→ / ⌥⌘← send **the same sequences**
+[[keyboard.bindings]]
+key   = "Right"
+mods  = "Alt|Command"
+chars = "\u001b[1;3C"
+
+[[keyboard.bindings]]
+key   = "Left"
+mods  = "Alt|Command"
+chars = "\u001b[1;3D"
