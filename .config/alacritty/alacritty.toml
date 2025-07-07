@@ -34,3 +34,14 @@ chars = "\u001b[1;3C"
 key   = "Left"
 mods  = "Alt|Command"
 chars = "\u001b[1;3D"
+
+# ── duplicate Alt-Arrow tmux window switch on ⌘⇧[  /  ⌘⇧] ──────────
+[[keyboard.bindings]]
+key   = "{"      # physical “[” key (⇧ makes it “{”)
+mods  = "Command|Shift"
+chars = "\u001b[1;3D"   # Meta-Left  → tmux previous-window
+
+[[keyboard.bindings]]
+key   = "}"      # physical “]” key (⇧ makes it “}”)
+mods  = "Command|Shift"
+chars = "\u001b[1;3C"   # Meta-Right → tmux next-window
