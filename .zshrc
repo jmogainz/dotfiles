@@ -159,7 +159,4 @@ function gcap() {
 }
 
 export ANTHROPIC_API_KEY=""
-export RMVIEW_CONF=~/rmview.json
-export ANDROID_HOME=/home/you/Android/Sdk
-export GRADLE_USER_HOME=/home/you/.gradle
-export JAVA_HOME=/usr/lib/jvm/java-17-openjdk
+# export ANDROID_HOME=/home/you/Android/Sdk
