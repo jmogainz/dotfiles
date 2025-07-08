@@ -181,6 +181,10 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # gnu-getopt keeps binaries directly in bin/
 PATH="/opt/homebrew/opt/gnu-getopt/bin:$PATH"
 
+unalias ls 2>/dev/null          # drop the old ‘ls -G’ alias if it exists
+alias   ls='/bin/ls -G -F'      # always run BSD /bin/ls, keep colour (-G)
+export  CLICOLOR=1              # lets BSD ls honour colour env-vars
+
 export PATH
 
 typeset -U path
