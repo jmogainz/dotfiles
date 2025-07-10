@@ -20,4 +20,4 @@ yabai -m config mouse_action2         resize
 #   autofocus  → focus only
 #   autoraise  → focus + raise (acts like a click)
 yabai -m config focus_follows_mouse autoraise
-yabai -m config mouse_follows_focus off
+yabai -m config mouse_follows_focus on

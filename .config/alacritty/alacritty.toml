@@ -24,16 +24,53 @@ key = "J"
 mods = "Control"
 chars = "\u001b[B"  # This sends the "Down" arrow key sequence
 
-# make ⌥⌘→ / ⌥⌘← send **the same sequences**
+############################################################
+#  ⌘⌫   – delete the whole line (shell “kill-line” = ^U)
+############################################################
+[[keyboard.bindings]]
+key   = "Back"
+mods  = "Command"          # “Super” instead of “Command” on Linux
+chars = "\u0015"           # 0x15  =  ^U  (line kill)
+
+############################################################
+#  ⌥←/→ – move back/forward a word (shell = ESC b / ESC f)
+############################################################
+[[keyboard.bindings]]
+key   = "Left"
+mods  = "Alt"              # Option on macOS
+chars = "\u001bb"          # ESC b  (back-a-word)
+
 [[keyboard.bindings]]
 key   = "Right"
-mods  = "Alt|Command"
-chars = "\u001b[1;3C"
+mods  = "Alt"
+chars = "\u001bf"          # ESC f  (forward-a-word)
 
+############################################################
+#  ⌘←/→ – jump to beginning / end of line (shell = ^A / ^E)
+############################################################
+[[keyboard.bindings]]
+key   = "Left"
+mods  = "Command"
+chars = "\u0001"           # 0x01  =  ^A  (beginning of line)
+
+[[keyboard.bindings]]
+key   = "Right"
+mods  = "Command"
+chars = "\u0005"           # 0x05  =  ^E  (end of line)
+
+############################################################
+#  ⌥⌘←/→ – keep your existing tmux “tab” (window) navigation
+#  (you already have these two lines in your file; repeated here for clarity)
+############################################################
 [[keyboard.bindings]]
 key   = "Left"
 mods  = "Alt|Command"
-chars = "\u001b[1;3D"
+chars = "\u001b[1;3D"      # Meta-Left  → tmux previous-window
+
+[[keyboard.bindings]]
+key   = "Right"
+mods  = "Alt|Command"
+chars = "\u001b[1;3C"      # Meta-Right → tmux next-window
 
 # ── duplicate Alt-Arrow tmux window switch on ⌘⇧[  /  ⌘⇧] ──────────
 [[keyboard.bindings]]

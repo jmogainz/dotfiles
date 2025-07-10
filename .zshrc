@@ -142,6 +142,11 @@ alias xclip='xclip -selection clipboard'
 
 # # <<< conda initialize <<<
 
+# Docker tab-completion  – uses the script built into the CLI itself
+if command -v docker &>/dev/null; then
+  source <(docker completion zsh)
+fi
+
 eval "$(zoxide init zsh)"
 
 # if tmux is installed, alias clear to do clear and tmux clear-history
