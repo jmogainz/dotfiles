@@ -9,17 +9,21 @@ alt - j : yabai -m window --focus stack.next || yabai -m window --focus stack.fi
 alt - k : yabai -m window --focus stack.prev || yabai -m window --focus stack.last  || yabai -m window --focus north
 alt - l : yabai -m window --focus east  || yabai -m space --focus next
 
-# move / swap like i3 ── stack-aware + wrap-around
-alt + shift - h : yabai -m window --warp west  || yabai -m window --swap west
+# move / swap like i3 ── stack-aware + wrap-around + cross-space
+alt + shift - h : yabai -m window --warp west  \
+                  || yabai -m window --swap west \
+                  || yabai -m window --space prev --focus    # ← cross-space move
 alt + shift - j : yabai -m window --swap stack.next \
                   || yabai -m window --warp south \
                   || yabai -m window --swap south \
-                  || yabai -m window --swap stack.first   # rotate to top
+                  || yabai -m window --swap stack.first      # rotate to top
 alt + shift - k : yabai -m window --swap stack.prev \
                   || yabai -m window --warp north \
                   || yabai -m window --swap north \
-                  || yabai -m window --swap stack.last    # rotate to bottom
-alt + shift - l : yabai -m window --warp east  || yabai -m window --swap east
+                  || yabai -m window --swap stack.last       # rotate to bottom
+alt + shift - l : yabai -m window --warp east  \
+                  || yabai -m window --swap east \
+                  || yabai -m window --space next --focus    # → cross-space move
 
 # resize focused window
 alt + ctrl - h : yabai -m window --resize left:-20:0  ; yabai -m window --resize right:-20:0
