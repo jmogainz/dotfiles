@@ -176,14 +176,15 @@ export HOMEBREW_CLEANUP_MAX_AGE_DAYS=30
 # 1) Put your Apple-Silicon Homebrew prefix first
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# # 2) Prepend every package’s gnubin (un-prefixed) directory
-# for pkg in make \
-#             coreutils findutils gnu-sed gnu-tar gnu-which \
-#             grep gawk diffutils gnu-indent; do
-#   PATH="/opt/homebrew/opt/$pkg/libexec/gnubin:$PATH"
-# done
+# 2) Prepend every package’s gnubin (un-prefixed) directory
+for pkg in make \
+            coreutils findutils gnu-sed gnu-tar gnu-which \
+            grep gawk diffutils gnu-indent; do
+  PATH="/opt/homebrew/opt/$pkg/libexec/gnubin:$PATH"
+done
 
-# gnu-getopt keeps binaries directly in bin/
+# COMMENTED OUT, they are linked in /opt/homebrew/bin, with brew link --force --overwrite
+# # gnu-getopt keeps binaries directly in bin/
 # PATH="/opt/homebrew/opt/gnu-getopt/bin:$PATH"
 # PATH="/opt/homebrew/opt/util-linux/bin:$PATH"
 
