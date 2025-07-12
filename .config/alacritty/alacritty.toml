@@ -82,3 +82,19 @@ chars = "\u001b[1;3D"   # Meta-Left  → tmux previous-window
 key   = "}"      # physical “]” key (⇧ makes it “}”)
 mods  = "Command|Shift"
 chars = "\u001b[1;3C"   # Meta-Right → tmux next-window
+
+############################################################
+#  ⌘T  – do nothing (override Alacritty’s default SpawnNewInstance)
+############################################################
+[[keyboard.bindings]]
+key    = "T"
+mods   = "Command"
+action = "None"         # “None” cleanly disables the key :contentReference[oaicite:0]{index=0}
+
+############################################################
+#  ⌘W  – behave exactly like ^W (delete previous word)
+############################################################
+[[keyboard.bindings]]
+key   = "W"
+mods  = "Command"
+chars = "\u0017"        # 0x17 = ^W ETB control-char
