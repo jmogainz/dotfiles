@@ -17,18 +17,5 @@ require('copilot').setup({
     }
   },
 
-  copilot_model = "gpi-4.1-copilot",
-
-  -- 2. add other trees you want Copilot to scan up-front
-  workspace_folders = {
-    "~/poof-meta-repo/meta-service/services/jobs-service/internal",
-  },
-
-  -- enable in every language you care about
-  filetypes = {
-    markdown = true,       -- off by default – turn it on
-    yaml     = false,      -- leave disabled (chatter)
-  },
-
-  copilot_node_command = 'node',  -- whatever `node -v` v20+ resolves to
+  copilot_model = "claude-sonnet-4",
 })

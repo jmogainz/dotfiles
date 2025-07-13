@@ -10,6 +10,7 @@ size = 14
 TERM = "xterm-256color"
 
 [window]
+decorations = "buttonless" # no buttons or title bar but keep rounded corners
 
 [scrolling]
 history = 20000

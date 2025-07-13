@@ -1,6 +1,6 @@
 require("CopilotChat").setup({
     model = "claude-sonnet-4",
-    context = {"buffers"},
+    context = {"buffer"},
     window = {
         position = "right",
         width = 0.4,
