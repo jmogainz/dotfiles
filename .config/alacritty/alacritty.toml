@@ -11,6 +11,7 @@ TERM = "xterm-256color"
 
 [window]
 decorations = "buttonless" # no buttons or title bar but keep rounded corners
+option_as_alt = "both"
 
 [scrolling]
 history = 20000
@@ -99,3 +100,21 @@ action = "None"         # “None” cleanly disables the key :contentReference[
 key   = "W"
 mods  = "Command"
 chars = "\u0017"        # 0x17 = ^W ETB control-char
+
+############################################################
+#  ⌥] / ⌥[ / ⌥u  → forward as real Meta (ESC-prefix) keys
+############################################################
+[[keyboard.bindings]]
+key   = "]"          # physical “]” key
+mods  = "Alt"        # Option on macOS
+chars = "\u001b]"    # ESC ]   = <M-]>
+
+[[keyboard.bindings]]
+key   = "["          # physical “[” key
+mods  = "Alt"
+chars = "\u001b["    # ESC [   = <M-[>
+
+[[keyboard.bindings]]
+key   = "U"          # un-shifted “u”
+mods  = "Alt"
+chars = "\u001bu"    # ESC u   = <M-u>
