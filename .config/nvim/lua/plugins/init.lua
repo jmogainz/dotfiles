@@ -15,7 +15,7 @@ require('packer').startup(function(use)
   use 'windwp/nvim-autopairs'
   use 'sheerun/vim-polyglot'
   use { 'dracula/vim', as = 'dracula' }
-  use { 'morhetz/gruvbox', as = 'gruvbox'}
+  use { 'morhetz/gruvbox', as = 'gruvbox' }
   use 'nvim-tree/nvim-web-devicons'
   use 'nvim-tree/nvim-tree.lua'
   use 'Xuyuanp/nerdtree-git-plugin'
@@ -40,7 +40,12 @@ require('packer').startup(function(use)
   use 'nvim-treesitter/nvim-treesitter-textobjects'
   use 'nvim-treesitter/nvim-treesitter-refactor'
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-  use { 'iamcco/markdown-preview.nvim', run = 'cd app && yarn install && yarn add tslib' }
+  use({
+    "iamcco/markdown-preview.nvim",
+    ft  = { "markdown" },
+    run = "cd app && npm install --production", -- <- important bit
+    -- or yarn:  run = "cd app && yarn install --production",
+  })
   use 'tpope/vim-abolish'
   use 'j-hui/fidget.nvim'
   use 'MattesGroeger/vim-bookmarks'
@@ -62,8 +67,8 @@ require('packer').startup(function(use)
   use 'folke/trouble.nvim'
   use { 'MeanderingProgrammer/render-markdown.nvim', after = 'nvim-treesitter' }
   use 'mfussenegger/nvim-dap'
-  use {'nvim-neotest/neotest', requires = {'nvim-neotest/nvim-nio', 'nvim-lua/plenary.nvim', 'antoinemadec/FixCursorHold.nvim',
-       'nvim-treesitter/nvim-treesitter'}}
+  use { 'nvim-neotest/neotest', requires = { 'nvim-neotest/nvim-nio', 'nvim-lua/plenary.nvim', 'antoinemadec/FixCursorHold.nvim',
+    'nvim-treesitter/nvim-treesitter' } }
   use 'nvim-neotest/neotest-go'
   use 'stevearc/dressing.nvim'
   use 'MunifTanjim/nui.nvim'

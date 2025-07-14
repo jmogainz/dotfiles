@@ -59,3 +59,5 @@ vim.api.nvim_create_autocmd("FileType", {
     end,
 })
 vim.api.nvim_set_keymap('n', '<Leader>rp', [[:lua print(vim.fn.system('realpath ' .. vim.fn.expand('%')))<CR>]], { noremap = true, silent = true })
+vim.keymap.set({ "i", "c", "n" }, "<M-b>",  "<C-Left>",  { noremap = true, silent = true })
+vim.keymap.set({ "i", "c", "n" }, "<M-f>", "<C-Right>", { noremap = true, silent = true })
