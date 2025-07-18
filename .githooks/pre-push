@@ -1,0 +1,137 @@
+#!/usr/bin/env bash
+#
+# pre‑push hook: blocks a push if gitleaks is missing **or**
+# if any secrets are detected in the commits being pushed.
+#
+# Requires:
+#   – gitleaks ≥ 8.x on $PATH
+#   – a .gitleaks.toml config at repo root
+#
+# Skip by exporting SKIP_GITLEAKS=1
+
+set -euo pipefail
+
+#------------------------------------------------------------
+# 0. Allow an override (useful for emergency pushes)
+#------------------------------------------------------------
+if [[ "${SKIP_GITLEAKS:-}" == 1 ]]; then
+  echo "⚠️  SKIP_GITLEAKS=1 – bypassing secret scan"
+  exit 0
+fi
+
+#------------------------------------------------------------
+# 1. Ensure gitleaks is installed
+#------------------------------------------------------------
+if ! command -v gitleaks >/dev/null 2>&1; then
+  echo "❌  gitleaks is not installed."
+  echo "    Install it (https://github.com/gitleaks/gitleaks#install) and retry."
+  exit 1
+fi
+
+#------------------------------------------------------------
+# 2. Move to repo root (hook runs from .githooks/)
+#------------------------------------------------------------
+repo_root="$(git rev-parse --show-toplevel)"
+cd "$repo_root"
+
+#------------------------------------------------------------
+# 3. Read ref updates from stdin and scan each range
+#    stdin lines: <local_ref> <local_sha> <remote_ref> <remote_sha>
+#------------------------------------------------------------
+while read -r local_ref local_sha remote_ref remote_sha; do
+  # If the branch doesn’t exist on the remote yet (all zeros), scan from the
+  # first commit; otherwise, scan the delta being pushed.
+  if [[ "$remote_sha" =~ ^0+$ ]]; then
+    range="$local_sha"
+  else
+    range="$remote_sha..$local_sha"
+  fi
+
+  echo "🔍  gitleaks scanning commits: $range ($local_ref → $remote_ref)"
+
+  # gitleaks v8+: detect in the specified commit range
+  gitleaks git \
+    --config .gitleaks.toml \
+    --exit-code 1
+
+  # gitleaks exits 1 if leaks are found; abort push immediately
+  if [[ $? -ne 0 ]]; then
+    echo "⛔️  Push blocked – secrets detected."
+    echo "    See .git/gitleaks-pre-push.sarif (or run \`gitleaks diff $range\`) for details."
+    exit 1
+  fi
+done
+#!/usr/bin/env bash
+#
+# pre‑push hook: blocks a push if gitleaks is missing **or**
+# if any secrets are detected in the commits being pushed.
+#
+# Requires:
+#   – gitleaks ≥ 8.x on $PATH
+#   – a .gitleaks.toml config at repo root
+#
+# Skip by exporting SKIP_GITLEAKS=1
+
+set -euo pipefail
+
+#------------------------------------------------------------
+# 0. Allow an override (useful for emergency pushes)
+#------------------------------------------------------------
+if [[ "${SKIP_GITLEAKS:-}" == 1 ]]; then
+  echo "⚠️  SKIP_GITLEAKS=1 – bypassing secret scan"
+  exit 0
+fi
+
+#------------------------------------------------------------
+# 1. Ensure gitleaks is installed
+#------------------------------------------------------------
+if ! command -v gitleaks >/dev/null 2>&1; then
+  echo "❌  gitleaks is not installed."
+  echo "    Install it (https://github.com/gitleaks/gitleaks#install) and retry."
+  exit 1
+fi
+
+#------------------------------------------------------------
+# 2. Move to repo root (hook runs from .githooks/)
+#------------------------------------------------------------
+repo_root="$(git rev-parse --show-toplevel)"
+cd "$repo_root"
+
+#------------------------------------------------------------
+# 3. Read ref updates from stdin and scan each range
+#    stdin lines: <local_ref> <local_sha> <remote_ref> <remote_sha>
+#------------------------------------------------------------
+while read -r local_ref local_sha remote_ref remote_sha; do
+  # If the branch doesn’t exist on the remote yet (all zeros), scan from the
+  # first commit; otherwise, scan the delta being pushed.
+  if [[ "$remote_sha" =~ ^0+$ ]]; then
+    range="$local_sha"
+  else
+    range="$remote_sha..$local_sha"
+  fi
+
+  echo "🔍  gitleaks scanning commits: $range ($local_ref → $remote_ref)"
+
+  # gitleaks v8+: detect in the specified commit range
+  gitleaks detect \
+    --log-opts "$range" \
+    --config .gitleaks.toml \
+    --redact \
+    --report-format sarif \
+    --report-path .git/gitleaks-pre-push.sarif \
+    --exit-code 1
+
+  # gitleaks exits 1 if leaks are found; abort push immediately
+  if [[ $? -ne 0 ]]; then
+    echo "⛔️  Push blocked – secrets detected."
+    echo "    See .git/gitleaks-pre-push.sarif (or run \`gitleaks diff $range\`) for details."
+    exit 1
+  fi
+done
+
+echo "✅  No secrets detected – push allowed."
+exit 0
+
+echo "✅  No secrets detected – push allowed."
+exit 0
+
