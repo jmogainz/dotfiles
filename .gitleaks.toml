@@ -1,0 +1,15 @@
+[extend]
+useDefault = true        # pulls ≈450 up‑to‑date rules from the binary
+
+
+[[rules]]
+id          = "generic-high-entropy"
+description = "≥40 B base64 / ≥64 B hex / ≥50 B base62 with entropy 4.5–7.5"
+regex       = '''\b([A-Za-z0-9+/]{40,}={0,2}|[A-Fa-f0-9]{64,}|[A-Za-z0-9]{50,})\b'''
+tags        = ["high_entropy","generic"]
+[[rules.Entropies]]
+Min = "4.5"
+Max = "7.5"
+Group = "1"
+
+
