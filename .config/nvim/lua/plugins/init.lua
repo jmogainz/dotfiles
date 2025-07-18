@@ -73,6 +73,8 @@ require('packer').startup(function(use)
   use 'stevearc/dressing.nvim'
   use 'MunifTanjim/nui.nvim'
   use 'nvimtools/none-ls.nvim'
+  use 'romainl/vim-qf'
+  use 'AndrewRadev/qftools.vim'
   -- use {'yetone/avante.nvim', run = 'make BUILD_FROM_SOURCE=true'}
 end)
 
@@ -98,5 +100,6 @@ require('plugins.neotest')
 require('plugins.null_ls')
 require('plugins.copilot_chat')
 require('plugins.tscontext')
+-- require('plugins.qf')
 -- require('plugins.copilot_lua')
 -- require('plugins.avante')

@@ -24,14 +24,10 @@ local fn      = vim.fn
 local qf_file = fn.stdpath('state') .. '/last_qflist.lua'
 
 local function save_qf()
-  -- grab current list WITH filenames
   local qf = fn.getqflist()
   if vim.tbl_isempty(qf) then return end
-
-  for _, it in ipairs(qf) do
-    it.filename = fn.bufname(it.bufnr) -- keep path
-    it.bufnr    = nil                  -- discard fragile id
-  end
+  -- don't persist 'bufnr'; it'll be wrong next time anyway
+  for _, item in ipairs(qf) do item.bufnr = nil end
   fn.writefile(vim.tbl_map(vim.inspect, qf), qf_file)
 end
 
@@ -39,7 +35,8 @@ local function load_qf()
   if fn.filereadable(qf_file) == 0 then return end
   local items = {}
   for _, l in ipairs(fn.readfile(qf_file)) do
-    table.insert(items, assert(loadstring('return ' .. l))())
+    local it = assert(loadstring('return ' .. l))()
+    table.insert(items, it)            -- no bufnr ⇒ filename will be used
   end
   if #items > 0 then pcall(fn.setqflist, items, 'r') end
 end
@@ -68,7 +65,7 @@ vim.g.bookmark_no_default_key_mappings = 1
 vim.g.fzf_layout = { window = { width = 1.00, height = 1.00, wrap = true } }
 vim.api.nvim_create_user_command('Rg', function(opts)
     local args = table.concat(opts.fargs, " ")
-    local command = 'rg --no-ignore --column --line-number --no-heading --color=always --glob "!.git/*" --glob "!.cache/*" ' .. args
+    local command = 'rg --no-ignore --hidden --column --line-number --no-heading --color=always --glob "!.git/*" --glob "!.cache/*" ' .. args
     vim.fn['fzf#vim#grep'](command, 1, vim.fn['fzf#vim#with_preview'](), opts.bang)
 end, { bang = true, nargs = '*' })
 vim.env.FZF_DEFAULT_COMMAND = 'rg --files -u --hidden --glob "!.git/*" --glob "!.cache/*"'
@@ -84,7 +81,7 @@ vim.cmd('colorscheme dracula')
 vim.o.undofile = true
 local target_path = vim.fn.expand('~/.config/nvim/undodir')
 if not vim.fn.isdirectory(target_path) then
-  vim.fn.mkdir(target_path, 'p', 0700)
+  vim.fn.mkdir(target_path, 'p', '0700')
 end
 vim.o.undodir = target_path
 
