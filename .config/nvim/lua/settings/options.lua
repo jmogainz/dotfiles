@@ -13,8 +13,39 @@ vim.o.wrap = true
 vim.o.cursorline = true
 vim.o.timeoutlen = 300
 vim.o.smartindent = false
+vim.opt.maxsearchcount = 9999
 vim.opt.fixeol = false
 vim.opt.shada = "'1000,<50,:1000,s10,h"
+vim.opt.grepprg   = "rg --vimgrep --smart-case --hidden"
+vim.opt.grepformat = "%f:%l:%c:%m"   -- file:line:col:message (vimgrep format)
+
+-- Qf settings
+local fn      = vim.fn
+local qf_file = fn.stdpath('state') .. '/last_qflist.lua'
+
+local function save_qf()
+  -- grab current list WITH filenames
+  local qf = fn.getqflist()
+  if vim.tbl_isempty(qf) then return end
+
+  for _, it in ipairs(qf) do
+    it.filename = fn.bufname(it.bufnr) -- keep path
+    it.bufnr    = nil                  -- discard fragile id
+  end
+  fn.writefile(vim.tbl_map(vim.inspect, qf), qf_file)
+end
+
+local function load_qf()
+  if fn.filereadable(qf_file) == 0 then return end
+  local items = {}
+  for _, l in ipairs(fn.readfile(qf_file)) do
+    table.insert(items, assert(loadstring('return ' .. l))())
+  end
+  if #items > 0 then pcall(fn.setqflist, items, 'r') end
+end
+
+vim.api.nvim_create_autocmd('VimLeavePre', {callback = save_qf})
+vim.api.nvim_create_autocmd('VimEnter',     {callback = load_qf})
 
 -- Plantuml settings
 vim.g['plantuml_previewer#plantuml_jar_path'] = '/usr/share/java/plantuml/plantuml.jar'
