@@ -63,6 +63,17 @@ vim.g.suda_prompt = 'Password: '
 vim.g.bookmark_no_default_key_mappings = 1
 
 -- FZF settings
+-- ── helpers --------------------------------------------------------------
+local function files_to_qf(lines)
+  -- each picked path → { filename = path, lnum = 1 }
+  local items = {}
+  for _, p in ipairs(lines) do
+    items[#items+1] = { filename = p, lnum = 1 }
+  end
+  vim.fn.setqflist({}, ' ', { title = 'fzf :Files', items = items })
+  vim.cmd('copen')          -- comment out if you don’t want it to pop
+end
+vim.g.fzf_action = { ['ctrl-q'] = files_to_qf}
 vim.g.fzf_layout = { window = { width = 1.00, height = 1.00, wrap = true } }
 vim.api.nvim_create_user_command('Rg', function(opts)
     local args = table.concat(opts.fargs, " ")
