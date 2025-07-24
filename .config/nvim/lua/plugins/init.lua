@@ -42,8 +42,8 @@ require('packer').startup(function(use)
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use({
     "iamcco/markdown-preview.nvim",
-    ft  = { "markdown" },
-    run = "cd app && npm install --production", -- <- important bit
+    -- ft  = { "markdown" },
+    -- run = "cd app && npm install --production", -- <- important bit
     -- or yarn:  run = "cd app && yarn install --production",
   })
   use 'tpope/vim-abolish'

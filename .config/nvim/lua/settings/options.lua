@@ -26,8 +26,10 @@ local qf_file = fn.stdpath('state') .. '/last_qflist.lua'
 local function save_qf()
   local qf = fn.getqflist()
   if vim.tbl_isempty(qf) then return end
-  -- don't persist 'bufnr'; it'll be wrong next time anyway
-  for _, item in ipairs(qf) do item.bufnr = nil end
+  for _, it in ipairs(qf) do
+    it.filename = fn.bufname(it.bufnr) -- keep path
+    it.bufnr    = nil                  -- discard fragile id
+  end
   fn.writefile(vim.tbl_map(vim.inspect, qf), qf_file)
 end
 
@@ -35,8 +37,7 @@ local function load_qf()
   if fn.filereadable(qf_file) == 0 then return end
   local items = {}
   for _, l in ipairs(fn.readfile(qf_file)) do
-    local it = assert(loadstring('return ' .. l))()
-    table.insert(items, it)            -- no bufnr ⇒ filename will be used
+    table.insert(items, assert(loadstring('return ' .. l))())
   end
   if #items > 0 then pcall(fn.setqflist, items, 'r') end
 end

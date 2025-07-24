@@ -194,6 +194,18 @@ export  CLICOLOR=1              # lets BSD ls honour colour env-vars
 
 alias fd='fd -H'
 
+if command -v rg >/dev/null 2>&1; then
+  # Basic replacement: grep → rg
+  alias grep='rg --color=auto --line-number --no-heading --smart-case'
+
+  # egrep / fgrep equivalents
+  alias egrep='rg --color=auto --line-number --no-heading --smart-case -E'
+  alias fgrep='rg --color=auto --line-number --no-heading --smart-case -F'
+
+  # Optional: fall back to the system grep when you really need it
+  alias ggrep='/usr/bin/grep'
+fi
+
 export PATH
 
 typeset -U path
