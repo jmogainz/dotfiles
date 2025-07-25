@@ -165,7 +165,7 @@ function gcap() {
 
 export ANTHROPIC_API_KEY=""
 # export ANDROID_HOME=/home/you/Android/Sdk
-export BAT_THEME="Dracula"
+export BAT_THEME="gruvbox-light"
 
 export HOMEBREW_VERBOSE=1
 export HOMEBREW_CURL_VERBOSE=

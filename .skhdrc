@@ -3,6 +3,11 @@
 alt - return        : open -na "Alacritty"
 alt + shift - q     : yabai -m window --close
 
+# ---------- yabai FFM quick‑reset ----------
+# Press Alt + Shift + r to re‑enable focus‑follows‑mouse without restarting yabai
+alt + shift - r : yabai -m config focus_follows_mouse off; \
+                  yabai -m config focus_follows_mouse autoraise
+
 # ---------- focus movement (BSP + stack + space-wrap + stack-wrap) ----------
 alt - h : yabai -m window --focus west  || yabai -m space --focus prev
 alt - j : yabai -m window --focus stack.next || yabai -m window --focus stack.first || yabai -m window --focus south
