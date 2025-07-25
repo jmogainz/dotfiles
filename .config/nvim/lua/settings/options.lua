@@ -82,7 +82,7 @@ vim.api.nvim_create_user_command('Rg', function(opts)
 end, { bang = true, nargs = '*' })
 vim.env.FZF_DEFAULT_COMMAND = 'rg --files -u --hidden --glob "!.git/*" --glob "!.cache/*"'
 vim.env.FZF_DEFAULT_OPTS = '--bind=ctrl-j:down,ctrl-k:up'
-vim.env.FZF_DEFAULT_OPTS = '--border=none --preview-window=border-none,wrap,hidden --bind=?:toggle-preview --preview "echo {}"'
+vim.env.FZF_DEFAULT_OPTS = '--border=none --preview-window=border-none,wrap,hidden --bind=?:toggle-preview'
 
 -- Colorscheme settings
 vim.cmd('syntax enable')
