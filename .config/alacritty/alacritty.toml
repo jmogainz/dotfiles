@@ -35,17 +35,25 @@ mods  = "Command"          # “Super” instead of “Command” on Linux
 chars = "\u0015"           # 0x15  =  ^U  (line kill)
 
 ############################################################
+#  ⌘⌫   – delete the whole line (shell “kill-line” = ^U)
+############################################################
+[[keyboard.bindings]]
+key   = "Back"
+mods  = "Alt"          # “Super” instead of “Command” on Linux
+chars = "\u0017"           # 0x17  =  ^W  (line kill)
+
+############################################################
 #  ⌥←/→ – move back/forward a word (shell = ESC b / ESC f)
 ############################################################
 [[keyboard.bindings]]
 key   = "Left"
-mods  = "Alt"              # Option on macOS
-chars = "\u001bb"          # ESC b  (back-a-word)
+mods  = "Alt"                    # ⌥←
+chars = "\u001b[1;5D"            # CSI 1;5D  =  Ctrl-Left
 
 [[keyboard.bindings]]
 key   = "Right"
-mods  = "Alt"
-chars = "\u001bf"          # ESC f  (forward-a-word)
+mods  = "Alt"                    # ⌥→
+chars = "\u001b[1;5C"            # CSI 1;5C  =  Ctrl-Right
 
 ############################################################
 #  ⌘←/→ – jump to beginning / end of line (shell = ^A / ^E)

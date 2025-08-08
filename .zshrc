@@ -164,6 +164,7 @@ function gcap() {
 }
 
 export ANTHROPIC_API_KEY=""
+export GEMINI_EDITOR="vim"
 # export ANDROID_HOME=/home/you/Android/Sdk
 export BAT_THEME="Dracula"
 
@@ -183,6 +184,16 @@ for pkg in make \
             grep gawk diffutils gnu-indent; do
   PATH="/opt/homebrew/opt/$pkg/libexec/gnubin:$PATH"
 done
+
+PATH="$(go env GOPATH)/bin:$PATH"  # add Go binaries to PATH
+PATH="/Library/TeX/texbin:$PATH"
+
+# ── Flutter / Android SDK (installed via Homebrew) ────────────────────────────
+export ANDROID_SDK_ROOT="$HOMEBREW_PREFIX/share/android-commandlinetools"
+path=("$ANDROID_SDK_ROOT/cmdline-tools/latest/bin" "$ANDROID_SDK_ROOT/platform-tools" $path)
+
+export JAVA_HOME="$HOMEBREW_PREFIX/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home"
+path=("$HOMEBREW_PREFIX/opt/openjdk@17/bin" $path)
 
 # COMMENTED OUT, they are linked in /opt/homebrew/bin, with brew link --force --overwrite
 # # gnu-getopt keeps binaries directly in bin/

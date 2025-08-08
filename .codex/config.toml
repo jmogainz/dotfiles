@@ -1,0 +1,27 @@
+# ~/.codex/config.toml
+
+projects = { "/Users/you/mono-repo" = { trust_level = "trusted" } }
+
+model = "gpt-5"
+
+# --- sensible defaults you can still override per-run with flags ---
+approval_policy = "on-request"      # ask when it needs escalation
+sandbox_mode    = "workspace-write" # write only inside the project (and tmp)
+
+# Allow networking in workspace-write mode (needed for go mod / pub get)
+[sandbox_workspace_write]
+network_access = true
+# keep default tmp access:
+exclude_tmpdir_env_var = false
+exclude_slash_tmp = false
+
+# Keep the terminal environment tidy & predictable:
+[shell_environment_policy]
+# Inherit your full env, but we’ll explicitly set the dev caches below.
+inherit = "all"
+ignore_default_excludes = true
+# Force-set/override a few vars so writes stay in the repo.
+# Use relative paths so this profile works in any project you start from.
+
+[startup]
+command = "open file AGENTS.md"

@@ -49,9 +49,10 @@ vim.api.nvim_create_autocmd('VimEnter',     {callback = load_qf})
 vim.g['plantuml_previewer#plantuml_jar_path'] = '/usr/share/java/plantuml/plantuml.jar'
 
 -- LaTeX settings
-vim.g.vimtex_view_method = 'zathura'
+vim.g.vimtex_view_method = 'skim'
 vim.g.vimtex_compiler_method = 'latexmk'
-vim.g.vimtex_view_general_viewer = 'zathura'
+vim.g.vimtex_view_general_viewer = 'skim'
+vim.g.vimtex_view_automatic = 1
 vim.g.vimtex_quickfix_mode = 0
 vim.g.vimtex_lint_enabled = 0
 vim.g.vimtex_check_enabled = 0
@@ -77,7 +78,7 @@ vim.g.fzf_action = { ['ctrl-q'] = files_to_qf}
 vim.g.fzf_layout = { window = { width = 1.00, height = 1.00, wrap = true } }
 vim.api.nvim_create_user_command('Rg', function(opts)
     local args = table.concat(opts.fargs, " ")
-    local command = 'rg --no-ignore --hidden --column --line-number --no-heading --color=always --glob "!.git/*" --glob "!.cache/*" ' .. args
+    local command = 'rg --no-ignore --hidden --column --line-number --no-heading --color=always --glob "!.git/*" --glob "!.cache/*" --glob "!*.txt" ' .. args
     vim.fn['fzf#vim#grep'](command, 1, vim.fn['fzf#vim#with_preview'](), opts.bang)
 end, { bang = true, nargs = '*' })
 vim.env.FZF_DEFAULT_COMMAND = 'rg --files -u --hidden --glob "!.git/*" --glob "!.cache/*"'
