@@ -187,6 +187,7 @@ done
 
 PATH="$(go env GOPATH)/bin:$PATH"  # add Go binaries to PATH
 PATH="/Library/TeX/texbin:$PATH"
+PATH="$HOME/.local/bin:$PATH"
 
 # ── Flutter / Android SDK (installed via Homebrew) ────────────────────────────
 export ANDROID_SDK_ROOT="$HOMEBREW_PREFIX/share/android-commandlinetools"
