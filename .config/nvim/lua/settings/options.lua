@@ -16,7 +16,7 @@ vim.o.smartindent = false
 vim.opt.maxsearchcount = 9999
 vim.opt.fixeol = false
 vim.opt.shada = "'1000,<50,:1000,s10,h"
-vim.opt.grepprg   = "rg --vimgrep --smart-case --hidden"
+vim.opt.grepprg   = "rg --vimgrep --smart-case --hidden --no-ignore"
 vim.opt.grepformat = "%f:%l:%c:%m"   -- file:line:col:message (vimgrep format)
 
 -- Qf settings
@@ -46,7 +46,7 @@ vim.api.nvim_create_autocmd('VimLeavePre', {callback = save_qf})
 vim.api.nvim_create_autocmd('VimEnter',     {callback = load_qf})
 
 -- Plantuml settings
-vim.g['plantuml_previewer#plantuml_jar_path'] = '/usr/share/java/plantuml/plantuml.jar'
+-- vim.g['plantuml_previewer#plantuml_jar_path'] = '/usr/share/java/plantuml/plantuml.jar'
 
 -- LaTeX settings
 vim.g.vimtex_view_method = 'skim'

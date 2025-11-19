@@ -23,12 +23,6 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', '<Leader>f', '<Cmd>lua vim.lsp.buf.format({ async = true })<CR>', opts)
 end
 
------------------------------------------------------------------------
--- Do NOT: local lspconfig = require('lspconfig')
--- Do NOT: local lspconfig = vim.lsp.config
--- Use vim.lsp.config + vim.lsp.enable instead
------------------------------------------------------------------------
-
 -- Clangd
 vim.lsp.config('clangd', {
   cmd = {
@@ -38,7 +32,7 @@ vim.lsp.config('clangd', {
     "--cross-file-rename",
     "--clang-tidy",
   },
-  filetypes = { "c", "cpp", "objc", "objcpp" },
+  filetypes = { "c", "cpp", "objc", "objcpp", "cuda" },
   capabilities = capabilities,
   on_attach = on_attach,
 })
