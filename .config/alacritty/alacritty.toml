@@ -27,6 +27,14 @@ mods = "Control"
 chars = "\u001b[B"  # This sends the "Down" arrow key sequence
 
 ############################################################
+#  Ctrl+Backspace – delete previous word (like Ctrl+W = ^W)
+############################################################
+[[keyboard.bindings]]
+key   = "Back"
+mods  = "Control"
+chars = "\u0017"        # 0x17 = ^W (backward-kill-word)
+
+############################################################
 #  ⌘⌫   – delete the whole line (shell “kill-line” = ^U)
 ############################################################
 [[keyboard.bindings]]
