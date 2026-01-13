@@ -1,14 +1,25 @@
 set number
 set relativenumber
 
+let g:netrw_bufsettings = 'noma nomod nu rnu nobl nowrap ro'
+
+set shada^=%,'1000
+
+set undofile
+set undodir=~/.local/state/nvim/undo//
+
+if !isdirectory(expand(&undodir))
+  call mkdir(expand(&undodir), "p")
+endif
+
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
 set smartindent
 
-" Numbers in netrw (:Ex)
-augroup netrw_numbers
-  autocmd!
-  autocmd FileType netrw setlocal number relativenumber
-augroup END
+set sessionoptions+=buffers
+autocmd VimLeavePre * silent! mksession! ~/.config/nvim/Session.vim
+autocmd VimEnter * if argc()==0 | silent! source ~/.config/nvim/Session.vim | endif
+
+set cursorline
