@@ -20,6 +20,6 @@ set smartindent
 
 set sessionoptions+=buffers
 autocmd VimLeavePre * silent! mksession! ~/.config/nvim/Session.vim
-autocmd VimEnter * if argc()==0 | silent! source ~/.config/nvim/Session.vim | endif
+autocmd VimEnter * silent! source ~/.config/nvim/Session.vim
 
 set cursorline
