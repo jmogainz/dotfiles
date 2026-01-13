@@ -1,0 +1,14 @@
+set number
+set relativenumber
+
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+set smartindent
+
+" Numbers in netrw (:Ex)
+augroup netrw_numbers
+  autocmd!
+  autocmd FileType netrw setlocal number relativenumber
+augroup END
