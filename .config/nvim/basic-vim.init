@@ -22,4 +22,14 @@ set sessionoptions+=buffers
 autocmd VimLeavePre * if argc()==0 | silent! mksession! ~/.config/nvim/Session.vim | endif
 autocmd VimEnter * if argc()==0 | silent! source ~/.config/nvim/Session.vim | endif
 
-set cursorline
+" in vimrc
+set wildmenu
+set wildignore+=*/node_modules/*,*/dist/*,*/build/*,*/.git/*,*/vendor/*
+
+" Use ripgrep for :grep / :lgrep
+if executable('rg')
+  set grepprg=rg\ --vimgrep\ --no-heading\ --smart-case
+  set grepformat=%f:%l:%c:%m
+endif
+
+
