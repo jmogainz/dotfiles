@@ -1,7 +1,9 @@
+import os
 import subprocess
 from flask import Flask, jsonify
 
 app = Flask(__name__)
+SQUID_SERVICE_NAME = os.environ.get("SQUID_SERVICE_NAME", "squid.service")
 
 HTML_TEMPLATE = """<!DOCTYPE html>
 <html>
@@ -129,7 +131,7 @@ def is_squid_active():
     """
     try:
         output = subprocess.check_output(
-            ["/usr/bin/systemctl", "is-active", "squid.service"],
+            ["/usr/bin/systemctl", "is-active", SQUID_SERVICE_NAME],
             stderr=subprocess.STDOUT
         )
         return output.decode("utf-8").strip()
@@ -150,10 +152,10 @@ def get_squid_status():
 @app.route("/restart", methods=["POST"])
 def restart_squid():
     # Spawn systemctl to restart squid without waiting for it to finish
-    subprocess.Popen(["/usr/bin/systemctl", "restart", "squid.service"])
+    subprocess.Popen(["/usr/bin/systemctl", "restart", SQUID_SERVICE_NAME])
     return jsonify({"message": "Restart initiated"})
 
 if __name__ == "__main__":
-    # Listen on port 80 (requires root privileges or capability)
-    app.run(host="127.0.0.1", port=8080)
-
+    host = os.environ.get("SQUID_RESTART_UI_HOST", "127.0.0.1")
+    port = int(os.environ.get("SQUID_RESTART_UI_PORT", "8080"))
+    app.run(host=host, port=port)
