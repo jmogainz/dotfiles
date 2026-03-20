@@ -2,7 +2,6 @@
 
 # Personal Information
 set realname = "jmogainz"
-set from = "private"
 set use_from = yes
 source ~/.mutt/muttrc.local
 
@@ -67,4 +66,3 @@ set editor = "nvim"
 
 # Message Sending Options
 set use_envelope_from = yes
-set envelope_from_address = "private"

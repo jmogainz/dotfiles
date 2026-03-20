@@ -1,6 +1,6 @@
 # ~/.codex/config.toml
 
-projects = { "/Users/you/mono-repo" = { trust_level = "trusted" } }
+projects = { "/Users/you/project" = { trust_level = "trusted" } }
 
 model = "gpt-5"
 

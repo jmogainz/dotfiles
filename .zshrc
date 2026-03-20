@@ -165,7 +165,7 @@ function gcap() {
 
 export ANTHROPIC_API_KEY=""
 export GEMINI_EDITOR="vim"
-# export ANDROID_HOME=/home/you/Android/Sdk
+# export ANDROID_HOME=$HOME/Android/Sdk
 export BAT_THEME="gruvbox-light"
 
 export HOMEBREW_VERBOSE=1
