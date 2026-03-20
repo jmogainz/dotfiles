@@ -92,6 +92,35 @@ vim.lsp.config('gopls', {
   },
 })
 
--- Enable all of the above Language Server Protocol (LSP) configs
-vim.lsp.enable({ 'clangd', 'pyright', 'lua_ls', 'dartls', 'gopls' })
+-- Rust Analyzer
+vim.lsp.config('rust_analyzer', {
+  capabilities = capabilities,
+  on_attach = on_attach,
+  settings = {
+    ["rust-analyzer"] = {
+      cargo = {
+        allFeatures = true,
+      },
+      checkOnSave = true,
+      check = {
+        command = "clippy",
+      },
+      procMacro = {
+        enable = true,
+      },
+    },
+  },
+})
 
+local lspconfig = require('lspconfig')
+
+lspconfig.omnisharp.setup({
+  cmd = { "omnisharp-mono", "--languageserver", "--hostPID", tostring(vim.fn.getpid()) },
+  -- Unity projects often benefit from this:
+  enable_editorconfig_support = true,
+  enable_roslyn_analyzers = true,
+  organize_imports_on_format = true,
+})
+
+-- Enable all of the above Language Server Protocol (LSP) configs
+vim.lsp.enable({ 'clangd', 'pyright', 'lua_ls', 'dartls', 'gopls', 'rust_analyzer', 'omnisharp' })

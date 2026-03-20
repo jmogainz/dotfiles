@@ -1,0 +1,2 @@
+# Generate with:
+# htpasswd -c /etc/squid/passwd your-user

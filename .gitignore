@@ -1,1 +1,11 @@
-
+.zsh_history*
+.esmptrc
+.smbcredentials
+.mutt/muttrc.local
+.local/state/nvim/
+.zcompdump
+.config/nvim/undodir/
+.config/nvim/plugin/
+gitleaks.json
+leaks.txt
+leaks.txtn

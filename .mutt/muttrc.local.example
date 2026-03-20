@@ -1,0 +1,4 @@
+set imap_user = "private"
+set imap_pass = "app-password"
+set smtp_url = "smtps://private:465/"
+set smtp_pass = "app-password"

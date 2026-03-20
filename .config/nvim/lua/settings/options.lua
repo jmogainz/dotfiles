@@ -92,7 +92,7 @@ vim.cmd('colorscheme dracula')
 
 -- Enable persistent undo
 vim.o.undofile = true
-local target_path = vim.fn.expand('~/.config/nvim/undodir')
+local target_path = vim.fn.stdpath('state') .. '/undo'
 if not vim.fn.isdirectory(target_path) then
   vim.fn.mkdir(target_path, 'p', '0700')
 end
@@ -118,6 +118,7 @@ vim.g.ale_linters = {
     lua = {},
     dart = {},
     go = {},
+    sql = {},
 }
 vim.g.ale_verbose = 1
 

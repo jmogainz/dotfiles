@@ -119,7 +119,7 @@ setopt APPEND_HISTORY # save to history after shell exits, whatever is not
 setopt HIST_FIND_NO_DUPS
 setopt HIST_IGNORE_ALL_DUPS
 
-HISTFILE=~/.zsh_history
+HISTFILE=~/shell-history/.zsh_history
 HISTSIZE=20000
 SAVEHIST=20000
 
