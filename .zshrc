@@ -92,21 +92,24 @@ source $ZSH/oh-my-zsh.sh
 # export LS_COLORS
 
 # llfo = link libs from onedrive
+SYSTEM_LIBS_LINK_ROOT="${SYSTEM_LIBS_LINK_ROOT:-$HOME/system_libs_unlink_link}"
+SYSTEM_INCLUDES_LINK_ROOT="${SYSTEM_INCLUDES_LINK_ROOT:-$HOME/system_includes_unlink_link}"
+
 ldl() {
-    sudo /home/you/system_libs_unlink_link/system_libs_link_and_unlink/link_libs.sh --path "$1"
+    sudo "$SYSTEM_LIBS_LINK_ROOT/system_libs_link_and_unlink/link_libs.sh" --path "$1"
 }
 
 # Function to unlink libs with a dynamic path argument
 uldl() {
-    sudo /home/you/system_libs_unlink_link/system_libs_link_and_unlink/unlink_libs.sh --path "$1"
+    sudo "$SYSTEM_LIBS_LINK_ROOT/system_libs_link_and_unlink/unlink_libs.sh" --path "$1"
 }
 
 lh() {
-    sudo /home/you/system_includes_unlink_link/link_headers.sh --path "$1"
+    sudo "$SYSTEM_INCLUDES_LINK_ROOT/link_headers.sh" --path "$1"
 }
 
 ulh() {
-    sudo /home/you/system_includes_unlink_link/unlink_headers.sh --path "$1"
+    sudo "$SYSTEM_INCLUDES_LINK_ROOT/unlink_headers.sh" --path "$1"
 }
 
 bindkey '^[[1;5D' backward-word
@@ -123,7 +126,7 @@ HISTFILE=~/shell-history/.zsh_history
 HISTSIZE=20000
 SAVEHIST=20000
 
-LINUX_CONFIG_PATH=~/linux_config
+LINUX_CONFIG_PATH="${LINUX_CONFIG_PATH:-$HOME/linux_config}"
 
 alias xclip='xclip -selection clipboard'
 
