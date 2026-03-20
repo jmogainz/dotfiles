@@ -1,4 +1,6 @@
+set from = "private"
+set envelope_from_address = "private"
 set imap_user = "private"
 set imap_pass = "app-password"
-set smtp_url = "smtps://private:465/"
+set smtp_url = "smtps://private"
 set smtp_pass = "app-password"

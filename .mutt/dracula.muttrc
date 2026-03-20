@@ -1,7 +1,7 @@
 ###############################################################################
 # Dracula Theme for Mutt: https://draculatheme.com/
 #
-# @author Paul Townsend <private>
+# @author Paul Townsend
 
 # general ------------ foreground ---- background -----------------------------
 color error		color231	color212
