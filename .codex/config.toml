@@ -1,12 +1,51 @@
-# ~/.codex/config.toml
 
-projects = { "/Users/you/project" = { trust_level = "trusted" } }
-
-model = "gpt-5"
+model = "gpt-5.5"
 
 # --- sensible defaults you can still override per-run with flags ---
 approval_policy = "on-request"      # ask when it needs escalation
 sandbox_mode    = "workspace-write" # write only inside the project (and tmp)
+model_reasoning_effort = "high"
+personality = "pragmatic"
+
+web_search = "live"
+plan_mode_reasoning_effort = "xhigh"
+
+[projects."/Users/jmogainz/mono-repo"]
+trust_level = "trusted"
+
+[projects."/Users/jmogainz/poly-bot"]
+trust_level = "trusted"
+
+[projects."/Users/jmogainz/go-phish"]
+trust_level = "trusted"
+
+[projects."/Users/jmogainz/NexViaOne-Connect"]
+trust_level = "trusted"
+
+[projects."/Users/jmogainz/resume"]
+trust_level = "trusted"
+
+[projects."/Users/jmogainz/humansonly"]
+trust_level = "trusted"
+
+[projects."/Users/jmogainz/dotfiles"]
+trust_level = "trusted"
+
+[projects."/Users/jmogainz/temp"]
+trust_level = "trusted"
+
+[projects."/Users/jmogainz/package_statistics"]
+trust_level = "trusted"
+
+[projects."/Users/jmogainz/Downloads"]
+trust_level = "trusted"
+
+[features]
+unified_exec = true
+shell_snapshot = true
+js_repl = true
+multi_agent = true
+goals = true
 
 # Allow networking in workspace-write mode (needed for go mod / pub get)
 [sandbox_workspace_write]
@@ -20,8 +59,30 @@ exclude_slash_tmp = false
 # Inherit your full env, but we’ll explicitly set the dev caches below.
 inherit = "all"
 ignore_default_excludes = true
+# Force Homebrew ahead of system paths (Codex does not source shell dotfiles).
+set = { PATH = "/Users/jmogainz/.bun/bin:/Users/jmogainz/.local/bin:/Users/jmogainz/go/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin" }
 # Force-set/override a few vars so writes stay in the repo.
 # Use relative paths so this profile works in any project you start from.
 
 [startup]
 command = "open file AGENTS.md"
+
+[notice]
+hide_gpt5_1_migration_prompt = true
+"hide_gpt-5.1-codex-max_migration_prompt" = true
+
+[notice.model_migrations]
+"gpt-5.1-codex-max" = "gpt-5.2-codex"
+"gpt-5.2" = "gpt-5.2-codex"
+"gpt-5.1-codex-mini" = "gpt-5.2-codex"
+gpt-5 = "gpt-5.3-codex"
+
+[mcp_servers.chrome-devtools]
+command = "npx"
+args = ["chrome-devtools-mcp@latest", "--browserUrl", "http://localhost:9222", "--no-usage-statistics"]
+
+[tui]
+status_line = ["model-with-reasoning", "context-remaining", "current-dir", "five-hour-limit", "weekly-limit"]
+
+[tui.model_availability_nux]
+"gpt-5.5" = 4

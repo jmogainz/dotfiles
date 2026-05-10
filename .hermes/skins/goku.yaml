@@ -1,0 +1,9 @@
+name: goku
+description: Goku assistant branding
+branding:
+  agent_name: "Goku"
+  welcome: "Goku is ready. Type your message or /help for commands."
+  goodbye: "Goodbye."
+  response_label: " Goku "
+  prompt_symbol: "> "
+  help_header: "Goku Commands"
