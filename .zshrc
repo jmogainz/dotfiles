@@ -225,3 +225,22 @@ fi
 export PATH
 
 typeset -U path
+
+# bun completions
+[ -s "/Users/jmogainz/.bun/_bun" ] && source "/Users/jmogainz/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+export GBRAIN_EMBEDDING_MODEL="voyage:voyage-4-large"
+
+export GBRAIN_EMBEDDING_DIMENSIONS="2048"
+
+export EMBEDDING_PROVIDER="voyage"
+
+export EMBEDDING_MODEL="voyage-4-large"
+
+export BROWSER_CDP_URL="http://localhost:9222"
+
+export PATH="$HOME/.bun/bin:$HOME/go/bin:$PATH"
