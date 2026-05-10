@@ -17,6 +17,7 @@ agent:
   gateway_timeout_warning: 900
   gateway_notify_interval: 180
   completion_reminder_min_seconds: 0
+  completion_reminder_cleanup_seconds: 120
   image_input_mode: auto
   verbose: false
   reasoning_effort: high
@@ -84,6 +85,8 @@ terminal:
   lifetime_seconds: 300
 browser:
   inactivity_timeout: 120
+  cleanup_after_turn: true
+  cleanup_new_cdp_tabs_after_turn: true
   command_timeout: 30
   record_sessions: false
   allow_private_urls: false
