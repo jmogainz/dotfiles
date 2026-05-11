@@ -6,6 +6,8 @@ dotfiles="${home}/dotfiles"
 
 install -d \
   "${dotfiles}/.codex/skills/hermes-ops" \
+  "${dotfiles}/.hermes/skills/devops/vercel-cli" \
+  "${dotfiles}/.hermes/skills/devops/stripe-cli" \
   "${dotfiles}/.hermes/skills/apple/apple-reminders" \
   "${dotfiles}/.hermes/skins" \
   "${dotfiles}/Library/LaunchAgents"
@@ -22,6 +24,10 @@ perl -0pi -e 's/WHATSAPP_HOME_CHANNEL:\s*\S+/WHATSAPP_HOME_CHANNEL: "<redacted-w
 cp "${home}/.hermes/SOUL.md" "${dotfiles}/.hermes/SOUL.md"
 cp "${home}/.hermes/skills/apple/apple-reminders/SKILL.md" \
   "${dotfiles}/.hermes/skills/apple/apple-reminders/SKILL.md"
+cp "${home}/.hermes/skills/devops/vercel-cli/SKILL.md" \
+  "${dotfiles}/.hermes/skills/devops/vercel-cli/SKILL.md"
+cp "${home}/.hermes/skills/devops/stripe-cli/SKILL.md" \
+  "${dotfiles}/.hermes/skills/devops/stripe-cli/SKILL.md"
 cp "${home}/.hermes/skins/goku.yaml" "${dotfiles}/.hermes/skins/goku.yaml"
 
 cp "${home}/Library/LaunchAgents/ai.hermes.gateway.plist" \
