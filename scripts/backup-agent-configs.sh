@@ -6,6 +6,7 @@ dotfiles="${home}/dotfiles"
 
 install -d \
   "${dotfiles}/.codex/skills/hermes-ops" \
+  "${dotfiles}/.gbrain" \
   "${dotfiles}/.hermes/skills/devops/vercel-cli" \
   "${dotfiles}/.hermes/skills/devops/stripe-cli" \
   "${dotfiles}/.hermes/skills/apple/apple-reminders" \
@@ -18,6 +19,8 @@ perl -0pi -e 's#set = \{ PATH = "[^"]+" \}#set = { PATH = "/Users/jmogainz/.bun/
 cp "${home}/.codex/skills/hermes-ops/SKILL.md" "${dotfiles}/.codex/skills/hermes-ops/SKILL.md"
 
 cp "${home}/.hermes/config.yaml" "${dotfiles}/.hermes/config.yaml"
+perl -0pi -e 's/(allow_from:\n)(?:\s*-\s*[^\n]+\n)+/${1}  - "<redacted-whatsapp-allowed-user>"\n/g' \
+  "${dotfiles}/.hermes/config.yaml"
 perl -0pi -e 's/WHATSAPP_HOME_CHANNEL:\s*\S+/WHATSAPP_HOME_CHANNEL: "<redacted-whatsapp-home-channel>"/g' \
   "${dotfiles}/.hermes/config.yaml"
 
@@ -38,5 +41,6 @@ cp "${home}/Library/LaunchAgents/ai.hermes.chrome-cdp.plist" \
   "${dotfiles}/Library/LaunchAgents/ai.hermes.chrome-cdp.plist"
 cp "${home}/Library/LaunchAgents/com.gbrain.autopilot.plist" \
   "${dotfiles}/Library/LaunchAgents/com.gbrain.autopilot.plist"
+cp "${home}/.gbrain/autopilot-run.sh" "${dotfiles}/.gbrain/autopilot-run.sh"
 
 echo "Backed up public-safe Codex/Hermes/GBrain config snapshots to ${dotfiles}."

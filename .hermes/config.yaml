@@ -215,7 +215,7 @@ display:
 dashboard:
   theme: default
 privacy:
-  redact_pii: false
+  redact_pii: true
 tts:
   provider: edge
   edge:
@@ -289,13 +289,17 @@ skills:
   template_vars: true
   inline_shell: false
   inline_shell_timeout: 10
-  guard_agent_created: false
+  guard_agent_created: true
   disabled:
   - microsoft-workspace
   - xurl
+  - godmode
   platform_disabled:
     whatsapp:
     - hermes-agent
+    - microsoft-workspace
+    - xurl
+    - godmode
   creation_nudge_interval: 15
 honcho: {}
 timezone: ''
@@ -307,7 +311,12 @@ discord:
   reactions: true
   channel_prompts: {}
   server_actions: ''
-whatsapp: {}
+whatsapp:
+  dm_policy: allowlist
+  allow_from:
+  - "<redacted-whatsapp-allowed-user>"
+  group_policy: disabled
+  group_allow_from: []
 telegram:
   channel_prompts: {}
 slack:
@@ -318,10 +327,7 @@ approvals:
   mode: manual
   timeout: 60
   cron_mode: deny
-command_allowlist:
-- script execution via -e/-c flag
-- delete in root path
-- stop/restart hermes gateway (kills running agents)
+command_allowlist: []
 quick_commands: {}
 hooks: {}
 hooks_auto_accept: false
@@ -330,9 +336,9 @@ security:
   allow_private_urls: false
   redact_secrets: true
   tirith_enabled: true
-  tirith_path: tirith
+  tirith_path: /Users/jmogainz/.hermes/bin/tirith
   tirith_timeout: 5
-  tirith_fail_open: true
+  tirith_fail_open: false
   website_blocklist:
     enabled: false
     domains: []
@@ -356,8 +362,8 @@ model_catalog:
 network:
   force_ipv4: false
 sessions:
-  auto_prune: false
-  retention_days: 90
+  auto_prune: true
+  retention_days: 30
   vacuum_after_prune: true
   min_interval_hours: 24
 onboarding:
@@ -372,17 +378,21 @@ mcp_servers:
     command: npx
     args:
     - -y
-    - chrome-devtools-mcp@latest
+    - chrome-devtools-mcp@0.25.0
     - --browserUrl
     - http://localhost:9222
     - --no-usage-statistics
     connect_timeout: 60
     timeout: 120
+    sampling:
+      enabled: false
   gbrain:
     command: /Users/jmogainz/.local/bin/gbrain-mcp
     args: []
     connect_timeout: 120
     timeout: 120
+    sampling:
+      enabled: false
 session_reset:
   mode: both
   idle_minutes: 1440

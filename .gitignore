@@ -12,3 +12,24 @@ leaks.txtn
 .config/nvim/prompt_script.txt
 prompt_script.txt
 rmview.json
+
+# Agent private state - never commit
+.hermes/.env
+.hermes/auth.json
+.hermes/google_client_secret.json
+.hermes/google_token.json
+.hermes/chrome-debug/
+.hermes/secrets/
+.hermes/whatsapp/
+.hermes/sessions/
+.hermes/session_archives_offline/
+.hermes/logs/
+.hermes/state.db*
+.codex/auth.json
+.codex/internal_storage.json
+.codex/sessions/
+.codex/log/
+.codex/*.sqlite*
+.codex/state*.sqlite*
+.codex/logs*.sqlite*
+.bash_history
