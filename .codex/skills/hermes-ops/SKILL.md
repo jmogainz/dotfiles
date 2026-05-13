@@ -99,6 +99,6 @@ Do not stage unrelated dirty dotfiles unless Jacob asked.
 - Goku runs primarily through WhatsApp.
 - BlueBubbles is removed and should not be reintroduced unless Jacob explicitly asks.
 - `xurl` is disabled; use browser automation for X.com unless Jacob re-enables paid API usage.
-- Microsoft Workspace is disabled; use Google Workspace by default.
+- Email/Workspace access is disabled; do not use Google Workspace, Gmail, Outlook, Microsoft Workspace, `gogcli`, or `himalaya` unless Jacob explicitly asks to re-enable and reauthenticate a specific capability.
 - GBrain is the primary durable memory; built-in Hermes memory is quick recall only.
 - WhatsApp replies create Apple Reminders notifications because WhatsApp self-chat does not reliably push notify.

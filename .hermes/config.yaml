@@ -292,12 +292,20 @@ skills:
   guard_agent_created: true
   disabled:
   - microsoft-workspace
+  - google-workspace
+  - gogcli
+  - himalaya
+  - google-oauth-maintenance
   - xurl
   - godmode
   platform_disabled:
     whatsapp:
     - hermes-agent
     - microsoft-workspace
+    - google-workspace
+    - gogcli
+    - himalaya
+    - google-oauth-maintenance
     - xurl
     - godmode
   creation_nudge_interval: 15
@@ -340,8 +348,14 @@ security:
   tirith_timeout: 5
   tirith_fail_open: false
   website_blocklist:
-    enabled: false
-    domains: []
+    enabled: true
+    domains:
+    - gmail.com
+    - mail.google.com
+    - outlook.live.com
+    - outlook.office.com
+    - outlook.office365.com
+    - mail.yahoo.com
     shared_files: []
 cron:
   wrap_response: true
